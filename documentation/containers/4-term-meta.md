@@ -36,11 +36,11 @@ where `$level` is the level of hierarchy depth, starting from 1 and increasing w
 
 To access field values you need to use the function `carbon_get_term_meta($term_id, $name, $type = null)`, where:
 
-| Parameter            | Description                                                                       |
-| -------------------- | --------------------------------------------------------------------------------- |
-| `$term_id`           | Term ID where your value was entered.                                             |
-| `$name`              | The name of the field to be retrieved.                                            |
-| `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass "complex". |
+| Parameter            | Description                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------- |
+| `$term_id`           | Term ID where your value was entered.                                               |
+| `$name`              | The name of the field to be retrieved.                                              |
+| `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
 ```
 <!-- Simple field -->
