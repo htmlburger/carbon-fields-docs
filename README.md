@@ -1,2 +1,4 @@
-# carbon-fields-docs
-Documentation and guides for Carbon Fields, wrapped as the WordPress theme behind http://carbonfields.net/
+Carbon Fields - Docs
+====================
+
+Documentation and guides for [Carbon Fields](http://carbonfields.net/).
