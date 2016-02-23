@@ -10,7 +10,7 @@ So for example, the following code would go in your theme functions.php (if buil
 <?php
 add_action('carbon_register_fields', 'crb_register_custom_fields');
 function crb_register_custom_fields() {
-	include_once(dirname(__FILE__) . 'includes/post-meta.php');
+	include_once(dirname(__FILE__) . '/includes/post-meta.php');
 }
 ```
 

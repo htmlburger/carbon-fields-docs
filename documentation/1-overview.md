@@ -6,6 +6,6 @@ The library supports PHP 5.3+ and uses PHP namespaces.
 
 The main components of the library are:
 
-* **Container** – represents group of fields and controls disposition of the fields in the WordPress administration panel.
-* **Field** – represents single field.
+* **Container** – represents and controls a group of fields.
+* **Field** – represents a single field.
 * **Data Storage** – controls the underlying data storage for field values.
