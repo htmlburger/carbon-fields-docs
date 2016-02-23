@@ -1,0 +1,20 @@
+{
+    "name": "htmlburger/carbon-fields-docs",
+    "description": "Documentation and guides for Carbon Fields, http://carbonfields.net/",
+    "keywords": ["carbon", "carbon fields", "docs", "documentation", "guides", "guide"],
+    "homepage": "https://github.com/htmlburger/carbon-fields-docs",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "htmlBurger",
+            "email": "info@htmlburger.com"
+        },
+        {
+            "name": "Marin Atanasov",
+            "email": "contact@marinatanasov.com"
+        }
+    ],
+    "require": {},
+    "autoload": {}
+}
