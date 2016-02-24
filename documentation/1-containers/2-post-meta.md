@@ -86,7 +86,7 @@ To access field values you need to use the function `carbon_get_post_meta($id, $
 | `$name`              | The name of the field to be retrieved.                                              |
 | `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
-```
+```php
 <!-- Simple field -->
 <p>Article was published in: <?php echo carbon_get_post_meta(get_the_ID(), 'crb_location'); ?></p>
 
@@ -103,7 +103,7 @@ if ( $slides ) {
 
 You can also use `carbon_get_the_post_meta($name, $type = null)` to access the values for the current post in [The Loop](http://codex.wordpress.org/The_Loop).
 
-```
+```php
 <p>Article was published in: <?php echo carbon_get_the_post_meta('crb_location'); ?></p>
 
 <?php $slides = carbon_get_the_post_meta('crb_slides', 'complex'); ?>

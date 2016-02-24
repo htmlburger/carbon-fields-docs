@@ -42,7 +42,7 @@ To access field values you need to use the function `carbon_get_term_meta($term_
 | `$name`              | The name of the field to be retrieved.                                              |
 | `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
-```
+```php
 <!-- Simple field -->
 <p>Editor of this category: <?php echo carbon_get_term_meta($category->term_id, 'crb_editor'); ?></p>
 

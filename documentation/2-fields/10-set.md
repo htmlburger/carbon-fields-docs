@@ -14,7 +14,7 @@ The method can be called multiple times, in which case the options between the c
 
 Set options as an associative array or a [callback](http://php.net/manual/en/language.types.callable.php).
 
-The method is not indented to be called multiple times – each call will overwrite the previous options.
+The method is not intended to be called multiple times – each call will overwrite the previous options.
 
 `limit_options($count)`
 

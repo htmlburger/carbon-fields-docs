@@ -29,7 +29,7 @@ To access field values you need to use the function `carbon_get_user_meta($user_
 | `$name`              | The name of the field to be retrieved.                                              |
 | `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
-```
+```php
 <!-- Simple field -->
 <?php $author = get_the_author(); ?>
 <p>Author address: <?php echo carbon_get_user_meta($author->ID, 'crb_street'); ?></p>

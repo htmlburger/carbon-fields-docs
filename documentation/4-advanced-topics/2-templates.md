@@ -2,7 +2,7 @@
 
 Carbon Fields are using the [Underscore](http://underscorejs.org/#template) template engine. Each field has a `template` method that prints the Underscore template code.
 
-```
+```php
 use Carbon_Fields\Field\Field;
 
 class Example_Field extends Field {
@@ -18,7 +18,7 @@ class Example_Field extends Field {
 
 Some fields have more than one template – in those cases the extra templates should be printed in separate methods and registered via `add_template($name, $callback)` method.
 
-```
+```php
 use Carbon_Fields\Field\Field;
 
 class Example_Field extends Field {
@@ -56,7 +56,7 @@ Interpolate a value, and have it be HTML-escaped.
 
 The variables that can be used inside a template are added by the `to_json()` PHP method. Here is an example of adding two new variables (rows & height):
 
-```
+```php
 // Textarea Field PHP Class
 class Textarea_Field extends Field {
 	protected $height = 170;

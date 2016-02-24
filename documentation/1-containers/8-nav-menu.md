@@ -109,7 +109,7 @@ function crb_nav_menu_link_attributes($atts, $item, $args, $depth) {
 
 Both of the above examples will result in:
 
-```
+```php
 <div class="menu-main-menu-container">
 	<ul id="menu-main-menu" class="menu">
 		<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23">
