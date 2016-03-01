@@ -6,9 +6,13 @@ The set field creates a list of tick-able options (checkboxes). This field enabl
 
 `add_options($options)`
 
-Add an associative array with options or a [callback](http://php.net/manual/en/language.types.callable.php).
+Add an associative array with options.
 
 The method can be called multiple times, in which case the options between the calls will be appended (instead of overwritten).
+
+If the old options are a [callback](http://php.net/manual/en/language.types.callable.php) (and not an array), the callback will be removed in favor of the new options.
+
+If the new options are a [callback](http://php.net/manual/en/language.types.callable.php) (and not an array), the callback will replace the old options.
 
 `set_options($options)`
 
