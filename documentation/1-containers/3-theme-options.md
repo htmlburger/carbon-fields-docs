@@ -5,8 +5,8 @@ Theme option containers are used to add pages with options in the back-end. Fiel
 By default, theme options containers automatically create main page in the admin area menu named **“Theme Options”**. In most cases these default settings are sufficient, but if you need to change the title or the location of a page in the menu, read the **“Multiple option pages”** section below.
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('theme_options', 'Theme Options')
 	->add_fields(array(
@@ -27,8 +27,8 @@ To change the location of your Theme Options page, you use `set_page_parent($par
 Below you see sample code for creating three theme option containers:
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 // Default options page
 Container::make('theme_options', 'Basic Options')
@@ -67,8 +67,8 @@ To change the icon of your Theme Options page, you use `set_icon($icon)`, where 
 Below you see an example for setting up the icon of the theme options page:
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('theme_options', 'Basic Options')
 	->set_icon('dashicons-carrot')

@@ -3,7 +3,7 @@
 Carbon Fields are using the [Underscore](http://underscorejs.org/#template) template engine. Each field has a `template` method that prints the Underscore template code.
 
 ```php
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Field;
 
 class Example_Field extends Field {
 	// Main template
@@ -19,7 +19,7 @@ class Example_Field extends Field {
 Some fields have more than one template – in those cases the extra templates should be printed in separate methods and registered via `add_template($name, $callback)` method.
 
 ```php
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Field;
 
 class Example_Field extends Field {
 	function admin_init() {

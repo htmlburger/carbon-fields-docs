@@ -3,8 +3,8 @@
 Comment meta containers add extra fields to the comment edit screens. Field data is stored separately for each comment as comment meta (see [add_comment_meta](http://codex.wordpress.org/Function_Reference/add_comment_meta)).
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('comment_meta', 'Comment Information')
 	->add_fields(array(

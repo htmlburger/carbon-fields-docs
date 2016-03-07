@@ -5,8 +5,8 @@ Nav Menu containers are used to extend the Nav Menu edit screens with additional
 ##### NB! Complex fields are currently not supported within this container.
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('nav_menu', 'Menu Settings')
 	->add_fields(array(

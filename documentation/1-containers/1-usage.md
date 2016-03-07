@@ -5,8 +5,8 @@ Container is a group of custom fields and display options. Containers are displa
 Containers have a title, which must be **unique** across the whole WordPress instance.
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Custom Data')
 	->show_on_post_type('page')

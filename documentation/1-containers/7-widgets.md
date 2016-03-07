@@ -16,8 +16,8 @@ The `front_end($args, $instance)` method is responsible for rendering your widge
 After you define your class, it is important that you register your new widget during the `widgets_init` action.
 
 ```php
-use Carbon_Fields\Widget\Widget;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Widget;
+use Carbon_Fields\Field;
 
 class ThemeWidgetExample extends Widget {
 	// Register widget function. Must have the same name as the class

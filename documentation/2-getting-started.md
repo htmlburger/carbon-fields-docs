@@ -22,8 +22,8 @@ Within this file, you can create your custom containers with preferred fields.
 
 ```php
 <?php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 ```
 
 and after that you can define your containers and fields, as shown in the [Containers -> Usage](http://carbonfields.net/docs/containers-usage/) examples.

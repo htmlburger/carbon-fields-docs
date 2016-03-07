@@ -3,8 +3,8 @@
 User meta containers add extra fields to the user edit screens. Field data is stored separately for each user as user meta (see [add_user_meta](http://codex.wordpress.org/Function_Reference/add_user_meta)).
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('user_meta', 'Address')
 	->add_fields(array(

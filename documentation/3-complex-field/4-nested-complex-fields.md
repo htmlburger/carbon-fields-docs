@@ -5,8 +5,8 @@ Complex fields can be nested.
 The following will define a container that creates multiple slides and allows positioning of multiple text fragments on each slide:
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Slider Data')
 	->show_on_post_type('post')

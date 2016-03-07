@@ -31,7 +31,7 @@ Allows client code to change labels for this complex field. The following items 
 Example usage:
 
 ```php
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Field;
 use Carbon_Fields\Field\Complex_Field;
 
 $employees_labels = array(

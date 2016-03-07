@@ -3,8 +3,8 @@
 Term meta containers are used to extend the term edit screens with additional fields. Field data is stored separately for each term, using the default term meta functionality for WordPress 4.4 and higher. For WordPress versions prior to 4.4, data is stored in a custom table (`$wpdb->termmeta`).
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('term_meta', 'Category Properties')
 	->show_on_taxonomy('category')

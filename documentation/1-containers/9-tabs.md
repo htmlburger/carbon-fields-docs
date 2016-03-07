@@ -5,8 +5,8 @@ The tabs allow you to group multiple fields under different tab panels using the
 Tabs can be used on every container type. Example:
 
 ```php
-use Carbon_Fields\Container\Container;
-use Carbon_Fields\Field\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
 Container::make('post_meta', __('User Settings'))
 	->show_on_post_type( 'page' )
