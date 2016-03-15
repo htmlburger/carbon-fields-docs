@@ -19,15 +19,14 @@ Carbon Fields - Docs
 * [Association](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/12-association.md)
 * [File](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/13-file.md)
 * [Image](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/14-image.md)
-* [Attachment](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/15-attachment.md)
-* [Map](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/16-map.md)
-* [Separator](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/17-separator.md)
-* [Sidebar](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/18-sidebar.md)
-* [Choose Sidebar](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/19-choose-sidebar.md)
-* [Header Scripts](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/20-header-scripts.md)
-* [Footer Scripts](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/21-footer-scripts.md)
-* [HTML](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/22-html.md)
-* [Gravity Form](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/23-gravity-form.md)
+* [Map](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/15-map.md)
+* [Separator](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/16-separator.md)
+* [Sidebar](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/17-sidebar.md)
+* [Choose Sidebar](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/18-choose-sidebar.md)
+* [Header Scripts](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/19-header-scripts.md)
+* [Footer Scripts](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/20-footer-scripts.md)
+* [HTML](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/21-html.md)
+* [Gravity Form](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/22-gravity-form.md)
 
 ---
 
