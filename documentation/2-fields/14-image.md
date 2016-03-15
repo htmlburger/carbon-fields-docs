@@ -1,10 +1,10 @@
 # Image
 
-Renders a text input with URL and image upload button. The built-in WordPress file handling interface is used.
+Renders an image upload button with a preview thumbnail of the uploaded image. The built-in WordPress file handling interface is used.
 
 Supported image formats are: `jpg`, `jpeg`, `gif`, `png` and `bmp`.
 
-This field type stores the URL of the image.
+This field type stores the **ID** of the selected image.
 
 ### Setup methods
 

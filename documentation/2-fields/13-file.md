@@ -1,8 +1,8 @@
 # File
 
-Renders a text input with URL and file upload button. The built-in WordPress file handling interface is used.
+Renders a file upload field with a preview thumbnail of the uploaded file. The built-in WordPress file handling interface is used.
 
-This field type stores the **URL** of the selected file.
+This field type stores the **ID** of the selected file.
 
 ### Setup methods
 
