@@ -31,12 +31,11 @@ To access field values you need to use the function `carbon_get_user_meta($user_
 
 ```php
 <!-- Simple field -->
-<?php $author = get_the_author(); ?>
-<p>Author address: <?php echo carbon_get_user_meta($author->ID, 'crb_street'); ?></p>
+<p>Author address: <?php echo carbon_get_user_meta(get_the_author_meta('ID'), 'crb_street'); ?></p>
 
 <!-- Complex field -->
 <?php 
-$phone_numbers = carbon_get_user_meta($author->ID, 'crb_phone_numbers', 'complex');
+$phone_numbers = carbon_get_user_meta(get_the_author_meta('ID'), 'crb_phone_numbers', 'complex');
 foreach ($phone_numbers as $phone) {
 	echo $phone['country_code'] . '-' . $phone['number'];
 }
