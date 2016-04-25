@@ -16,7 +16,7 @@ In this context:
 	* For the `taxonomy` `type`, you can use `category`, `post_tag` or any other registered custom taxonomy. 
 	* The `subtype` is not used for the `user` and `comment` types.
 
-Defaults to `array('type' => 'post', 'post_type' => 'post')`
+Defaults to `array(array('type' => 'post', 'post_type' => 'post'))`
 
 `set_max($max)`
 
