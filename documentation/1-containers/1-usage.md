@@ -23,3 +23,46 @@ To create a new Container, you just use the container `make` method `Container::
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `$type`   | Identifier of the container type (accepted values are `post_meta`, `term_meta`, `user_meta`, `comment_meta`, `nav_menu` and `theme_options`). |
 | `$title`  | Unique title of the container.                                                                                                                |
+
+
+## Verify the plugin has been installed
+
+When Carbon-Fields is used as a plugin, and can be deactivated by the user, it is recommended to protect your theme/plugin code, by having a fallback functions, in case someone has deactivated the Carbon-Fields plugin, and you have code that depends on the `carbon_get_` functions. Here is a snippet, that needs to be loaded after the plugin:
+
+```
+if ( ! function_exists( 'carbon_get_post_meta' ) ) {
+	function carbon_get_post_meta( $id, $name, $type = null ) {
+		return false;
+	}	
+}
+
+if ( ! function_exists( 'carbon_get_the_post_meta' ) ) {
+	function carbon_get_the_post_meta( $name, $type = null ) {
+		return false;
+	}	
+}
+
+if ( ! function_exists( 'carbon_get_theme_option' ) ) {
+	function carbon_get_theme_option( $name, $type = null ) {
+		return false;
+	}	
+}
+
+if ( ! function_exists( 'carbon_get_term_meta' ) ) {
+	function carbon_get_term_meta( $id, $name, $type = null ) {
+		return false;
+	}	
+}
+
+if ( ! function_exists( 'carbon_get_user_meta' ) ) {
+	function carbon_get_user_meta( $id, $name, $type = null ) {
+		return false;
+	}	
+}
+
+if ( ! function_exists( 'carbon_get_comment_meta' ) ) {
+	function carbon_get_comment_meta( $id, $name, $type = null ) {
+		return false;
+	}	
+}
+```
