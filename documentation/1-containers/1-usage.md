@@ -29,7 +29,7 @@ To create a new Container, you just use the container `make` method `Container::
 
 When Carbon-Fields is used as a plugin, and can be deactivated by the user, it is recommended to protect your theme/plugin code, by having a fallback functions, in case someone has deactivated the Carbon-Fields plugin, and you have code that depends on the `carbon_get_` functions. Here is a snippet, that needs to be loaded after the plugin:
 
-```
+```php
 if ( ! function_exists( 'carbon_get_post_meta' ) ) {
 	function carbon_get_post_meta( $id, $name, $type = null ) {
 		return false;
