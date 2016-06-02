@@ -55,25 +55,33 @@ Allows you to change the number of characters, visible from the comment text in 
 
 Allows you to modify the available options of the relationship / association field with name `{name}` from the `{post_type}` post type.
 
-For example, if you want to filter the page post type options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options_crb_relationship_post_page`
+For example, if you want to filter the page post type options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options__crb_relationship_post_page`
+
+**Note:** The double underscore `__` is intended because the {name} of the field is automatically prefixed with one underscore, and the other underscore is part of the filter name.
 
 *(filter)* `carbon_relationship_options_{name}_taxonomy_{taxonomy}` `($options)`
 
 Allows you to modify the available options of the relationship / association field with name `{name}` from the `{taxonomy}` taxonomy.
 
-For example, if you want to filter the category taxonomy options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options_crb_relationship_taxonomy_category`
+For example, if you want to filter the category taxonomy options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options__crb_relationship_taxonomy_category`
+
+**Note:** The double underscore `__` is intended because the {name} of the field is automatically prefixed with one underscore, and the other underscore is part of the filter name.
 
 *(filter)* `carbon_relationship_options_{name}_user` `($options)`
 
 Allows you to modify the available options of the relationship / association field with name `{name}` that are users.
 
-For example, if you want to filter the users options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options_crb_relationship_user`
+For example, if you want to filter the users options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options__crb_relationship_user`
+
+**Note:** The double underscore `__` is intended because the {name} of the field is automatically prefixed with one underscore, and the other underscore is part of the filter name.
 
 *(filter)* `carbon_relationship_options_{name}_comment` `($options)`
 
 Allows you to modify the available options of the relationship / association field with name `{name}` that are comments.
 
-For example, if you want to filter the comments options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options_crb_relationship_comment`
+For example, if you want to filter the comments options of the `crb_relationship` field, you would use the following filter: `carbon_relationship_options__crb_relationship_comment`
+
+**Note:** The double underscore `__` is intended because the {name} of the field is automatically prefixed with one underscore, and the other underscore is part of the filter name.
 
 *(filter)* `carbon_relationship_options` `($options, $name)`
 
