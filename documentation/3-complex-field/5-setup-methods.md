@@ -26,7 +26,7 @@ Maximum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
 Allows client code to change labels for this complex field. The following items are accepted:
 
 * `plural_name` — the plural label. Default is `“entries”`
-* singular_name — the singular label. Default is `“entry”`
+* `singular_name` — the singular label. Default is `“entry”`
 
 Example usage:
 
