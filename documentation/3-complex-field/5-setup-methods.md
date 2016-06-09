@@ -2,7 +2,7 @@
 
 You can use the following methods to setup and customize the complex field.
 
-`add_fields( $fields )`
+`add_fields($fields)`
 
 This method is identical to Container add_fields method, where `$fields` is an array of fields.
 
@@ -47,4 +47,38 @@ Field::make('complex', 'crb_employee_data')
 		Field::make('image', 'image'),
 		Field::make('rich_text', 'description'),
 	))
+```
+
+`set_header_template($template)`
+
+Allows for an Underscore template to be used in the fields group header.
+
+The passed `$template` can also be a [callback](http://php.net/manual/en/language.types.callable.php).
+
+Example usage:
+
+```php
+->add_fields('passenger', array(
+    Field::make('text', 'name'),
+    Field::make('text', 'years'),
+))
+->set_header_template('
+    <# if (name) { #>
+        Passenger: {{ name }} {{ years ? "(" + years + ")" : "" }}
+    <# } #>
+')
+->add_fields('driver', array(
+    Field::make('text', 'name'),
+    Field::make('text', 'drivers_license_id'),
+    Field::make('image', 'picture'),
+))
+->set_header_template('
+    <# if (name && drivers_license_id) { #>
+        <# if (picture) { #>
+                <img src="{{ _models.picture.get("url") }}" width="18" height="18">
+        <# } #>
+
+        Driver: {{ name }}, {{ drivers_license_id }}
+    <# } #>
+')
 ```
