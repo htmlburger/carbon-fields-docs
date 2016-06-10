@@ -22,6 +22,14 @@ Applied to the template html before putting it into the admin footer.
 
 Same as `carbon_template`, but you can specify a template name.
 
+### Theme Options Container
+
+*(filter)* `carbon_{container-title}_button_label` `($label)`
+
+Allows you to modify the button label of the theme options container. The filter name is based on the container's title. For example, the filter name for a container with a title of `Theme Options` would be `carbon_theme_options_button_label`. Passes the following parameter:
+
+* *string* `$label` The unfiltered button label.
+
 ### Relationship & Association Fields
 
 *(filter)* `carbon_relationship_title` `($title, $name, $id, $type, $subtype)`
