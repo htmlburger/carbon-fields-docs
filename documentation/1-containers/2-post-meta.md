@@ -24,9 +24,9 @@ Containers may be assigned to posts from specific categories or taxonomies:
 
 #### Pages and subpages
 
-Show container on a specific page, identified by path, for example: `"parent-page/sub-page"`:
+Show container on a specific page, identified by path or ID, for example: `"parent-page/sub-page"`:
 
-`->show_on_page($page_path)`
+`->show_on_page($page_path|$page_id)`
 
 Show container on all **subpages** of a specific page, identified by path, for example: `"parent-page"`:
 
