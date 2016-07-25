@@ -6,12 +6,12 @@ You can use the following methods to setup and customize the complex field.
 
 This method is identical to Container add_fields method, where `$fields` is an array of fields.
 
-`set_layout($layout = table | list)` *Deprecated*
+`set_layout($layout)`
 
 There are two layouts available for displaying a complex field:
 
-* `Complex_Field::LAYOUT_TABLE` *(default)* – lists groups as rows. Each field in the group is displayed in a new line with the label first and the user control after it.
-* `Complex_Field::LAYOUT_LIST` – lists groups as rows and their fields as a columns.
+* `grid` *(default)* – lists the complex groups as a grid. Each field in the group is displayed in a new line with the label first and the user control after it.
+* `tabbed` – groups are displayed as tabs. If the group has a label, it will be displayed in the tabs navigation. The fields style is similar to the grid layout.
 
 `set_min($min)`
 
