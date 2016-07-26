@@ -74,10 +74,6 @@ Example usage:
 ))
 ->set_header_template('
     <# if (name && drivers_license_id) { #>
-        <# if (picture) { #>
-                <img src="{{ _models.picture.get("url") }}" width="18" height="18">
-        <# } #>
-
         Driver: {{ name }}, {{ drivers_license_id }}
     <# } #>
 ')
