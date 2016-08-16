@@ -8,10 +8,15 @@ This method is identical to Container add_fields method, where `$fields` is an a
 
 `set_layout($layout)`
 
-There are two layouts available for displaying a complex field:
+There are 3 layouts available for displaying a complex field:
 
-* `grid` *(default)* – lists the complex groups as a grid. Each field in the group is displayed in a new line with the label first and the user control after it.
-* `tabbed` – groups are displayed as tabs. If the group has a label, it will be displayed in the tabs navigation. The fields style is similar to the grid layout.
+* `grid` *(default)* – lists the complex groups as a grid. Each field in the group is displayed in a new line with the label first and the form controls after it
+* `tabbed-horizontal` – groups are displayed as horizontal tabs
+* `tabbed-vertical` - groups are displayed as vertical tabs
+
+For tabbed layouts the group label will be displayed in the tabs navigation.
+
+Tabbed layouts are intended to clean up the user interface of field-heavy pages.
 
 `set_min($min)`
 
