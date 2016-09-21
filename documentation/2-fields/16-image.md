@@ -16,6 +16,6 @@ Set the allowed files type. Short mime types are also supported (`audio`, `video
 
 Set the type of the stored value. *(defaults to `id`)*
 
-You can also `url` to store the URL of the image instead of the ID.
+You can also set the type to `url` to store the URL of the image instead of it's ID.
 
 `Field::make("image", "crb_employee_photo", "Photo")`
