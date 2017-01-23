@@ -18,6 +18,10 @@ For tabbed layouts the group label will be displayed in the tabs navigation.
 
 Tabbed layouts are intended to clean up the user interface of field-heavy pages.
 
+`set_collapsed($collapsed)`
+
+Change the groups' initial visual collapse state. Must be `boolean`. Defaults to `false`.
+
 `set_min($min)`
 
 Minimum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
