@@ -8,7 +8,8 @@ This field type stores the **ID** of the selected file.
 
 `set_type($mime_type)`
 
-Set the allowed files type. Short mime types are also supported (`audio`, `video`, `image`).
+Set the allowed file type as a `string` or an `array` of types. Short mime types are also supported (`audio`, `video`, `image`).  
+Any mime in the list of acceptable file extensions for upload to the WordPress Media can be used. You can read more [here](https://codex.wordpress.org/Plugin_API/Filter_Reference/upload_mimes).
 
 `set_value_type($value_type)`
 
