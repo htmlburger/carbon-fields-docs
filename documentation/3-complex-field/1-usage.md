@@ -9,7 +9,7 @@ Field::make('complex', 'crb_slide')->add_fields(array(
 ))
 ```
 
-The example above shows how to make a slide show. We crated a single complex field named `slide`, to which we attached one group of fields that represents a single slide – `title` and `photo`. The user will be able to add multiple rows of title and photo, thus creating a list of slides for the slide show.
+The example above shows how to make a slide show. We created a single complex field named `slide`, to which we attached one group of fields that represents a single slide – `title` and `photo`. The user will be able to add multiple rows of title and photo, thus creating a list of slides for the slide show.
 
 A more advanced usage of the complex field is shown below:
 
