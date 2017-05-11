@@ -55,4 +55,4 @@ foreach ($authors as $author) {
 ?>
 ```
 
-After saving, the `carbon_after_save_term_meta` hook is called, which allows you to hook additional functionality after saving. It accepts the `$term_id` parameter, which is the `term_id` of the taxonomy term that was updated.
+After saving, the `carbon_fields_term_meta_container_saved` hook is called, which allows you to hook additional functionality after saving. It accepts the `$term_id` parameter, which is the `term_id` of the taxonomy term that was updated.

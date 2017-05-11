@@ -1,6 +1,6 @@
 # Getting Started
 
-In order to register your fields properly, you need to use the `carbon_register_fields` action hook.
+In order to register your fields properly, you need to use the `carbon_fields_register_fields` action hook.
 
 The recommended way to do this is to include your files with custom fields in a function, hooked to that action.
 
@@ -8,7 +8,7 @@ So for example, the following code would go in your theme functions.php (if buil
 
 ```php
 <?php
-add_action('carbon_register_fields', 'crb_register_custom_fields');
+add_action('carbon_fields_register_fields', 'crb_register_custom_fields');
 function crb_register_custom_fields() {
 	include_once(dirname(__FILE__) . '/includes/post-meta.php');
 }

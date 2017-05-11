@@ -11,12 +11,12 @@ use Carbon_Fields\Field;
 Container::make('post_meta', __('User Settings'))
 	->show_on_post_type( 'page' )
 	->add_tab(__('Profile'), array(
-		Field::make('text', '_crb_first_name', 'First Name'),
-		Field::make('text', '_crb_last_name', 'Last Name'),
-		Field::make('text', '_crb_position', 'Position'),
+		Field::make('text', 'crb_first_name', 'First Name'),
+		Field::make('text', 'crb_last_name', 'Last Name'),
+		Field::make('text', 'crb_position', 'Position'),
 	))
 	->add_tab(__('Notification'), array(
-		Field::make('text', '_crb_email', 'Notification Email'),
-		Field::make('text', '_crb_phone', 'Phone Number'),
+		Field::make('text', 'crb_email', 'Notification Email'),
+		Field::make('text', 'crb_phone', 'Phone Number'),
 	));
 ```

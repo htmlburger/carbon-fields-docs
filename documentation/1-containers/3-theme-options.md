@@ -101,4 +101,4 @@ To retrieve field values from a theme options container, you need to use the fun
 <p>
 ```
 
-After saving, the `carbon_after_save_theme_options` hook is called, which allows you to hook additional functionality after saving.
+After saving, the `carbon_fields_theme_options_container_saved` hook is called, which allows you to hook additional functionality after saving.

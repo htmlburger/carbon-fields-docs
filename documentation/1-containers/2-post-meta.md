@@ -109,10 +109,10 @@ You can also use `carbon_get_the_post_meta($name, $type = null)` to access the v
 <?php $slides = carbon_get_the_post_meta('crb_slides', 'complex'); ?>
 ```
 
-After saving, the `carbon_after_save_post_meta` hook is called, which allows you to hook additional functionality after saving. It accepts the `$post_id` parameter, which is the ID of the post being updated. Example:
+After saving, the `carbon_fields_post_meta_container_saved` hook is called, which allows you to hook additional functionality after saving. It accepts the `$post_id` parameter, which is the ID of the post being updated. Example:
 
 ```php
-add_action('carbon_after_save_post_meta', 'crb_after_save_event');
+add_action('carbon_fields_post_meta_container_saved', 'crb_after_save_event');
 function crb_after_save_event($post_id) {
 	if ( get_post_type($post_id) !== 'crb_event' ) {
 		return false;

@@ -6,10 +6,10 @@ If the [Gravity Forms](http://www.gravityforms.com/) plugin is not installed or 
 
 `Field::make("gravity_form", "crb_gravity_form", "Select a Form")`
 
-There is a `crb_gravity_form_options` filter which you can use to override the options that are passed to the select field. Example usage:
+There is a `carbon_fields_gravity_form_options` filter which you can use to override the options that are passed to the select field. Example usage:
 
 ```php
-add_filter('crb_gravity_form_options', 'crb_my_gravity_form_options');
+add_filter('carbon_fields_gravity_form_options', 'crb_my_gravity_form_options');
 function crb_my_gravity_form_options($options) {
 	//change the default "No Form" text
 	$options[0] = 'Do not show any form';

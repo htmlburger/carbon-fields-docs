@@ -42,4 +42,4 @@ foreach ($phone_numbers as $phone) {
 ?>
 ```
 
-After saving, the `carbon_after_save_user_meta` hook is called, which allows you to hook additional functionality after saving. It accepts the `$user_id` parameter, which is the ID of the user that was updated.
+After saving, the `carbon_fields_user_meta_container_saved` hook is called, which allows you to hook additional functionality after saving. It accepts the `$user_id` parameter, which is the ID of the user that was updated.
