@@ -4,61 +4,7 @@ Custom Field containers are used to extend the post edit screens with additional
 
 ### Visibility options
 
-Custom fields containers are very flexible in terms of display options. You can select specific post type they show on, as well as category, format, parent, etc. A list of all options is displayed below:
-
-#### Post type
-
-`->show_on_post_type('page')`
-
-You can also show a single container on multiple post types, as seen below:
-
-`->show_on_post_type(array('page', 'my_custom_post_type', 'post'))`
-
-#### Categories and custom taxonomies
-
-Containers may be assigned to posts from specific categories or taxonomies:
-
-`->show_on_category($category_slug)`
-
-`->show_on_taxonomy_term($term_slug, $taxonomy)`
-
-#### Pages and subpages
-
-Show container on a specific page, identified by path or ID, for example: `"parent-page/sub-page"`:
-
-`->show_on_page($page_path|$page_id)`
-
-Show container on all **subpages** of a specific page, identified by path, for example: `"parent-page"`:
-
-`->show_on_page_children($parent_page_path)`
-
-#### Page templates
-
-Containers may be assigned to pages using specific template:
-
-`->show_on_template($template_path)`
-
-The `$template_path` is the name of the template file (or array of template file names), for example: `"about_us.php"` or `array("templates/contact.php", "about_us.php")`
-
-You can also hide the container from pages using specific template:
-
-`->hide_on_template($template_path)`
-
-where the `$template_path` is the name of the template file (or array of template file names), as in `show_on_template()` above.
-
-#### Post formats
-
-To display a container on posts with specific post format, use:
-
-`->show_on_post_format($post_format)`
-
-#### Level
-
-To display a container on hierarchical posts from a specific level, use:
-
-`->show_on_level($level)`
-
-where `$level` is the level of hierarchy depth, starting from 1 and increasing when going into further hierarchy depth.
+// TODO
 
 ### Container position
 

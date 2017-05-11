@@ -7,30 +7,16 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('term_meta', 'Category Properties')
-	->show_on_taxonomy('category')
+	->when('term_taxonomy', '=', 'category')
 	->add_fields(array(
 		Field::make('color', 'crb_title_color'),
 		Field::make('image', 'crb_thumb'),
 	));
 ```
 
-By default the term meta containers are displayed on `category` terms, but you can select specific taxonomies they show on using the method `show_on_taxonomy($taxonomy)`, where:
-
-| Parameter | Description                                                           |
-| --------- | --------------------------------------------------------------------- |
-| `$taxonomy` | Can be either name of a single taxonomy or an array of taxonomy names |
-
 ### Visibility options
 
-Custom fields containers are very flexible in terms of display options. You can select specific post type they show on, as well as category, format, parent, etc. A list of all options is displayed below:
-
-#### Level
-
-To display a container on hierarchical terms from a specific level, use:
-
-`->show_on_level($level)`
-
-where `$level` is the level of hierarchy depth, starting from 1 and increasing when going into further hierarchy depth.
+// TODO
 
 ### Accessing field values
 

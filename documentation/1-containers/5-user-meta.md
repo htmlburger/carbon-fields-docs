@@ -13,11 +13,9 @@ Container::make('user_meta', 'Address')
 	));
 ```
 
-By default the user meta containers are displayed for all users of all roles, but you can select specific user roles they show on using the method `show_on_user_role($role)`, where:
+### Visibility options
 
-| Parameter   | Description                                                   |
-| ----------- | ------------------------------------------------------------- |
-| `$role`     | Can be either name of a single role or an array of role names |
+// TODO
 
 ### Accessing field values
 

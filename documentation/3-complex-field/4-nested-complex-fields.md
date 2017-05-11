@@ -9,7 +9,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Slider Data')
-	->show_on_post_type('post')
+	->when('post_type', '=', 'post')
 	->add_fields(array(
 		Field::make('complex', 'crb_slides')->add_fields(array(
 			Field::make('image', 'image'),
