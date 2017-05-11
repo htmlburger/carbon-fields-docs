@@ -17,7 +17,6 @@ Carbon Fields - Docs
 * [Select](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/10-select.md)
 * [Radio](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/11-radio.md)
 * [Set](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/12-set.md)
-* [Relationship](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/13-relationship.md)
 * [Association](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/14-association.md)
 * [File](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/15-file.md)
 * [Image](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/2-fields/16-image.md)

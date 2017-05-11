@@ -16,7 +16,7 @@ function crb_register_custom_fields() {
 
 This example assumes that you have created a file `post-meta.php` in the `/includes` subdirectory of your theme/plugin.
 
-Within this file, you can create your custom containers with preferred fields.
+Within this file, you can create your custom containers with the desired fields.
 
 ##### NB! Don’t forget the `use` statements in the beginning of the custom fields files. Each file should begin with:
 
