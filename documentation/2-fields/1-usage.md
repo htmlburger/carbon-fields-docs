@@ -10,7 +10,7 @@ The type of the field. This parameter should be valid class name of a field. For
 
 `$name`
 
-Name of the field. Used as a key when stored in the database and for you to retrieve its value. Please note, that all fields in a Custom Field Container have their names automatically prefixed with an underscore (e.g. `bgcolor` becomes `_bgcolor`). For more information why, see [here](http://codex.wordpress.org/Function_Reference/add_post_meta#Hidden_Custom_Fields).
+Name of the field. Used as a key when stored in the database and for you to retrieve its value. Please note, that all fields in a Custom Field Container have their names automatically prefixed with an underscore when stored (e.g. `bgcolor` becomes `_bgcolor`). For more information why, see [here](http://codex.wordpress.org/Function_Reference/add_post_meta#Hidden_Custom_Fields).
 
 `$label` *(optional)*
 
@@ -66,7 +66,7 @@ You can set the width to fields that are next to each other and they will align 
 
 ### Classes
 
-Custom field classes can be added using the `add_class()` method, for example:
+Custom field classes can be added using the `set_classes()` method, for example:
 
 `Field::make(...)->set_classes( 'my-custom-class' )`
 
