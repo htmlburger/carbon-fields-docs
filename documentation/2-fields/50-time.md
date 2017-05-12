@@ -2,9 +2,9 @@
 
 Renders a time picker field.
 
-`Field::make('time', 'opens_at', 'Opening time')`
+`Field::make( 'time', 'opens_at', 'Opening time' )`
 
-### Setup Methods
+### Config methods
 
 `set_time_format` **(string)**
 
@@ -29,20 +29,20 @@ Here is a list of allowed Format Characters:
 |s        |Seconds, without leading zeros      |     0-59|
 |ss       |Seconds, with leading zeros         |    00-59|
 
-	Field::make('time', 'time', 'Time')
-		->set_time_format('hh:mm:ss tt')
+	Field::make( 'time', 'time', 'Time' )
+		->set_time_format( 'hh:mm:ss tt' )
 
 ----
 `set_interval_step` **(array)**
 
 Sets the interval step for *hours*, *minutes* and *seconds*.
 
-	Field::make('time', 'time', 'Time')
-		->set_interval_step(array(
+	Field::make( 'time', 'time', 'Time' )
+		->set_interval_step( array(
 			'hour'   => '2',
 			'minute' => '10',
 			'second' => '10',
-		))
+		) )
 
 ----
 `set_restraints` **(array)**
@@ -67,21 +67,21 @@ Sets restraints for *Hours*, *Minutes*, *Seconds*.
 |microsecMin     |The minimum microsecond allowed for all dates  |        0|
 |microsecMax     |The maximum microsecond allowed for all dates  |      999|
 
-	Field::make('time', 'time', 'Time')
-		->set_restraints(array(
+	Field::make( 'time', 'time', 'Time' )
+		->set_restraints( array(
 			'hourMin' => '9',
 			'hourMax' => '18',
-		))
+		) )
 
 ----
 `set_timepicker_options` **(array)**
 
 With this method you can set other time picker options. 
 
-	Field::make('time', 'time', 'Time')
-		->set_timepicker_options(array(
+	Field::make( 'time', 'time', 'Time' )
+		->set_timepicker_options( array(
 			'currentText' => 'Current time',
-		))
+		) )
 	
 You can find a full list of all available options here: 
 

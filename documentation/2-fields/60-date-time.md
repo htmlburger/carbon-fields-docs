@@ -2,7 +2,7 @@
 
 Renders a time and date picker field.
 
-`Field::make('date_time', 'eta', 'Estimated time of arrival')`
+`Field::make( 'date_time', 'eta', 'Estimated time of arrival' )`
 
 ### Setup Methods
 
@@ -31,20 +31,20 @@ Here is a list of allowed Format Characters:
 
 **The default date format is mm/dd/yyyy (e.g. 07/09/2014), you can change it using the `set_timepicker_options` method.**
 
-	Field::make('date_time', 'date_and_time', 'Date & Time')
-		->set_time_format('hh:mm:ss tt')
+	Field::make( 'date_time', 'date_and_time', 'Date & Time' )
+		->set_time_format( 'hh:mm:ss tt' )
 
 ----
 `set_interval_step` **(array)**
 
 Sets the interval step for *hours*, *minutes* and *seconds*.
 
-	Field::make('date_time', 'date_and_time', 'Time')
-		->set_interval_step(array(
+	Field::make( 'date_time', 'date_and_time', 'Time' )
+		->set_interval_step( array(
 			'hour'   => '2',
 			'minute' => '10',
 			'second' => '10',
-		))
+		) )
 
 ----
 `set_restraints` **(array)**
@@ -72,22 +72,22 @@ Sets restraints for *Hours*, *Minutes*, *Seconds* and *Dates*
 |minDate         |Date object of the minimum datetime allowed.   |        0|
 |maxDate         |Date object of the maximum datetime allowed.   |       31|
 
-	Field::make('date_time', 'date_and_time', 'Date & Time')
-		->set_restraints(array(
+	Field::make( 'date_time', 'date_and_time', 'Date & Time' )
+		->set_restraints( array(
 			'hourMin' => '9',
 			'hourMax' => '18',
-		))
+		) )
 
 ----
 `set_timepicker_options` **(array)**
 
 With this method you can set other time and date picker options. 
 
-	Field::make('date_time', 'date_and_time', 'Date & Time')
-		->set_timepicker_options(array(
+	Field::make( 'date_time', 'date_and_time', 'Date & Time' )
+		->set_timepicker_options( array(
 			'currentText' => 'Current time',
 			'dateFormat' => 'yy-mm-dd',
-		))
+		) )
 	
 You can find a full list of all available options here: 
 

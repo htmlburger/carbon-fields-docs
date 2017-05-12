@@ -6,4 +6,4 @@ Displays a text area, the contents of which will be automatically printed before
 
 Useful for printing *Google Analytics* tracking code, or user-defined javascript.
 
-`Field::make("footer_scripts", "crb_footer_script")`
+`Field::make( 'footer_scripts', 'crb_footer_script' )`

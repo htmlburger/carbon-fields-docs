@@ -6,12 +6,12 @@ Term meta containers are used to extend the term edit screens with additional fi
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make('term_meta', 'Category Properties')
-	->where('term_taxonomy', '=', 'category')
-	->add_fields(array(
-		Field::make('color', 'crb_title_color'),
-		Field::make('image', 'crb_thumb'),
-	));
+Container::make( 'term_meta', 'Category Properties' )
+	->where( 'term_taxonomy', '=', 'category' )
+	->add_fields( array(
+		Field::make( 'color', 'crb_title_color' ),
+		Field::make( 'image', 'crb_thumb' ),
+	) );
 ```
 
 ### Accessing field values
@@ -30,7 +30,7 @@ To access field values you need to use the function `carbon_get_term_meta( $term
 <!-- Complex field -->
 <?php 
 $authors = carbon_get_term_meta( $category->term_id, 'crb_authors' );
-foreach ($authors as $author) {
+foreach ( $authors as $author ) {
 	echo $author['name'];
 }
 ?>

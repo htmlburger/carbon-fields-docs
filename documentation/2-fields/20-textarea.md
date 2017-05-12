@@ -4,7 +4,7 @@ Multiline text input with HTML allowed.
 
 `Field::make( 'textarea', 'crb_meta_description' )`
 
-### Setup methods
+### Config methods
 
 `set_rows( $rows = 5 )`
 

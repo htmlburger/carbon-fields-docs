@@ -2,7 +2,7 @@
 
 Creates a select box with pre-defined options.
 
-### Setup methods
+### Config methods
 
 `add_options( $options )`
 
@@ -19,7 +19,7 @@ The method is not intended to be called multiple times – each call will overwr
 ##### NB! If you provide an indexed array with no key values, the default indexes **(0, 1, 2 …)** of the elements will be used.
 
 ```php
-Field::make( "select", "crb_content_align", "Text alignment" )
+Field::make( 'select', 'crb_content_align', 'Text alignment' )
 	->add_options( array(
 		'left' => 'Left',
 		'center' => 'Center',

@@ -1,6 +1,6 @@
 # Multiple groups
 
-To add multiple groups of fields you use `add_fields($name, $fields)`, where:
+To add multiple groups of fields you use `add_fields( $name, $fields )`, where:
 
 `$name`
 
@@ -11,20 +11,20 @@ Unique name of the group.
 Numeric array of fields.
 
 ```php
-Field::make('complex', 'crb_job')
-	->add_fields('driver', array(
-		Field::make('text', 'name'),
-		Field::make('text', 'drivers_license_id'),
+Field::make( 'complex', 'crb_job' )
+	->add_fields( 'driver', array(
+		Field::make( 'text', 'name' ),
+		Field::make( 'text', 'drivers_license_id' ),
 	))
-	->add_fields('teacher', array(
-		Field::make('image', 'name'),
-		Field::make('image', 'years_of_experience'),
+	->add_fields( 'teacher', array(
+		Field::make( 'image', 'name' ),
+		Field::make( 'image', 'years_of_experience' ),
 	))
 ```
 
-Each call to `add_fields($name, $fields)` creates a new group and adds it to the complex field.
+Each call to `add_fields( $name, $fields )` creates a new group and adds it to the complex field.
 
-You can also give each group a label different from their name using `add_fields($name, $label, $fields)`.
+You can also give each group a label different from their name using `add_fields( $name, $label, $fields )`.
 
 All data stored in a complex field is returned as a two-dimensional array with the following format:
 

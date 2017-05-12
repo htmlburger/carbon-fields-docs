@@ -8,16 +8,17 @@ The following will define a container that creates multiple slides and allows po
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make('post_meta', 'Slider Data')
-	->where('post_type', '=', 'post')
-	->add_fields(array(
-		Field::make('complex', 'crb_slides')->add_fields(array(
-			Field::make('image', 'image'),
-			Field::make('complex', 'slide_fragments')->add_fields(array(
-				Field::make('text', 'fragment_text'),
-				Field::make('select', 'fragment_position')
-					->add_options(array('Top Left', 'Top Right', "Bottom Left", "Bottom Right")),
-			))
+Container::make( 'post_meta', 'Slider Data' )
+	->where( 'post_type', '=', 'post' )
+	->add_fields( array(
+		Field::make( 'complex', 'crb_slides' )->add_fields( array(
+			Field::make( 'image', 'image' ),
+			Field::make( 'complex', 'slide_fragments' )
+				->add_fields( array(
+					Field::make( 'text', 'fragment_text' ),
+					Field::make( 'select', 'fragment_position' )
+						->add_options( array('Top Left', 'Top Right', "Bottom Left", "Bottom Right") ),
+				))
 		)),
 	));
 ```

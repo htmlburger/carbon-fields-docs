@@ -6,4 +6,4 @@ Displays a text area, the contents of which will be automatically printed in the
 
 Useful for printing user-defined javascript, as well as styles, meta tags, etc.
 
-`Field::make("header_scripts", "crb_header_script")`
+`Field::make( 'header_scripts', 'crb_header_script' )`
