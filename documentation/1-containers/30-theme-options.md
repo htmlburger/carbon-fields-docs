@@ -81,7 +81,7 @@ Container::make('theme_options', 'Basic Options')
 
 ### Accessing field values
 
-To retrieve field values from a theme options container, you need to use the function `carbon_get_theme_option($name, $type = null)`, where:
+To retrieve field values from a theme options container, you need to use the function `carbon_get_theme_option( $name )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
@@ -89,11 +89,11 @@ To retrieve field values from a theme options container, you need to use the fun
 | `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
 ```php
-<p>Copyright <?php echo carbon_get_theme_option('crb_copyright'); ?></p>
+<p>Copyright <?php echo carbon_get_theme_option( 'crb_copyright' ); ?></p>
 <p>
 	Office locations:
 	<?php 
-	$address_lines = carbon_get_theme_option('crb_addresses', 'complex');
+	$address_lines = carbon_get_theme_option( 'crb_addresses' );
 	foreach ($address_lines as $line) {
 		echo $line . '<br/>';
 	}

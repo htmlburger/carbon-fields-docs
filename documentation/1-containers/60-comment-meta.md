@@ -15,13 +15,12 @@ Container::make('comment_meta', 'Comment Information')
 
 ### Accessing field values
 
-To access field values you need to use the function ```carbon_get_comment_meta($comment_id, $name, $type = null)```, where:
+To access field values you need to use the function `carbon_get_comment_meta( $comment_id, $name )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
 | `$comment_id`        | Comment ID where your value was entered.                                            |
 | `$name`              | The name of the field to be retrieved.                                              |
-| `$type` *(optional)* | If the field you want to retrieve is of type complex, you need to pass `"complex"`. |
 
 ```php
 <?php $comments = get_comments(array(
@@ -29,14 +28,14 @@ To access field values you need to use the function ```carbon_get_comment_meta($
 ));
 
 foreach ( $comments as $comment ) {
-	$comment_additional_info = carbon_get_comment_meta($comment->comment_ID, 'crb_comment_additional_info');
-	$comment_rating	= carbon_get_comment_meta($comment->comment_ID, 'crb_comment_rating');
+	$comment_additional_info = carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_additional_info' );
+	$comment_rating	= carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_rating' );
 
-	if ( !empty($comment_additional_info) ) {
+	if ( ! empty( $comment_additional_info ) ) {
 		echo $comment->comment_ID . ' info: '. $comment_additional_info;
 	}
 
-	if ( !empty($comment_rating) ) {
+	if ( ! empty( $comment_rating ) ) {
 		echo 'Rating: ' . $comment_rating;
 	}
 }

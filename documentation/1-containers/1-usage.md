@@ -1,6 +1,7 @@
 # Usage
 
-A Container is a group of custom fields and display options. Containers are displayed on different parts of the backend, according to their type and display options.
+A Container is a group of custom fields and display options. Containers are displayed on different parts of the backend, according to their type and display options.  
+By default, all containers are visible on all entities based on their type (posts for `post_meta`, terms for `term_meta` etc.) and are editable by all users who can access the related edit screen.
 
 To create a new container you must specify a type and a title:
 

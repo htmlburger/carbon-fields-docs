@@ -24,7 +24,7 @@ The priority within the context where the container should show (`'high'` (defau
 
 ### Accessing field values
 
-To access field values you need to use the function `carbon_get_post_meta($id, $name, $type = null)`, where:
+To access field values you need to use the function `carbon_get_post_meta( $id, $name )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
@@ -34,11 +34,11 @@ To access field values you need to use the function `carbon_get_post_meta($id, $
 
 ```php
 <!-- Simple field -->
-<p>Article was published in: <?php echo carbon_get_post_meta(get_the_ID(), 'crb_location'); ?></p>
+<p>Article was published in: <?php echo carbon_get_post_meta( get_the_ID(), 'crb_location' ); ?></p>
 
 <!-- Complex field -->
 <?php 
-$slides = carbon_get_post_meta(get_the_ID(), 'crb_slides', 'complex');
+$slides = carbon_get_post_meta( get_the_ID(), 'crb_slides' );
 if ( $slides ) {
 	foreach ($slides as $slide) {
 		echo $slide['image'];
@@ -47,12 +47,12 @@ if ( $slides ) {
 ?>
 ```
 
-You can also use `carbon_get_the_post_meta($name, $type = null)` to access the values for the current post in [The Loop](http://codex.wordpress.org/The_Loop).
+You can also use `carbon_get_the_post_meta( $name )` to access the values for the current post in [The Loop](http://codex.wordpress.org/The_Loop).
 
 ```php
-<p>Article was published in: <?php echo carbon_get_the_post_meta('crb_location'); ?></p>
+<p>Article was published in: <?php echo carbon_get_the_post_meta( 'crb_location' ); ?></p>
 
-<?php $slides = carbon_get_the_post_meta('crb_slides', 'complex'); ?>
+<?php $slides = carbon_get_the_post_meta( 'crb_slides' ); ?>
 ```
 
 After saving, the `carbon_fields_post_meta_container_saved` hook is called, which allows you to hook additional functionality after saving. It accepts the `$post_id` parameter, which is the ID of the post being updated. Example:
@@ -64,10 +64,10 @@ function crb_after_save_event($post_id) {
 		return false;
 	}
 
-	$event_date = carbon_get_post_meta($post_id, 'crb_event_date');
+	$event_date = carbon_get_post_meta( $post_id, 'crb_event_date' );
 	if ( $event_date ) {
-		$timestamp = strtotime($event_date);
-		update_post_meta($post_id, '_crb_event_timestamp', $timestamp);
+		$timestamp = strtotime( $event_date );
+		update_post_meta( $post_id, '_crb_event_timestamp', $timestamp );
 	}
 }
 ```

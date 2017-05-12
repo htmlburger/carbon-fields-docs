@@ -1,22 +1,16 @@
-# Nav Menu
+# Nav Menu Item
 
-Nav Menu containers are used to extend the Nav Menu edit screens with additional fields. Field data is stored separately for each post as post meta.
-
-##### NB! Complex fields are currently not supported within this container.
+Nav Menu Item containers are used to extend the Nav Menu edit screens with additional fields. Field data is stored separately for each link as post meta.
 
 ```php
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make('nav_menu', 'Menu Settings')
-	->add_fields(array(
-		Field::make('color', 'crb_color'),
+Container::make( 'nav_menu_item', 'Menu Settings' )
+	->add_fields( array(
+		Field::make( 'color', 'crb_color' ),
 	));
 ```
-
-### Visibility options
-
-Custom Nav Menu containers does not support any visibility options. All containers are visible in all menu items.
 
 ### Container position
 
@@ -24,13 +18,12 @@ Containers are rendered in the order they are initialized.
 
 ### Accessing field values
 
-Since each menu entry is a post from post type `"nav_menu_item"` with status `"publish"`, the values can be accessed with the function `carbon_get_post_meta($nav_menu_item_ID, $name)`, where:
+Since each menu entry is a post from post type `"nav_menu_item"` with status `"publish"`, the values can be accessed with the function `carbon_get_post_meta( $nav_menu_item_ID, $name )`, where:
 
 | Parameter            | Description                                                   |
 | -------------------- | ------------------------------------------------------------- |
 | `$nav_menu_item_ID`  | Nav Menu Item Post ID where your value was entered.           |
 | `$name`              | The name of the field to be retrieved.                        |
-| `$type` *(optional)* | Complex fields are not yet supported.                         |
 
 ### Custom Walkers or Walker Filters
 
@@ -67,7 +60,7 @@ class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
 
 
 		// Adding a custom color to the links
-		$crb_color = carbon_get_post_meta($item->ID, 'crb_color');
+		$crb_color = carbon_get_post_meta( $item->ID, 'crb_color' );
 		$atts['style'] = ! empty( $crb_color ) ? 'color: ' . $crb_color . '; ' : '';
 		// --- END --- "Adding a custom color to the links"
 
@@ -98,9 +91,9 @@ Here is a Filter example, doing the same thing:
 
 ```php
 // Adding a custom color to the links
-add_filter('nav_menu_link_attributes', 'crb_nav_menu_link_attributes', 10, 4);
-function crb_nav_menu_link_attributes($atts, $item, $args, $depth) {
-	$crb_color = carbon_get_post_meta($item->ID, 'crb_color');
+add_filter( 'nav_menu_link_attributes', 'crb_nav_menu_link_attributes', 10, 4 );
+function crb_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+	$crb_color = carbon_get_post_meta( $item->ID, 'crb_color' );
 	$atts['style'] = ! empty( $crb_color ) ? 'color: ' . $crb_color . '; ' : '';
 
 	return $atts;

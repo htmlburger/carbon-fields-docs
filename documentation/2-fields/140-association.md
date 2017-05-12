@@ -40,31 +40,24 @@ Field::make('association', 'crb_association')
 
 ```php
 /* Get the association data as an array */
-carbon_get_post_meta($id, $name, 'association'); 
+carbon_get_post_meta( $id, $name );
 /*
 The above example returns: 
 array( 
 	0 => array(
-		'id' => 20, 
-		'type' => 'post', 
-		'post_type' => 'page'
+		'object_id' => 20,
+		'type' => 'post',
+		'subtype' => 'page',
+		'value' => 'post:page:20',
 	), 
 	1 => array(
-		'id' => 16, 
-		'type' => 'term', 
-		'taxonomy' => 'category'
+		'object_id' => 16,
+		'type' => 'term',
+		'subtype' => 'category',
+		'value' => 'term:category:16',
 	)
 )
 */
-
-/* Get the association data as plain array with IDs */
-carbon_get_post_meta($id, $name); 
-/* 
-The above example returns: 
-array( 
-	0 => 20,
-	1 => 16
-)
 ```
 
 ### Example

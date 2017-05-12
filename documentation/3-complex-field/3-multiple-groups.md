@@ -31,18 +31,18 @@ All data stored in a complex field is returned as a two-dimensional array with t
 ```php
 array (
 	0 => array (
-		'_type' => '_photograph',
+		'_type' => 'photograph',
 		'caption' => 'Lorem Ipsum',
 		'image' => 'http://example.com/wp-content/uploads/2012/12/Jellyfish.jpg',
 	),
 	1 => array (
-		'_type' => '_movie',
+		'_type' => 'movie',
 		'length' => '1:56',
 		'title' => 'Dolor sit amet',
 		'video' => 'http://example.com/wp-content/uploads/2012/12/video_new.mp4',
 	),
 	2 => array (
-		'_type' => '_photograph',
+		'_type' => 'photograph',
 		'caption' => 'Consectetur adipiscing elit',
 		'image' => 'http://example.com/wp-content/uploads/2012/12/Koala.jpg',
 	),
