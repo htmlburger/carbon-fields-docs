@@ -6,6 +6,7 @@ Creating an admin section which allows admins to enter a link for Facebook and T
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'text', 'crb_social_url_facebook', 'Facebook URL' )
 			->set_help_text( 'Enter your Facebook page url' ),
@@ -36,12 +37,13 @@ foreach ( $services as $type => $label ) {
 
 ### Allowing users to enter any number of social links
 
-Similar to the one above, but this time we will allow admins to enter any number of links.
+Similar to the one above, but we will allow admins to enter any number of links.
 
 ##### Field Definition
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'complex', 'crb_social_urls', 'Social Links' )
 			->add_fields( array(
@@ -69,12 +71,13 @@ foreach ( $social_links as $link ) {
 
 ### Allowing users to specify an image for every link
 
-Expanding Example 2 by allowing admins to specify an image instead of a label.
+Similar to the one above, but we will allow admins to specify an image instead of a label.
 
 ##### Field Definition
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'complex', 'crb_social_urls', 'Social Links' )
 			->add_fields( array(
