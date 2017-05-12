@@ -14,10 +14,6 @@ Container::make('term_meta', 'Category Properties')
 	));
 ```
 
-### Visibility options
-
-// TODO
-
 ### Accessing field values
 
 To access field values you need to use the function `carbon_get_term_meta( $term_id, $name )`, where:

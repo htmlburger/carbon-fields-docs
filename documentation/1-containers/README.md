@@ -14,7 +14,7 @@ Carbon Fields - Docs
 * [User Meta](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/50-user-meta.md)
 * [Comment Meta](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/60-comment-meta.md)
 * [Widgets](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/70-widgets.md)
-* [Nav Menu](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/80-nav-menu.md)
+* [Nav Menu Item](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/80-nav-menu.md)
 * [Tabs](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-containers/90-tabs.md)
 
 ---

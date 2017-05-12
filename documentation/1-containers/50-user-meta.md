@@ -13,10 +13,6 @@ Container::make('user_meta', 'Address')
 	));
 ```
 
-### Visibility options
-
-// TODO
-
 ### Accessing field values
 
 To access field values you need to use the function `carbon_get_user_meta( $user_d, $name )`, where:

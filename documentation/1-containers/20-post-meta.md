@@ -2,10 +2,6 @@
 
 Custom Field containers are used to extend the post edit screens with additional fields. Field data is stored separately for each post as post meta (see [add_post_meta](http://codex.wordpress.org/Function_Reference/add_post_meta)).
 
-### Visibility options
-
-// TODO
-
 ### Container position
 
 More information about the position options can be found in the [add_meta_box()](https://codex.wordpress.org/Function_Reference/add_meta_box) function.
