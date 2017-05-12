@@ -11,8 +11,8 @@ _Note: chaining conditions behaves exactly like a normal php `if` statement with
 
 | Parameter              | Description                                                                                                   |
 |------------------------|---------------------------------------------------------------------------------------------------------------|
-| `$condition`           | A condition type name as a string (refer to the `Condition Types` page)                                       |
-| `$comparison_operator` | Can be one of the following: `=`, `!=`, `>`, `>=`, `<`, `<=`, `IN`, `NOT IN`, `CUSTOM`                        |
+| `$condition`           | A condition type name as a string (refer to the `Container Types` page)                                       |
+| `$comparison_operator` | Can be one of the following: `'='`, `'!='`, `'>'`, `'>='`, `'<'`, `'<='`, `'IN'`, `'NOT IN'`, `'CUSTOM'`      |
 | `$value`               | The value to check against. `IN` and `NOT IN` operators expect an array; `CUSTOM` operator expects a callable |
 
 # The `CUSTOM` comparison operator
