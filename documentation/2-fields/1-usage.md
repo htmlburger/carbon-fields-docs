@@ -24,7 +24,7 @@ The factory greatly simplifies the field creation process, since it returns the 
 Field::make('image', 'crb_customer_photo', 'Photo')
 
 // Here the title is automatically set to "Custom Sidebar"
-Field::make('choose_sidebar', 'crb_custom_sidebar')
+Field::make('sidebar', 'crb_custom_sidebar')
 
 // Method chaining
 Field::make('select', 'crb_color')

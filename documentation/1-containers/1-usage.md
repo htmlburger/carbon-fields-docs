@@ -9,7 +9,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Custom Data')
-	->when('post_type', '=', 'page')
+	->where('post_type', '=', 'page')
 	->add_fields(array(
 		Field::make('map', 'crb_location')->set_position(37.423156, -122.084917, 14),
 		Field::make('sidebar', 'crb_custom_sidebar'),

@@ -9,7 +9,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('post_meta', __('User Settings'))
-	->when('post_type', '=', 'page')
+	->where('post_type', '=', 'page')
 	->add_tab(__('Profile'), array(
 		Field::make('text', 'crb_first_name', 'First Name'),
 		Field::make('text', 'crb_last_name', 'Last Name'),

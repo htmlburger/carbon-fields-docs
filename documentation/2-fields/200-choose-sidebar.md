@@ -30,7 +30,7 @@ array(
 The example below shows how to create a Choose Sidebar field with custom sidebar options and help text:
 
 ```php
-Field::make("choose_sidebar", "crb_custom_sidebar", __('Sidebar'))
+Field::make("sidebar", "crb_custom_sidebar", __('Sidebar'))
 	->help_text('Select which sidebar to show in this page, or click "Add New" to create a new one')
 	->set_sidebar_options(array(
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -43,7 +43,7 @@ Field::make("choose_sidebar", "crb_custom_sidebar", __('Sidebar'))
 The following example sets different sidebar options for each of the specified sidebars:
 
 ```php
-Field::make( 'choose_sidebar', 'crb_custom_sidebar', __('Sidebar') )
+Field::make( 'sidebar', 'crb_custom_sidebar', __('Sidebar') )
 	->set_sidebar_options(array(
 		'default' => array(
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',

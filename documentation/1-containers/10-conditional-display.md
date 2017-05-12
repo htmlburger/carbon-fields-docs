@@ -4,37 +4,71 @@ Containers are very flexible in terms of display options. By default, containers
 
 Adding a display condition to a container is done by using one of the following methods:
 
-- `->when( $condition, $comparison_operator, $value )` - adds a basic condition
-- `->or_when( $condition, $comparison_operator, $value )` - adds a basic condition with an `OR` relation to other conditions
+- `->where( $condition, $comparison_operator, $value )` - adds a condition with an __AND__ relation to other conditions
+- `->or_where( $condition, $comparison_operator, $value )` - adds a condition with an __OR__ relation to other conditions
 
 _Note: chaining conditions behaves exactly like a normal php `if` statement with multiple conditions._
 
+| Parameter              | Description                                                                                                   |
+|------------------------|---------------------------------------------------------------------------------------------------------------|
+| `$condition`           | A condition type name as a string (refer to the `Condition Types` page)                                       |
+| `$comparison_operator` | Can be one of the following: `=`, `!=`, `>`, `>=`, `<`, `<=`, `IN`, `NOT IN`, `CUSTOM`                        |
+| `$value`               | The value to check against. `IN` and `NOT IN` operators expect an array; `CUSTOM` operator expects a callable |
+
+# The `CUSTOM` comparison operator
+
+This operator allows you to supply a callable which must return a boolean value whether this condition is fulfilled or not. This way you have more control over how a value is compared if the built-in functionality does not suit your needs.
+
+For example, if you wish to have a container only display on pages on even levels in the hierarchy your code will look like this:
+
+```php
+Container::make( 'post_meta', 'Custom Data' )
+	->where( 'post_type', '=', 'page' )
+	->where( 'post_level', 'CUSTOM', function( $post_level ) {
+		return ( $post_level % 2 === 0 );
+	} );
+```
+
 # Examples
 
-## Showing a Post Meta Container on all pages
+##### Showing a Post Meta Container on all pages
 
-	Container::make('post_meta', 'Custom Data')
-	    ->when('post_type', '=', 'page')
-	    ->add_fields(array(...));
+```php
+Container::make( 'post_meta', 'Custom Data' )
+    ->where( 'post_type', '=', 'page' )
+    ->add_fields( array( ... ) );
+```
 
-## Nested logic
+##### Showing a User Meta Container only if the current user is an administrator or editor
 
-In order to achieve nested display logic all of the above methods also support the following syntax:
-	
-	Container::make( 'post_meta', 'Custom Data' )
-		->when( function( $lvl1_condition ) {
-			$lvl1_condition->when( $condition, $comparison_operator, $value );
-			$lvl1_condition->when( function( $lvl2_condition ) {
-				... // can be nested infinitely
-			} );
-			...
+```php
+Container::make( 'post_meta', 'Custom Data' )
+    ->where( 'current_user_role', 'IN', array( 'administrator', 'editor' ) )
+    ->add_fields( array( ... ) );
+```
+
+##### Nested logic
+
+In order to achieve nested display logic the `when()` and `or_when()` methods also support being invoked with a `callable`:
+
+```php
+Container::make( 'post_meta', 'Custom Data' )
+	->where( function( $lvl1_condition ) {
+		$lvl1_condition->where( $condition, $comparison_operator, $value );
+		$lvl1_condition->where( function( $lvl2_condition ) {
+			... // can be nested infinitely
 		} );
+		...
+	} );
+```
 
 For example, to have a container visible on all post types if the current user is an `administrator` OR only on the `page` post type if the current user is an `editor` your code will look like this:
-	
-	Container::make( 'post_meta', 'Custom Data' )
-		->when( 'current_user_role', '=', 'administrator' )
-		->or_when( function( $condition ) {
-			$condition->when( 'current_user_role', '=', 'editor' );
-			$condition->when( 'post_type', '=', 'page' );
-		} );
+
+```php
+Container::make( 'post_meta', 'Custom Data' )
+	->where( 'current_user_role', '=', 'administrator' )
+	->or_where( function( $condition ) {
+		$condition->where( 'current_user_role', '=', 'editor' );
+		$condition->where( 'post_type', '=', 'page' );
+	} );
+```

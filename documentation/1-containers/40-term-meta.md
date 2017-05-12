@@ -7,7 +7,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make('term_meta', 'Category Properties')
-	->when('term_taxonomy', '=', 'category')
+	->where('term_taxonomy', '=', 'category')
 	->add_fields(array(
 		Field::make('color', 'crb_title_color'),
 		Field::make('image', 'crb_thumb'),
