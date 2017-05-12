@@ -8,7 +8,7 @@ More information about the position options can be found in the [add_meta_box()]
 
 #### Context
 
-The part of the page where the container should be shown (`'normal'` (default), `'advanced'`, or `'side'`)
+The part of the page where the container should be shown (`'normal'` (default), `'advanced'`, `'side'` or `'carbon_fields_after_title'`)
 
 `->set_context('normal')`
 
