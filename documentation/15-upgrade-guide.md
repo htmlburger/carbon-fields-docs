@@ -31,7 +31,7 @@
 -> `carbon_fields_field_activated`
 
 ###### `carbon_after_save_nav_menu_item`
--> `carbon_fields_nav_menu_item_saved`
+-> `carbon_fields_nav_menu_item_container_saved`
 
 ###### `carbon_after_save_post_meta`
 -> `carbon_fields_post_meta_container_saved`
