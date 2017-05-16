@@ -65,9 +65,6 @@
 ###### `crb_gravity_form_options`
 -> `carbon_fields_gravity_form_options`
 
-###### `carbon_custom_sidebar_default_options`
--> `carbon_fields_custom_sidebar_default_options`
-
 ###### `carbon_association_comment_length`
 -> `carbon_fields_association_field_comment_length`
 
@@ -79,15 +76,6 @@
 
 ###### `carbon_association_options`
 -> `carbon_fields_association_field_options`
-
-###### `carbon_map_api_key`
--> `carbon_fields_map_field_api_key`
-
-###### `carbon_map_url`
--> `carbon_fields_map_field_api_url`
-
-###### `carbon_custom_sidebar_options`
--> `carbon_fields_sidebar_options`
 
 ###### `carbon_{container_title}_button_label`
 -> `carbon_fields_{container_title}_button_label`
@@ -104,8 +92,17 @@
 ###### `carbon_relationship_options`
 -> `carbon_fields_association_field_options`
 
-###### `carbon_fields_map_field_api_key`
--> `carbon_fields_association_field_comment_length`
+###### `carbon_map_api_key`
+-> `carbon_fields_map_field_api_key`
+
+###### `carbon_map_url`
+-> `carbon_fields_map_field_api_url`
+
+###### `carbon_custom_sidebar_default_options`
+-> `carbon_fields_sidebar_default_options`
+
+###### `carbon_custom_sidebar_options`
+-> `carbon_fields_sidebar_options`
 
 ###### `carbon_custom_sidebars`
 -> `carbon_fields_sidebars`

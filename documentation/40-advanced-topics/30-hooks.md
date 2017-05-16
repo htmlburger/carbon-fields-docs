@@ -154,7 +154,7 @@ Allows you to completely replace the Google Maps JavaScript API URL.
 
 ### Sidebar Field
 
-*(filter)* `carbon_fields_custom_sidebar_default_options` `( $options )`
+*(filter)* `carbon_fields_sidebar_default_options` `( $options )`
 
 Allows you to modify the default sidebar options for sidebars created through Carbon Fields.
 
