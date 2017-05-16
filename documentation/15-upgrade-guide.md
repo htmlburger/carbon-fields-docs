@@ -1,5 +1,6 @@
 # 2.0 Upgrade Guide
 
+- __All extending fields must be reworked. Refer to the Extending documentation page.__
 - Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example.
 - __WARNING:__ `theme_options` containers are now visible to __ALL__ users by default. In order to achieve previous behavior call `->where( 'current_user_capability', '=', 'manage_options' )` on all theme options container definitions
 - Review all `user_meta` and `theme_options` containers - they are now editable for all users who can access the page (e.g. subscribers will be able to edit their own meta but not anyone else's). Add `->where( 'current_user_capability', '=', 'manage_options' )` if you wish only admin-level users to be able to access the containers.
