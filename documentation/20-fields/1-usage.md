@@ -103,3 +103,28 @@ Field::make( 'text', 'crb_facebook', 'Facebook URL' )
 		)
 	) ),
 ```
+
+##### NB: Conditional logic fields are scoped to the current field's siblings.
+
+In order to depend on parent fields, prefix their names with `parent.`. For example, to depend on the `crb_in_production` field which is 2 levels up, use `parent.parent.crb_in_production`.
+
+Example:
+
+```php
+Field::make( 'checkbox', 'crb_in_production', 'In Production' ),
+
+Field::make( 'complex', 'crb_makes', 'Makes' )
+	->add_fields( array(
+		Field::make( 'complex', 'models', 'Models' )
+			->add_fields( array(
+				Field::make( 'text', 'name', 'Name' ),
+				Field::make( 'text', 'price', 'Price' )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'parent.parent.crb_in_production',
+							'value' => 'yes',
+						)
+					) )
+			) )
+	) ),
+```
