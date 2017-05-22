@@ -98,3 +98,17 @@ Field::make( 'association', 'crb_association' )
 		),
 	) )
 ```
+
+### Value Format
+
+```php
+array(
+	array(
+		'value': 'post:page:10',
+		'object_id': 10,
+		'type': 'post',
+		'subtype': 'page',
+	),
+	...
+)
+```
