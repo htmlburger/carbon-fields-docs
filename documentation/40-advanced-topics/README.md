@@ -5,10 +5,12 @@ Carbon Fields - Docs
 
 ### Advanced Topics
 
-* [WPML Support](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/1-wpml-support.md)
-* [Extending](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/10-extending.md)
-* [Templates](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/20-templates.md)
+* [Queries](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/1-queries.md)
+* [Updating Values](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/5-updating-values.md)
+* [WPML Support](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/10-wpml-support.md)
+* [Extending](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/20-extending.md)
 * [Hooks](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/30-hooks.md)
+* [Custom Validation](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/40-custom-validation.md)
 
 ---
 
