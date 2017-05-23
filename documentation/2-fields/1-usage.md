@@ -79,8 +79,8 @@ The conditional rules are passed in a two-dimensional array and each rule can ha
 | Key       | Description                                                                                           | Type/Value                       | Required |
 | --------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------| -------- |
 | `field` 	| The field name to which the rule is applied. The name should be the same as defined in the container.	| `string`                         | Yes      |
-| `value` 	| The value of the field. It can be an array only when compare is IN or NOT IN.	                        | `string|array`, default: `""`    | No       |
-| `compare` | Operator to test. Possible values are: =, <, >, <=, >=, IN, NOT IN.	                                | `string`, default: `=`           | No       |
+| `value` 	| The value of the field. It can be an array only when compare is IN, NOT IN, INCLUDES or EXCLUDES.	                        | `string|array`, default: `""`    | No       |
+| `compare` | Operator to test. Possible values are: =, <, >, <=, >=, IN, NOT IN, INCLUDES or EXCLUDES.	                                | `string`, default: `=`           | No       |
 
 You can optionally pass the `relation` key and set it to either `AND` (default) or `OR`. It defines the relation, when there is more than one rule.
 
