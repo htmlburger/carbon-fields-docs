@@ -4,6 +4,26 @@ Carbon Fields provide a useful JavaScript API on administration screens with vis
 
 __Note:__ when referring to fields you use a ___Field Name Pattern___ - more information can be found in the Field Name Patterns documentation page.
 
+### API Methods
+
+`api.getFieldValue( fieldName )`
+
+Get a field's value.
+
+`api.setFieldValue( fieldName, value )`
+
+Set a field's value.
+
+`api.addComplexFieldGroup( fieldName[, groupName] )`
+
+Add a group to a complex field. `groupName` is optional when the field does not have defined group names.
+
+`api.removeComplexFieldGroup( fieldName, groupIndex )`
+
+Remove a group from a complex field by it's index.
+
+### Examples
+
 ##### Getting the API object instance
 
 ```js
