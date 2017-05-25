@@ -70,6 +70,12 @@ Custom field classes can be added using the `set_classes()` method, for example:
 
 `Field::make(...)->set_classes( 'my-custom-class' )`
 
+### REST API
+
+Fields can be exposed in WordPress' REST API by using their `show_in_rest()` method:
+
+`Field::make(...)->show_in_rest( $visible = true )`
+
 ### Conditional Logic
 
 You can apply conditional logic to a field, using `set_conditional_logic( $rules )`, to show or hide it based on other field(s) in the same container. The syntax is similar to `meta_query`.
