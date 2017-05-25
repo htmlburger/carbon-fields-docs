@@ -15,7 +15,7 @@
 - `checkbox` field not returns a real boolean value.
 - `carbon_get_*()` methods now always use the appropriate field format (i.e. the `$type` parameter has been removed).
 - `relationship` field removed - use `association` instead.
-- `association` field now returns `array( 'value', 'type', 'subtype', 'object_id' )`.
+- `association` field now returns `array( 'value', 'type', 'subtype', 'id' )`.
 - `set_datepicker_options` method is now `set_picker_options`
 - `set_timepicker_options` method is now `set_picker_options`
 

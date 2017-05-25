@@ -45,13 +45,13 @@ carbon_get_post_meta( $id, $name );
 The above example returns: 
 array( 
 	0 => array(
-		'object_id' => 20,
+		'id' => 20,
 		'type' => 'post',
 		'subtype' => 'page',
 		'value' => 'post:page:20',
 	), 
 	1 => array(
-		'object_id' => 16,
+		'id' => 16,
 		'type' => 'term',
 		'subtype' => 'category',
 		'value' => 'term:category:16',
@@ -105,7 +105,7 @@ Field::make( 'association', 'crb_association' )
 array(
 	array(
 		'value': 'post:page:10',
-		'object_id': 10,
+		'id': 10,
 		'type': 'post',
 		'subtype': 'page',
 	),
