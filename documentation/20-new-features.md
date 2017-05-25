@@ -8,6 +8,7 @@
 - `carbon_get_*` functions no longer require a $type parameter.
 - Added `carbon_set_*( $field_name, $value )` functions which allow you to update field values.
 - Rewrote container conditions. `show_on_*` and `hide_on_*` methods are now deprecated in favor of the new solution. Refer to the Conditional Display documentation page for more information.
+- Added a JavaScript API which allows you to communicate with fields on edit screens.
 - `Field::set_default_value( $default_value )` now works for all fields including complex fields.
 - Added `Hidden_Field`.
 - Added `Field::set_classes( $classes )` and `Container::set_classes( $classes )` methods to allow you to add css classes to fields and containers.

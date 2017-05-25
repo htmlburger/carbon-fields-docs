@@ -48,7 +48,7 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 	// Set the current value of the 'crb_complex' field (which has a single "mytext" child field) to 2 entries
 	api.setFieldValue( 'crb_complex', [
 		{
-			// _type: 'your_group_name_here', // use this to specify a group if you have defined any
+			// _type: 'your_group_name_here', // optional: use only if you've specified group names on field definition
 			mytext: 'Hello'
 		},
 		{

@@ -63,14 +63,12 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 // updating
 carbon_set_post_meta( 10, 'crb_complex', array(
 	array(
-		\Carbon_Fields\VALUE_PROPERTY => '_',
+		// _type: 'your_group_name_here', // optional: use only if you've specified group names on field definition
 		'text' => 'Foo',
 	),
 	array(
-		\Carbon_Fields\VALUE_PROPERTY => '_',
+		// _type: 'your_group_name_here',
 		'text' => 'Bar',
 	),
 ) );
 ```
-
-The `\Carbon_Fields\VALUE_PROPERTY` key acts as the group type and the default type is `'_'`.
