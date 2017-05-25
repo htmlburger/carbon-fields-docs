@@ -11,6 +11,8 @@ Carbon Fields - Docs
 * [Extending](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/20-extending.md)
 * [Hooks](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/30-hooks.md)
 * [Custom Validation](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/40-custom-validation.md)
+* [JavaScript API](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/50-javascript-api.md)
+* [Field Name Patterns](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/4-advanced-topics/60-field-name-patterns.md)
 
 ---
 

@@ -21,7 +21,7 @@ To access field values you need to use the function `carbon_get_term_meta( $term
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
 | `$term_id`           | Term ID where your value was entered.                                               |
-| `$name`              | The name of the field to be retrieved.                                              |
+| `$name`              | The field name pattern of the field to be retrieved.                                              |
 
 ```php
 <!-- Simple field -->

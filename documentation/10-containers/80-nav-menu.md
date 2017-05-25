@@ -23,7 +23,7 @@ Since each menu entry is a post from post type `"nav_menu_item"` with status `"p
 | Parameter            | Description                                                   |
 | -------------------- | ------------------------------------------------------------- |
 | `$nav_menu_item_ID`  | Nav Menu Item Post ID where your value was entered.           |
-| `$name`              | The name of the field to be retrieved.                        |
+| `$name`              | The field name pattern of the field to be retrieved.                        |
 
 ### Custom Walkers or Walker Filters
 

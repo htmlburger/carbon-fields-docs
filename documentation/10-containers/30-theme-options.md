@@ -96,7 +96,7 @@ To retrieve field values from a theme options container, you need to use the fun
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
-| `$name`              | The name of the field to be retrieved.                                              |
+| `$name`              | The field name pattern of the field to be retrieved.                                              |
 
 ```php
 <p>Copyright <?php echo carbon_get_theme_option( 'crb_copyright' ); ?></p>

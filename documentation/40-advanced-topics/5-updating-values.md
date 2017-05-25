@@ -2,6 +2,8 @@
 
 Carbon Fields allow you to update field values programatically through the set of `carbon_set_{container_type}( [$id,] $field_name, $value )` functions.
 
+__Note:__ when referring to fields you use a ___Field Name Pattern___ - more information can be found in the Field Name Patterns documentation page.
+
 ##### Example 1
 
 Setting the value for the `crb_text` post_meta field for the post with id of 10:

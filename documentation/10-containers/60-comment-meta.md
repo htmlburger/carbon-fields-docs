@@ -20,7 +20,7 @@ To access field values you need to use the function `carbon_get_comment_meta( $c
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
 | `$comment_id`        | Comment ID where your value was entered.                                            |
-| `$name`              | The name of the field to be retrieved.                                              |
+| `$name`              | The field name pattern of the field to be retrieved.                                              |
 
 ```php
 <?php $comments = get_comments( array(
