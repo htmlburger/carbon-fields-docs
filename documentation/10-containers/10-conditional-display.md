@@ -15,6 +15,8 @@ _Note: chaining conditions behaves exactly like a normal php `if` statement with
 | `$comparison_operator` | Can be one of the following: `'='`, `'!='`, `'>'`, `'>='`, `'<'`, `'<='`, `'IN'`, `'NOT IN'`, `'CUSTOM'`      |
 | `$value`               | The value to check against. `IN` and `NOT IN` operators expect an array; `CUSTOM` operator expects a callable |
 
+___Note:___ You can use an anonymous function as the `$value` parameter for all comparison operators in order to lazyload the value which can be very useful when evaluating the value is a resource-intensive task.
+
 # The `CUSTOM` comparison operator
 
 This operator allows you to supply a callable which must return a boolean value whether this condition is fulfilled or not. This way you have more control over how a value is compared if the built-in functionality does not suit your needs.
