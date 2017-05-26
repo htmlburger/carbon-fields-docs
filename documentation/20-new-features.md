@@ -1,5 +1,6 @@
 # What's new in 2.0
 
+- Carbon Fields no longer stores serialized values.
 - You can now create queries based on any field including complex fields and on attributes other than field values. Refer to the "Queries" documentation page for more information.
 - Expanded `Field::set_conditional_logic( $conditions )` with the ability to target parent scopes. Refer to the Fields Usage documentation page for more information.
 - Added `INCLUDES` and `EXCLUDES` conditional logic comparison operators which allow you to base your logic on fields which have multiple values (e.g. Set_Field) or text fields (partial text match).
