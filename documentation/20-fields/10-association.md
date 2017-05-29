@@ -36,7 +36,7 @@ Field::make( 'association', 'crb_association' )
 	->allow_duplicates( true )
 ```
 
-##### NB! To get all the association data (each entry containing `id`, `type`, `subtype`) array, you can set the association type in the retrieval functions. Example:
+##### Getting stored values
 
 ```php
 /* Get the association data as an array */
