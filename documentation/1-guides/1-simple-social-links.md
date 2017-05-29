@@ -1,6 +1,6 @@
 # Adding social links to your site's header
 
-Creating an admin section which allows admins to enter a link for Facebook and Twitter for their header (both optional).
+We'll create an admin section which allows admins to enter a link for Facebook and Twitter for their header (both optional).
 
 ### Field Definition
 
