@@ -5,9 +5,12 @@ Carbon Fields - Docs
 
 ### Guides
 
-* [Social Links](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/1-social-links.md)
-* [Sidebar Options](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/10-sidebar-options.md)
-* [Serialized Datastore](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/20-serialized-datastore.md)
+* [Using Field Values](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-using-field-values.md)
+* [Simple Social Links](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/5-simple-social-links.md)
+* [Section-based Layout](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/10-section-layout.md)
+* [Predefined Complex Groups](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/20-predefined-complex-groups.md)
+* [Sidebar Options](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/30-sidebar-options.md)
+* [Serialized Datastore](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/50-serialized-datastore.md)
 
 ---
 
