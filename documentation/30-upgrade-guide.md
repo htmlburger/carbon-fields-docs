@@ -5,7 +5,8 @@
 - Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example.
 - __WARNING:__ `theme_options` containers are now visible to __ALL__ users by default. In order to achieve previous behavior call `->where( 'current_user_capability', '=', 'manage_options' )` on all theme options container definitions
 - Review all `user_meta` and `theme_options` containers - they are now editable for all users who can access the page (e.g. subscribers will be able to edit their own meta but not anyone else's). Add `->where( 'current_user_capability', '=', 'manage_options' )` if you wish only admin-level users to be able to access the containers.
-- `post_meta` containers are now visible on all post types unless you specify a post type. Previously they defaulted to the `post` post type only.
+- `post_meta` containers are now visible on all post types unless you specify one with `where( 'post_type', '=', 'YOURPOSTTYPEHERE')`. Previously they defaulted to the `post` post type only.
+- `term_meta` containers are now visible on all taxonomies unless you specify one with `where( 'term_taxonomy', '=', 'YOURTAXONOMYHERE')`.
 - The deprecated `choose_sidebar` field has been removed. Use `sidebar` instead.
 - The legacy `Association_Field::set_post_type()` method has been removed removed - use `set_types()` instead.
 - `map_with_address` field has been removed. Use `map` instead.
@@ -15,7 +16,7 @@
 - `checkbox` field not returns a real boolean value.
 - `carbon_get_*()` methods now always use the appropriate field format (i.e. the `$type` parameter has been removed).
 - `relationship` field removed - use `association` instead.
-- `association` field now returns `array( 'value', 'type', 'subtype', 'id' )`.
+- `association` field now returns `array( array( 'value', 'type', 'subtype', 'id' ), ... )`.
 - `set_datepicker_options` method is now `set_picker_options`
 - `set_timepicker_options` method is now `set_picker_options`
 

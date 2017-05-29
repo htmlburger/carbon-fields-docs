@@ -2,7 +2,7 @@
 
 1. Browse to your theme directory
 1. Execute the following in your terminal of choice:
-	```
+	```cli
 	composer require htmlburger/carbon-fields
 	```
 1. Add the following to the top of your functions.php file:
