@@ -1,6 +1,7 @@
 # User Meta
 
 User meta containers add extra fields to the user edit screens. Field data is stored separately for each user as user meta (see [add_user_meta](http://codex.wordpress.org/Function_Reference/add_user_meta)).
+Note that by default only users with the `manage_options` capability have access to this container. In order to override this behavior please refer to the `carbon_fields_user_meta_container_admin_only_access` filter in the Hooks section.
 
 ```php
 use Carbon_Fields\Container;

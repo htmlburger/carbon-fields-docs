@@ -3,8 +3,8 @@
 - __Carbon Fields is no longer distributed as a WordPress plugin. To install Carbon Fields use `composer install htmlburger/carbon-fields` in your theme directory and make sure you are including the generated composer autoloader.__
 - __All extending fields must be reworked. Refer to the Extending documentation page.__
 - Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example.
-- __WARNING:__ `theme_options` containers are now visible to __ALL__ users by default. In order to achieve previous behavior call `->where( 'current_user_capability', '=', 'manage_options' )` on all theme options container definitions
-- Review all `user_meta` and `theme_options` containers - they are now editable for all users who can access the page (e.g. subscribers will be able to edit their own meta but not anyone else's). Add `->where( 'current_user_capability', '=', 'manage_options' )` if you wish only admin-level users to be able to access the containers.
+- __WARNING:__ `theme_options` containers are limited to users who have the `manage_options` capability. In order to turn off this behavior to allow custom capability conditions use the `carbon_fields_theme_options_container_admin_only_access` filter.
+- The above applies to user meta containers as well with the filter being `carbon_fields_user_meta_container_admin_only_access`.
 - `post_meta` containers are now visible on all post types unless you specify one with `where( 'post_type', '=', 'YOURPOSTTYPEHERE')`. Previously they defaulted to the `post` post type only.
 - `term_meta` containers are now visible on all taxonomies unless you specify one with `where( 'term_taxonomy', '=', 'YOURTAXONOMYHERE')`.
 - The deprecated `choose_sidebar` field has been removed. Use `sidebar` instead.

@@ -6,7 +6,6 @@ Creating an admin section which allows admins to enter a link for Facebook and T
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'text', 'crb_social_url_facebook', 'Facebook URL' )
 			->set_help_text( 'Enter your Facebook page url' ),
@@ -43,7 +42,6 @@ Similar to the one above, but we will allow admins to enter any number of links.
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'complex', 'crb_social_urls', 'Social Links' )
 			->add_fields( array(
@@ -77,7 +75,6 @@ Similar to the one above, but we will allow admins to specify an image instead o
 
 ```php
 Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_tab( 'Social', array(
 		Field::make( 'complex', 'crb_social_urls', 'Social Links' )
 			->add_fields( array(

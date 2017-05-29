@@ -1,6 +1,7 @@
 # Theme Options
 
 Theme option containers are used to add pages with options in the back-end. Field data is stored as [options](http://codex.wordpress.org/Option_Reference).
+Note that by default only users with the `manage_options` capability have access to this container. In order to override this behavior please refer to the `carbon_fields_theme_options_container_admin_only_access` filter in the Hooks section.
 
 By default, theme options containers automatically create main page in the admin area menu named **“Theme Options”**. In most cases these default settings are sufficient, but if you need to change the title or the location of a page in the menu, read the **“Multiple option pages”** section below.
 
@@ -32,7 +33,6 @@ use Carbon_Fields\Field;
 
 // Default options page
 Container::make( 'theme_options', 'Basic Options' )
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_fields( array(
 		Field::make( 'header_scripts', 'crb_header_script' ),
 		Field::make( 'footer_scripts', 'crb_footer_script' ),
@@ -41,7 +41,6 @@ Container::make( 'theme_options', 'Basic Options' )
 // Add second options page under 'Basic Options'
 Container::make( 'theme_options', 'Social Links' )
 	->set_page_parent( 'Basic Options' ) // title of a top level Theme Options page
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_fields( array(
 		Field::make( 'text', 'crb_facebook_link' ),
 		Field::make( 'text', 'crb_twitter_link' ),
@@ -50,7 +49,6 @@ Container::make( 'theme_options', 'Social Links' )
 // Add third options page under "Appearance"
 Container::make( 'theme_options', 'Customize Background' )
 	->set_page_parent( 'themes.php' ) // identificator of the "Appearance" admin section
-	->where( 'current_user_capability', '=', 'manage_options' )
 	->add_fields( array(
 		Field::make( 'color', 'crb_background_color' ),
 		Field::make( 'image', 'crb_background_image' ),
