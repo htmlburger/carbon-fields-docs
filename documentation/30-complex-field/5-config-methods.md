@@ -60,7 +60,7 @@ Field::make( 'complex', 'crb_employee_data' )
 
 `set_header_template( $template )`
 
-Allows for an Underscore template to be used in the fields group header.
+Allows for a [Lodash template](https://lodash.com/docs/4.17.4#template) to be used in the fields group header.
 
 The passed `$template` can also be a [callback](http://php.net/manual/en/language.types.callable.php).
 
@@ -72,9 +72,9 @@ Example usage:
     Field::make( 'text', 'years' ),
 ) )
 ->set_header_template( '
-    <# if (name) { #>
-        Passenger: {{ name }} {{ years ? "(" + years + ")" : "" }}
-    <# } #>
+    <% if (name) { %>
+        Passenger: <%- name %> <%- years ? "(" + years + ")" : "" %>
+    <% } %>
 ' )
 ->add_fields( 'driver', array(
     Field::make( 'text', 'name' ),
@@ -82,8 +82,8 @@ Example usage:
     Field::make( 'image', 'picture' ),
 ) )
 ->set_header_template( '
-    <# if (name && drivers_license_id) { #>
-        Driver: {{ name }}, {{ drivers_license_id }}
-    <# } #>
+    <% if (name && drivers_license_id) { %>
+        Driver: <%- name %>, <%- drivers_license_id %>
+    <% } %>
 ' )
 ```
