@@ -128,7 +128,7 @@ Field::make( 'complex', 'crb_makes', 'Makes' )
 					->set_conditional_logic( array(
 						array(
 							'field' => 'parent.parent.crb_in_production',
-							'value' => 'yes',
+							'value' => true,
 						)
 					) )
 			) )
