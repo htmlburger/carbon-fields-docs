@@ -51,8 +51,8 @@ $employees_labels = array(
 Field::make( 'complex', 'crb_employee_data' )
 	->setup_labels( $employees_labels )
 	->add_fields( array(
-		Field::make( 'text', 'name')->help_text('Name of employee' ),
-		Field::make( 'text', 'position')->help_text('Position title' ),
+		Field::make( 'text', 'name')->set_help_text('Name of employee' ),
+		Field::make( 'text', 'position')->set_help_text('Position title' ),
 		Field::make( 'image', 'image' ),
 		Field::make( 'rich_text', 'description' ),
 	) )

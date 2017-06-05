@@ -29,7 +29,7 @@ Field::make( 'sidebar', 'crb_custom_sidebar' )
 // Method chaining
 Field::make( 'select', 'crb_color' )
 	->add_options( array('red', 'blue', 'green') )
-	->help_text( 'Pick a color' )
+	->set_help_text( 'Pick a color' )
 ```
 
 All field types originate from a single class named `Field` and inherit the following basic features:
@@ -54,7 +54,7 @@ Help text is used as a hint to the user, who will use the field. It is usually r
 
 You add help text using:
 
-`Field::make(...)->help_text( $text )`
+`Field::make(...)->set_help_text( $text )`
 
 ### Width
 
