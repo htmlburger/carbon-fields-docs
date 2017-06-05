@@ -72,9 +72,9 @@ Custom field classes can be added using the `set_classes()` method, for example:
 
 ### REST API
 
-Fields can be exposed in WordPress' REST API by using their `show_in_rest()` method:
+Fields can be exposed in WordPress' REST API by using their `set_visible_in_rest_api()` method:
 
-`Field::make(...)->show_in_rest( $visible = true )`
+`Field::make(...)->set_visible_in_rest_api( $visible = true )`
 
 ### Conditional Logic
 
