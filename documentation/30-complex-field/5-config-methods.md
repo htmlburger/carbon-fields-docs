@@ -30,6 +30,10 @@ Minimum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
 
 Maximum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
 
+`set_duplicate_groups_allowed( $allowed )`
+
+Set whether the user should be allowed to create duplicate groups. Defaults to `true`.
+
 `setup_labels( $labels )`
 
 Allows client code to change labels for this complex field. The following items are accepted:
