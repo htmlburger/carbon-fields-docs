@@ -27,13 +27,13 @@ Field::make( 'association', 'crb_association' )
 	->set_max( 5 )
 ```
 
-`allow_duplicates( $allow )`
+`set_duplicates_allowed( $allow )`
 
 If enabled will allow the same item to be selected more than once. By default, duplicates are not allowed.
 
 ```php
 Field::make( 'association', 'crb_association' )
-	->allow_duplicates( true )
+	->set_duplicates_allowed( true )
 ```
 
 ##### Getting stored values
