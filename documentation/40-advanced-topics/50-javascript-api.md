@@ -2,6 +2,8 @@
 
 Carbon Fields provide a useful JavaScript API on administration screens with visible containers which you can use to manipulate field values, for example.
 
+__Important:__ Carbon Fields use React + Redux which is why when setting a field's value you must ALWAYS use a "fresh" value rather than a reference to an old one. This is why the api exposes the [immutable](https://github.com/mariocasciaro/object-path-immutable) library (`api.immutable` - you can find example usage below).
+
 __Note:__ when referring to fields you use a ___Field Name Pattern___ - more information can be found in the Field Name Patterns documentation page.
 
 ### API Methods
@@ -58,6 +60,20 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 $(document).on('carbonFields.apiLoaded', function(e, api) {
 	// Set the current value of the 'crb_text' field to "Hello World"
 	api.setFieldValue( 'crb_text', 'Hello World' );
+});
+```
+
+##### Partially updating a field's value
+
+In order to update fields that hold multiple value properties (e.g. Map has `lat`, `lng`, `zoom` and `address`) we must use the immutable library exposed by the API.
+
+In the following example we only want to update the zoom property of the map to 5:
+
+```js
+$(document).on('carbonFields.apiLoaded', function(e, api) {
+	var value = api.getFieldValue( 'crb_map' );
+	value = api.immutable.set( value, 'zoom', 5 );
+	api.setFieldValue( 'crb_map', value );
 });
 ```
 
