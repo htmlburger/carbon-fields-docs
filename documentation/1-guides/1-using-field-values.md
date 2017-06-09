@@ -17,6 +17,10 @@ function crb_attach_theme_options() {
 }
 ```
 
+If you open your administration panel you will see the newly added "Theme Options" section:
+
+![Theme Options admin page](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/using-field-values-1.png)
+
 Then, we'll have to edit the theme's `footer.php` and output the field value:
 
 ```php
@@ -40,11 +44,17 @@ use Carbon_Fields\Container;
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 function crb_attach_post_meta() {
     Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+        ->where( 'post_type', '=', 'post' )
         ->add_fields( array(
             Field::make( 'text', 'crb_venue', 'Venue' ),
         ) );
 }
 ```
+
+If you edit a post you will see the newly added "Post Options" meta box:
+
+![Post Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/using-field-values-2.png)
+
 Then, we'll edit your Loop code like this (most likely found in `index.php`):
 
 ```php

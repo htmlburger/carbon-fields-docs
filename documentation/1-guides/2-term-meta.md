@@ -19,6 +19,10 @@ function crb_attach_term_meta() {
 }
 ```
 
+If you edit a category you will see the newly added "Color" field:
+
+![Term Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/term-meta-1.png)
+
 We now have a new color field available when creating or editing categories.
 Let's add some categories:
 1. "News" with the color #FF0000
@@ -29,12 +33,16 @@ Now let's list your categories in your `footer.php` file:
 
 ```php
 <?php
-$categories = get_categories();
+$categories = get_categories( 'hide_empty=0' );
 echo '<ul>';
 foreach ( $categories as $category ) {
     $color = carbon_get_term_meta( $category->term_id, 'crb_color' );
-    echo '<li><a href="' . get_term_link( $category ) . '" style="color: ' + $color + ';">' . $category->name . '</a></li>';
+    echo '<li><a href="' . get_term_link( $category ) . '" style="color: ' . $color . ';">' . $category->name . '</a></li>';
 }
 echo '</ul>';
 ?>
 ```
+
+Which results in:
+
+![Term Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/term-meta-2.png)
