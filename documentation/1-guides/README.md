@@ -6,6 +6,7 @@ Carbon Fields - Docs
 ### Guides
 
 * [Using Field Values](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-using-field-values.md)
+* [Term Meta](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/2-term-meta.md)
 * [Simple Social Links](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/5-simple-social-links.md)
 * [Section-based Layout](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/10-section-layout.md)
 * [Predefined Complex Groups](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/20-predefined-complex-groups.md)
