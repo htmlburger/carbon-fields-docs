@@ -21,7 +21,7 @@ function crb_attach_term_meta() {
 
 If you edit a category you will see the newly added "Color" field:
 
-![Term Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/term-meta-1.png)
+![Term Options meta box](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/term-meta-1.png)
 
 We now have a new color field available when creating or editing categories.
 Let's add some categories:
@@ -45,4 +45,4 @@ echo '</ul>';
 
 Which results in:
 
-![Term Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/term-meta-2.png)
+![Term Options meta box](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/term-meta-2.png)

@@ -19,7 +19,7 @@ function crb_attach_theme_options() {
 
 If you open your administration panel you will see the newly added "Theme Options" section:
 
-![Theme Options admin page](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/using-field-values-1.png)
+![Theme Options admin page](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/using-field-values-1.png)
 
 Then, we'll have to edit the theme's `footer.php` and output the field value:
 
@@ -53,7 +53,7 @@ function crb_attach_post_meta() {
 
 If you edit a post you will see the newly added "Post Options" meta box:
 
-![Post Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/using-field-values-2.png)
+![Post Options meta box](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/using-field-values-2.png)
 
 Then, we'll edit your Loop code like this (most likely found in `index.php`):
 

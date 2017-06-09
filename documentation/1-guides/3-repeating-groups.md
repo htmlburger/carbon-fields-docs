@@ -26,11 +26,11 @@ function crb_attach_post_meta() {
 
 If you edit a page you will see the newly added "Slides" field:
 
-![Post Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/repeating-groups-1.png)
+![Post Options meta box](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/repeating-groups-1.png)
 
 We now have a repeating group that allows us to create any number of slides with an image, a title and a title color. Edit your desired page and create a few entries so we have something to list in our template like so:
 
-![Post Options meta box](https://github.com/htmlburger/carbon-fields-docs/tree/milestone/2_0/assets/repeating-groups-2.png)
+![Post Options meta box](https://raw.githubusercontent.com/htmlburger/carbon-fields-docs/milestone/2_0/assets/repeating-groups-2.png)
 
 Once done, open up your page template (be it `front-page.php` or `page.php`) and add the following:
 
