@@ -16,9 +16,9 @@ Set an associative array with options. For more information, see the Select fiel
 
 ```php
 Field::make( 'radio', 'crb_subtitle_styling', 'Subtitle text style' )
-	->add_options( array(
-		'em' => 'Italic',
-		'strong' => 'Bold',
-		'del' => 'Strike',
-	) )
+    ->add_options( array(
+        'em' => 'Italic',
+        'strong' => 'Bold',
+        'del' => 'Strike',
+    ) )
 ```

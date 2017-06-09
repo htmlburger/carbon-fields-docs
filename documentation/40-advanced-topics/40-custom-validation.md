@@ -4,11 +4,11 @@ You can add your own custom JavaScript validation to containers by directly hook
 
 ```js
 $(document).ready(function() {
-	// Hook to the theme options submission form
-	$('#theme-options-form').on('submit', function(e) {
-		e.preventDefault();
-		console.log('Submit prevented!');
-	});
+    // Hook to the theme options submission form
+    $('#theme-options-form').on('submit', function(e) {
+        e.preventDefault();
+        console.log('Submit prevented!');
+    });
 });
 ```
 

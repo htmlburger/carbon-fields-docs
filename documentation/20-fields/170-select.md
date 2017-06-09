@@ -20,9 +20,9 @@ The method is not intended to be called multiple times – each call will overwr
 
 ```php
 Field::make( 'select', 'crb_content_align', 'Text alignment' )
-	->add_options( array(
-		'left' => 'Left',
-		'center' => 'Center',
-		'right' => 'Right',
-	) )
+    ->add_options( array(
+        'left' => 'Left',
+        'center' => 'Center',
+        'right' => 'Right',
+    ) )
 ```

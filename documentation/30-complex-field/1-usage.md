@@ -4,10 +4,10 @@ Complex fields act as containers to which you can add multiple groups of fields.
 
 ```php
 Field::make( 'complex', 'crb_slide' )
-	->add_fields( array(
-		Field::make( 'text', 'title' ),
-		Field::make( 'image', 'photo' ),
-	) )
+    ->add_fields( array(
+        Field::make( 'text', 'title' ),
+        Field::make( 'image', 'photo' ),
+    ) )
 ```
 
 The example above shows how to make a slide show. We created a single complex field named `slide`, to which we attached one group of fields that represents a single slide – `title` and `photo`. The user will be able to add multiple rows of title and photo, thus creating a list of slides for the slide show.
@@ -16,15 +16,15 @@ A more advanced usage of the complex field is shown below:
 
 ```php
 Field::make( 'complex', 'crb_media_item' )
-	->add_fields( 'photograph', array(
-		Field::make( 'image', 'image' ),
-		Field::make( 'text', 'caption' ),
-	) )
-	->add_fields( 'movie', array(
-		Field::make( 'file', 'video' ),
-		Field::make( 'text', 'title' ),
-		Field::make( 'text', 'length' ),
-	) )
+    ->add_fields( 'photograph', array(
+        Field::make( 'image', 'image' ),
+        Field::make( 'text', 'caption' ),
+    ) )
+    ->add_fields( 'movie', array(
+        Field::make( 'file', 'video' ),
+        Field::make( 'text', 'title' ),
+        Field::make( 'text', 'length' ),
+    ) )
 ```
 
 Here we have to create a list of media items, lets say for an art exhibition. There are two types of items – photos (defined by an `image` and a `caption`) and movies (having a `title`, `length` and the `video` file itself). Since items have different properties, we need to define separate group for each one. Groups also must have a name, by which they will be recognized later – `photograph` and `movie`.

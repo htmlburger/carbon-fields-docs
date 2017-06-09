@@ -48,18 +48,18 @@ use Carbon_Fields\Field;
 use Carbon_Fields\Field\Complex_Field;
 
 $employees_labels = array(
-	'plural_name' => 'Employees',
-	'singular_name' => 'Employee',
+    'plural_name' => 'Employees',
+    'singular_name' => 'Employee',
 );
 
 Field::make( 'complex', 'crb_employee_data' )
-	->setup_labels( $employees_labels )
-	->add_fields( array(
-		Field::make( 'text', 'name')->set_help_text('Name of employee' ),
-		Field::make( 'text', 'position')->set_help_text('Position title' ),
-		Field::make( 'image', 'image' ),
-		Field::make( 'rich_text', 'description' ),
-	) )
+    ->setup_labels( $employees_labels )
+    ->add_fields( array(
+        Field::make( 'text', 'name')->set_help_text('Name of employee' ),
+        Field::make( 'text', 'position')->set_help_text('Position title' ),
+        Field::make( 'image', 'image' ),
+        Field::make( 'rich_text', 'description' ),
+    ) )
 ```
 
 `set_header_template( $template )`

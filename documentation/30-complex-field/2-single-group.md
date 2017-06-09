@@ -8,8 +8,8 @@ Numeric array of fields.
 
 ```php
 Field::make( 'complex', 'crb_test' )
-	->add_fields( array(
-		Field::make( 'text', 'name' ),
-		Field::make( 'text', 'job_title' ),
-	) )
+    ->add_fields( array(
+        Field::make( 'text', 'name' ),
+        Field::make( 'text', 'job_title' ),
+    ) )
 ```

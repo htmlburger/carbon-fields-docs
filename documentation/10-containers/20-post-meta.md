@@ -35,9 +35,9 @@ To access field values you need to use the function `carbon_get_post_meta( $id, 
 <?php 
 $slides = carbon_get_post_meta( get_the_ID(), 'crb_slides' );
 if ( $slides ) {
-	foreach ( $slides as $slide ) {
-		echo $slide['image'];
-	}
+    foreach ( $slides as $slide ) {
+        echo $slide['image'];
+    }
 }
 ?>
 ```
@@ -55,14 +55,14 @@ After saving, the `carbon_fields_post_meta_container_saved` hook is called, whic
 ```php
 add_action( 'carbon_fields_post_meta_container_saved', 'crb_after_save_event' );
 function crb_after_save_event( $post_id ) {
-	if ( get_post_type( $post_id ) !== 'crb_event' ) {
-		return false;
-	}
+    if ( get_post_type( $post_id ) !== 'crb_event' ) {
+        return false;
+    }
 
-	$event_date = carbon_get_post_meta( $post_id, 'crb_event_date' );
-	if ( $event_date ) {
-		$timestamp = strtotime( $event_date );
-		update_post_meta( $post_id, '_crb_event_timestamp', $timestamp );
-	}
+    $event_date = carbon_get_post_meta( $post_id, 'crb_event_date' );
+    if ( $event_date ) {
+        $timestamp = strtotime( $event_date );
+        update_post_meta( $post_id, '_crb_event_timestamp', $timestamp );
+    }
 }
 ```

@@ -5,8 +5,8 @@ Carbon Fields allows you to define custom fields inside your theme if you have t
 1. Execute `git clone https://github.com/htmlburger/carbon-field-template.git --single-branch --depth 1 includes/my-field` in your theme dir
 1. Delete the `includes/my-field/.git` directory
 1. Add the following to your theme's composer.json:
-	```js
-	"autoload": {
+    ```js
+    "autoload": {
         "files": [
             "./includes/my-field/field.php"
         ],

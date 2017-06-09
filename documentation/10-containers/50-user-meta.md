@@ -8,10 +8,10 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'user_meta', 'Address' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_city_and_post', 'City and post code' ),
-		Field::make( 'text', 'crb_street', 'Street Name' ),
-	) );
+    ->add_fields( array(
+        Field::make( 'text', 'crb_city_and_post', 'City and post code' ),
+        Field::make( 'text', 'crb_street', 'Street Name' ),
+    ) );
 ```
 
 ### Accessing field values
@@ -31,7 +31,7 @@ To access field values you need to use the function `carbon_get_user_meta( $user
 <?php 
 $phone_numbers = carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_phone_numbers' );
 foreach ( $phone_numbers as $phone ) {
-	echo $phone['country_code'] . '-' . $phone['number'];
+    echo $phone['country_code'] . '-' . $phone['number'];
 }
 ?>
 ```

@@ -20,5 +20,5 @@ You can also set the type to `url` to store the URL of the image instead of it's
 
 ```php
 Field::make( 'image', 'crb_employee_photo', 'Photo' )
-	->set_value_type( 'url' )
+    ->set_value_type( 'url' )
 ```

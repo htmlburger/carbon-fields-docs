@@ -30,7 +30,7 @@ Remove a group from a complex field by it's index.
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// your api actions here
+    // your api actions here
 });
 ```
 
@@ -38,8 +38,8 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// Get the current value in the 'crb_text' field
-	var value = api.getFieldValue( 'crb_text' );
+    // Get the current value in the 'crb_text' field
+    var value = api.getFieldValue( 'crb_text' );
 });
 ```
 
@@ -47,10 +47,10 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// Get the current value in the 'text' field
-	// which is inside the first entry of the 'subcomplex' field
-	// which is inside the first entry of the 'crb_complex' field
-	var value = api.getFieldValue( 'crb_complex[0]/subcomplex[0]/text' );
+    // Get the current value in the 'text' field
+    // which is inside the first entry of the 'subcomplex' field
+    // which is inside the first entry of the 'crb_complex' field
+    var value = api.getFieldValue( 'crb_complex[0]/subcomplex[0]/text' );
 });
 ```
 
@@ -58,8 +58,8 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// Set the current value of the 'crb_text' field to "Hello World"
-	api.setFieldValue( 'crb_text', 'Hello World' );
+    // Set the current value of the 'crb_text' field to "Hello World"
+    api.setFieldValue( 'crb_text', 'Hello World' );
 });
 ```
 
@@ -71,9 +71,9 @@ In the following example we only want to update the zoom property of the map to 
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	var value = api.getFieldValue( 'crb_map' );
-	value = api.immutable.set( value, 'zoom', 5 );
-	api.setFieldValue( 'crb_map', value );
+    var value = api.getFieldValue( 'crb_map' );
+    value = api.immutable.set( value, 'zoom', 5 );
+    api.setFieldValue( 'crb_map', value );
 });
 ```
 
@@ -81,17 +81,17 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// Set the current value of the 'crb_complex' field (which has a single "mytext" child field) to 2 entries
-	api.setFieldValue( 'crb_complex', [
-		{
-			// _type: 'your_group_name_here', // optional: use only if you've specified group names on field definition
-			mytext: 'Hello'
-		},
-		{
-			// _type: 'your_group_name_here',
-			mytext: 'World'
-		}
-	] );
+    // Set the current value of the 'crb_complex' field (which has a single "mytext" child field) to 2 entries
+    api.setFieldValue( 'crb_complex', [
+        {
+            // _type: 'your_group_name_here', // optional: use only if you've specified group names on field definition
+            mytext: 'Hello'
+        },
+        {
+            // _type: 'your_group_name_here',
+            mytext: 'World'
+        }
+    ] );
 });
 ```
 
@@ -99,13 +99,13 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
-	// Hook to all field changes and log the changed field's name and new value
-	$(document).on('carbonFields.fieldUpdated', function(e, fieldName) {
-		console.log('---');
-		console.log('Field updated: ' + fieldName);
-		console.log('New value:');
-		console.log(api.getFieldValue(fieldName))
-		console.log('---');
-	});
+    // Hook to all field changes and log the changed field's name and new value
+    $(document).on('carbonFields.fieldUpdated', function(e, fieldName) {
+        console.log('---');
+        console.log('Field updated: ' + fieldName);
+        console.log('New value:');
+        console.log(api.getFieldValue(fieldName))
+        console.log('---');
+    });
 });
 ```

@@ -9,20 +9,20 @@ Getting all posts which have a `crb_text` field with a value of `'hello world'`:
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_text', 'Text' ),
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'text', 'crb_text', 'Text' ),
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'meta_query'=>array(
-		array(
-			'key' => 'crb_text',
-			'value' => 'hello_world',
-		),
-	),
+    'post_type'=>'post',
+    'meta_query'=>array(
+        array(
+            'key' => 'crb_text',
+            'value' => 'hello_world',
+        ),
+    ),
 ) );
 ```
 
@@ -33,22 +33,22 @@ Getting all posts which have a `crb_map` field with a longitude property larger 
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( array(
-		Field::make( 'map', 'crb_map', 'Map' ),
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'map', 'crb_map', 'Map' ),
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'meta_query'=>array(
-		array(
-			'key' => 'crb_map',
-			'carbon_field_property' => 'lng',
-			'compare' => '>',
-			'value' => -2,
-		),
-	),
+    'post_type'=>'post',
+    'meta_query'=>array(
+        array(
+            'key' => 'crb_map',
+            'carbon_field_property' => 'lng',
+            'compare' => '>',
+            'value' => -2,
+        ),
+    ),
 ) );
 ```
 
@@ -59,21 +59,21 @@ Getting all posts which have `'red'` selected in the `crb_colors` Set field:
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( array(
-		Field::make( 'set', 'crb_colors', 'Colors' )
-			->add_options( array( 'red' => 'Red', 'green' => 'Green', 'blue' => 'Blue' ) ),
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'set', 'crb_colors', 'Colors' )
+            ->add_options( array( 'red' => 'Red', 'green' => 'Green', 'blue' => 'Blue' ) ),
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'meta_query'=>array(
-		array(
-			'key' => 'crb_colors',
-			'value' => 'red',
-		),
-	),
+    'post_type'=>'post',
+    'meta_query'=>array(
+        array(
+            'key' => 'crb_colors',
+            'value' => 'red',
+        ),
+    ),
 ) );
 ```
 
@@ -84,23 +84,23 @@ Getting all posts which have `'New York'` entered in the `city` Text_Field insid
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( array(
-		Field::make( 'complex', 'crb_cities', 'Cities' )
-			->add_fields( array(
-				Field::make( 'text', 'city', 'City' ),
-			) )
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'complex', 'crb_cities', 'Cities' )
+            ->add_fields( array(
+                Field::make( 'text', 'city', 'City' ),
+            ) )
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'meta_query'=>array(
-		array(
-			'key' => 'crb_cities/city',
-			'value' => 'New York',
-		),
-	),
+    'post_type'=>'post',
+    'meta_query'=>array(
+        array(
+            'key' => 'crb_cities/city',
+            'value' => 'New York',
+        ),
+    ),
 ) );
 ```
 
@@ -111,29 +111,29 @@ Getting all posts which have `'New York'` entered in the `city` Text_Field insid
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( 'group1', array(
-		Field::make( 'complex', 'crb_cities', 'Cities' )
-			->add_fields( array(
-				Field::make( 'text', 'city', 'City' ),
-			) )
-	) )
-	->add_fields( 'group2', array(
-		Field::make( 'complex', 'crb_cities', 'Cities' )
-			->add_fields( array(
-				// ...
-			) )
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( 'group1', array(
+        Field::make( 'complex', 'crb_cities', 'Cities' )
+            ->add_fields( array(
+                Field::make( 'text', 'city', 'City' ),
+            ) )
+    ) )
+    ->add_fields( 'group2', array(
+        Field::make( 'complex', 'crb_cities', 'Cities' )
+            ->add_fields( array(
+                // ...
+            ) )
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'meta_query'=>array(
-		array(
-			'key' => 'crb_cities:group1/city',
-			'value' => 'New York',
-		),
-	),
+    'post_type'=>'post',
+    'meta_query'=>array(
+        array(
+            'key' => 'crb_cities:group1/city',
+            'value' => 'New York',
+        ),
+    ),
 ) );
 ```
 
@@ -144,21 +144,21 @@ Ordering posts based on a Carbon Field value:
 ```php
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	->where( 'post_type', '=', 'post' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_text', 'Text' ),
-	) );
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'text', 'crb_text', 'Text' ),
+    ) );
 
 // query
 $query = new WP_Query( array(
-	'post_type'=>'post',
-	'orderby' => 'text_field',
-	'order' => 'asc',
-	'meta_query'=>array(
-		'text_field' => array(
-			'key' => 'crb_text',
-			'compare' => 'EXISTS',
-		),
-	),
+    'post_type'=>'post',
+    'orderby' => 'text_field',
+    'order' => 'asc',
+    'meta_query'=>array(
+        'text_field' => array(
+            'key' => 'crb_text',
+            'compare' => 'EXISTS',
+        ),
+    ),
 ) );
 ```

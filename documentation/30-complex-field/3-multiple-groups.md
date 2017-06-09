@@ -12,14 +12,14 @@ Numeric array of fields.
 
 ```php
 Field::make( 'complex', 'crb_job' )
-	->add_fields( 'driver', array(
-		Field::make( 'text', 'name' ),
-		Field::make( 'text', 'drivers_license_id' ),
-	))
-	->add_fields( 'teacher', array(
-		Field::make( 'image', 'name' ),
-		Field::make( 'image', 'years_of_experience' ),
-	))
+    ->add_fields( 'driver', array(
+        Field::make( 'text', 'name' ),
+        Field::make( 'text', 'drivers_license_id' ),
+    ))
+    ->add_fields( 'teacher', array(
+        Field::make( 'image', 'name' ),
+        Field::make( 'image', 'years_of_experience' ),
+    ))
 ```
 
 Each call to `add_fields( $name, $fields )` creates a new group and adds it to the complex field.
@@ -30,22 +30,22 @@ All data stored in a complex field is returned as a two-dimensional array with t
 
 ```php
 array (
-	0 => array (
-		'_type' => 'photograph',
-		'caption' => 'Lorem Ipsum',
-		'image' => 'http://example.com/wp-content/uploads/2012/12/Jellyfish.jpg',
-	),
-	1 => array (
-		'_type' => 'movie',
-		'length' => '1:56',
-		'title' => 'Dolor sit amet',
-		'video' => 'http://example.com/wp-content/uploads/2012/12/video_new.mp4',
-	),
-	2 => array (
-		'_type' => 'photograph',
-		'caption' => 'Consectetur adipiscing elit',
-		'image' => 'http://example.com/wp-content/uploads/2012/12/Koala.jpg',
-	),
+    0 => array (
+        '_type' => 'photograph',
+        'caption' => 'Lorem Ipsum',
+        'image' => 'http://example.com/wp-content/uploads/2012/12/Jellyfish.jpg',
+    ),
+    1 => array (
+        '_type' => 'movie',
+        'length' => '1:56',
+        'title' => 'Dolor sit amet',
+        'video' => 'http://example.com/wp-content/uploads/2012/12/video_new.mp4',
+    ),
+    2 => array (
+        '_type' => 'photograph',
+        'caption' => 'Consectetur adipiscing elit',
+        'image' => 'http://example.com/wp-content/uploads/2012/12/Koala.jpg',
+    ),
 )
 ```
 

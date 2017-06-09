@@ -10,10 +10,10 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'theme_options', 'Theme Options' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_facebook_url') ,
-		Field::make( 'textarea', 'crb_footer_text' )
-	) );
+    ->add_fields( array(
+        Field::make( 'text', 'crb_facebook_url') ,
+        Field::make( 'textarea', 'crb_footer_text' )
+    ) );
 ```
 
 ### Multiple option pages
@@ -33,26 +33,26 @@ use Carbon_Fields\Field;
 
 // Default options page
 Container::make( 'theme_options', 'Basic Options' )
-	->add_fields( array(
-		Field::make( 'header_scripts', 'crb_header_script' ),
-		Field::make( 'footer_scripts', 'crb_footer_script' ),
-	) );
+    ->add_fields( array(
+        Field::make( 'header_scripts', 'crb_header_script' ),
+        Field::make( 'footer_scripts', 'crb_footer_script' ),
+    ) );
 
 // Add second options page under 'Basic Options'
 Container::make( 'theme_options', 'Social Links' )
-	->set_page_parent( 'Basic Options' ) // title of a top level Theme Options page
-	->add_fields( array(
-		Field::make( 'text', 'crb_facebook_link' ),
-		Field::make( 'text', 'crb_twitter_link' ),
-	) );
+    ->set_page_parent( 'Basic Options' ) // title of a top level Theme Options page
+    ->add_fields( array(
+        Field::make( 'text', 'crb_facebook_link' ),
+        Field::make( 'text', 'crb_twitter_link' ),
+    ) );
 
 // Add third options page under "Appearance"
 Container::make( 'theme_options', 'Customize Background' )
-	->set_page_parent( 'themes.php' ) // identificator of the "Appearance" admin section
-	->add_fields( array(
-		Field::make( 'color', 'crb_background_color' ),
-		Field::make( 'image', 'crb_background_image' ),
-	) );
+    ->set_page_parent( 'themes.php' ) // identificator of the "Appearance" admin section
+    ->add_fields( array(
+        Field::make( 'color', 'crb_background_color' ),
+        Field::make( 'image', 'crb_background_image' ),
+    ) );
 ```
 
 For detailed information on managing admin pages, see [Administration_Menus](http://codex.wordpress.org/Administration_Menus).
@@ -68,10 +68,10 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'theme_options', 'Basic Options' )
-	->set_icon( 'dashicons-carrot' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_test_field' ),
-	) );
+    ->set_icon( 'dashicons-carrot' )
+    ->add_fields( array(
+        Field::make( 'text', 'crb_test_field' ),
+    ) );
 ```
 
 ### Menu position
@@ -80,10 +80,10 @@ To change the position priority of the page's menu button, you use `set_page_pos
 
 ```php
 Container::make( 'theme_options', 'Basic Options' )
-	->set_page_position( 80 )
-	->add_fields( array(
-		// ...
-	) );
+    ->set_page_position( 80 )
+    ->add_fields( array(
+        // ...
+    ) );
 ```
 
 ##### NB! You can specify custom icons only to parent theme options pages.
@@ -99,13 +99,13 @@ To retrieve field values from a theme options container, you need to use the fun
 ```php
 <p>Copyright <?php echo carbon_get_theme_option( 'crb_copyright' ); ?></p>
 <p>
-	Office locations:
-	<?php 
-	$address_lines = carbon_get_theme_option( 'crb_addresses' );
-	foreach ( $address_lines as $line ) {
-		echo $line . '<br/>';
-	}
-	?>
+    Office locations:
+    <?php 
+    $address_lines = carbon_get_theme_option( 'crb_addresses' );
+    foreach ( $address_lines as $line ) {
+        echo $line . '<br/>';
+    }
+    ?>
 <p>
 ```
 

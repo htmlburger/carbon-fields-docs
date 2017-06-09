@@ -34,11 +34,11 @@ A term descriptor is an array which has the following keys:
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
-	->where( 'post_term', '=', array(
-		'field' => 'slug',
-		'value' => 'featured',
-		'taxonomy' => 'category',
-	) )
+    ->where( 'post_term', '=', array(
+        'field' => 'slug',
+        'value' => 'featured',
+        'taxonomy' => 'category',
+    ) )
 ```
 
 More information on these values can be found in the documentation of the [`get_term_by()`](https://codex.wordpress.org/Function_Reference/get_term_by) function in the WordPress Codex (the three keys here are identical to the first three arguments of this function).

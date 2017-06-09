@@ -16,8 +16,8 @@ Set an associative array with options. For more information, see the Select fiel
 
 ```php
 Field::make( 'radio_image', 'crb_background', 'Background' )
-	->add_options( array(
-		'sky' => 'https://example.com/sky.jpg',
-		'ground' => 'https://example.com/ground.jpg',
-	) )
+    ->add_options( array(
+        'sky' => 'https://example.com/sky.jpg',
+        'ground' => 'https://example.com/ground.jpg',
+    ) )
 ```

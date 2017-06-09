@@ -11,9 +11,9 @@ There is a `carbon_fields_gravity_form_options` filter which you can use to over
 ```php
 add_filter( 'carbon_fields_gravity_form_options', 'crb_my_gravity_form_options' );
 function crb_my_gravity_form_options( $options ) {
-	//change the default "No Form" text
-	$options[0] = 'Do not show any form';
+    //change the default "No Form" text
+    $options[0] = 'Do not show any form';
 
-	return $options;
+    return $options;
 }
 ```

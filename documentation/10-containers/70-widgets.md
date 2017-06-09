@@ -20,23 +20,23 @@ use Carbon_Fields\Widget;
 use Carbon_Fields\Field;
 
 class ThemeWidgetExample extends Widget {
-	// Register widget function. Must have the same name as the class
-	function __construct() {
-		$this->setup( 'Theme Widget - Example', 'Displays a block with title/text', array(
-			Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!') ,
-			Field::make( 'textarea', 'content', 'Content' )->set_default_value( 'Lorem Ipsum dolor sit amet' )
-		) );
-	}
-	
-	// Called when rendering the widget in the front-end
-	function front_end( $args, $instance ) {
-		echo $args['before_title'] . $instance['title'] . $args['after_title'];
-		echo '<p>' . $instance['content'] . '</p>';
-	}
+    // Register widget function. Must have the same name as the class
+    function __construct() {
+        $this->setup( 'Theme Widget - Example', 'Displays a block with title/text', array(
+            Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!') ,
+            Field::make( 'textarea', 'content', 'Content' )->set_default_value( 'Lorem Ipsum dolor sit amet' )
+        ) );
+    }
+    
+    // Called when rendering the widget in the front-end
+    function front_end( $args, $instance ) {
+        echo $args['before_title'] . $instance['title'] . $args['after_title'];
+        echo '<p>' . $instance['content'] . '</p>';
+    }
 }
 
 function load_widgets() {
-	register_widget( 'ThemeWidgetExample' );
+    register_widget( 'ThemeWidgetExample' );
 }
 ```
 
@@ -50,7 +50,7 @@ You can setup control options (like width) of your widget by adding a `$form_opt
 
 ```php
 protected $form_options = array(
-	'width' => 500
+    'width' => 500
 );
 ```
 
@@ -58,10 +58,10 @@ In case you want to disable the default widget wrappers that come from your side
 
 ```php
 function __construct() {
-	$this->setup( 'Widget Title', __('Widget Description'), array(
-		Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!' ),
-	) );
+    $this->setup( 'Widget Title', __('Widget Description'), array(
+        Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!' ),
+    ) );
 
-	$this->print_wrappers = false;
+    $this->print_wrappers = false;
 }
 ```

@@ -12,5 +12,5 @@ Set the value that will be saved when the option is ticked.
 
 ```php
 Field::make( 'checkbox', 'crb_show_content', 'Show content' )
-	->set_option_value( 'yes' )
+    ->set_option_value( 'yes' )
 ```

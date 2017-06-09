@@ -12,5 +12,5 @@ Sets a direct attribute of the resulting `<input>` field. Can only be one of the
 
 ```php
 Field::make( 'text', 'crb_phone', 'Phone' )
-	->set_attribute( 'placeholder', '(***) ***-****' );
+    ->set_attribute( 'placeholder', '(***) ***-****' );
 ```

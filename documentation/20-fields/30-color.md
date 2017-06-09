@@ -14,5 +14,5 @@ Sets the color picker's pallete of predefined colors. Must be an array of hexade
 
 ```php
 Field::make( 'color', 'crb_background', 'Background' )
-	->set_palette( array( '#FF0000', '#00FF00', '#0000FF' ) );
+    ->set_palette( array( '#FF0000', '#00FF00', '#0000FF' ) );
 ```

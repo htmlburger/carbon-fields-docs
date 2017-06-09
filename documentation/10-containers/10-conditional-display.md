@@ -25,10 +25,10 @@ For example, if you wish to have a container only display on pages on even level
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
-	->where( 'post_type', '=', 'page' )
-	->where( 'post_level', 'CUSTOM', function( $post_level ) {
-		return ( $post_level % 2 === 0 );
-	} );
+    ->where( 'post_type', '=', 'page' )
+    ->where( 'post_level', 'CUSTOM', function( $post_level ) {
+        return ( $post_level % 2 === 0 );
+    } );
 ```
 
 # Examples
@@ -55,22 +55,22 @@ In order to achieve nested display logic the `when()` and `or_when()` methods al
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
-	->where( function( $lvl1_condition ) {
-		$lvl1_condition->where( $condition, $comparison_operator, $value );
-		$lvl1_condition->where( function( $lvl2_condition ) {
-			... // can be nested infinitely
-		} );
-		...
-	} );
+    ->where( function( $lvl1_condition ) {
+        $lvl1_condition->where( $condition, $comparison_operator, $value );
+        $lvl1_condition->where( function( $lvl2_condition ) {
+            ... // can be nested infinitely
+        } );
+        ...
+    } );
 ```
 
 For example, to have a container visible on all post types if the current user is an `administrator` OR only on the `page` post type if the current user is an `editor` your code will look like this:
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
-	->where( 'current_user_role', '=', 'administrator' )
-	->or_where( function( $condition ) {
-		$condition->where( 'current_user_role', '=', 'editor' );
-		$condition->where( 'post_type', '=', 'page' );
-	} );
+    ->where( 'current_user_role', '=', 'administrator' )
+    ->or_where( function( $condition ) {
+        $condition->where( 'current_user_role', '=', 'editor' );
+        $condition->where( 'post_type', '=', 'page' );
+    } );
 ```

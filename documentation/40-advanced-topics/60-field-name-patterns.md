@@ -22,9 +22,9 @@ Field::make( 'text', 'crb_text' )
 
 ```php
 Field::make( 'complex', 'crb_services' )
-	->add_fields( array(
-		Field::make( 'text', 'name' ),
-	) )
+    ->add_fields( array(
+        Field::make( 'text', 'name' ),
+    ) )
 ```
 
 | Pattern                | Refers to                                            |
@@ -39,12 +39,12 @@ When you have custom groups defined you must specify the group name in the field
 
 ```php
 Field::make( 'complex', 'crb_services' )
-	->add_fields( 'digital', array(
-		Field::make( 'text', 'name' ),
-	) )
-	->add_fields( 'physical', array(
-		Field::make( 'textarea', 'name' ),
-	) )
+    ->add_fields( 'digital', array(
+        Field::make( 'text', 'name' ),
+    ) )
+    ->add_fields( 'physical', array(
+        Field::make( 'textarea', 'name' ),
+    ) )
 ```
 
 | Pattern                        | Refers to                                            |
@@ -57,13 +57,13 @@ Field::make( 'complex', 'crb_services' )
 
 ```php
 Field::make( 'complex', 'crb_service_types' )
-	->add_fields( array(
-		Field::make( 'text', 'name' ),
-		Field::make( 'complex', 'services' )
-			->add_fields( array(
-				Field::make( 'text', 'name' ),
-			) )
-	) )
+    ->add_fields( array(
+        Field::make( 'text', 'name' ),
+        Field::make( 'complex', 'services' )
+            ->add_fields( array(
+                Field::make( 'text', 'name' ),
+            ) )
+    ) )
 ```
 
 | Pattern                                 | Refers to                                                                                      |

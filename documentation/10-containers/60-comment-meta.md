@@ -7,10 +7,10 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'comment_meta', 'Comment Information' )
-	->add_fields( array(
-		Field::make( 'text', 'crb_comment_rating', 'Comment Rating' ),
-		Field::make( 'text', 'crb_comment_additional_info', 'Additional Comment Information' ),
-	) );
+    ->add_fields( array(
+        Field::make( 'text', 'crb_comment_rating', 'Comment Rating' ),
+        Field::make( 'text', 'crb_comment_additional_info', 'Additional Comment Information' ),
+    ) );
 ```
 
 ### Accessing field values
@@ -24,20 +24,20 @@ To access field values you need to use the function `carbon_get_comment_meta( $c
 
 ```php
 <?php $comments = get_comments( array(
-	'post_id' => get_the_ID(),
+    'post_id' => get_the_ID(),
 ) );
 
 foreach ( $comments as $comment ) {
-	$comment_additional_info = carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_additional_info' );
-	$comment_rating	= carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_rating' );
+    $comment_additional_info = carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_additional_info' );
+    $comment_rating    = carbon_get_comment_meta( $comment->comment_ID, 'crb_comment_rating' );
 
-	if ( ! empty( $comment_additional_info ) ) {
-		echo $comment->comment_ID . ' info: '. $comment_additional_info;
-	}
+    if ( ! empty( $comment_additional_info ) ) {
+        echo $comment->comment_ID . ' info: '. $comment_additional_info;
+    }
 
-	if ( ! empty( $comment_rating ) ) {
-		echo 'Rating: ' . $comment_rating;
-	}
+    if ( ! empty( $comment_rating ) ) {
+        echo 'Rating: ' . $comment_rating;
+    }
 }
 ?>
 ```
