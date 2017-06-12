@@ -7,7 +7,7 @@
 - `post_meta` containers are now visible on all post types unless you specify one with `where( 'post_type', '=', 'YOURPOSTTYPEHERE')`. Previously they defaulted to the `post` post type only.
 - `term_meta` containers are now visible on all taxonomies unless you specify one with `where( 'term_taxonomy', '=', 'YOURTAXONOMYHERE')`.
 - The deprecated `choose_sidebar` field has been removed. Use `sidebar` instead.
-- The legacy `Association_Field::set_post_type()` method has been removed removed - use `set_types()` instead.
+- The legacy `Association_Field::set_post_type()` method has been removed - use `set_types()` instead.
 - `map_with_address` field has been removed. Use `map` instead.
 - `Textarea_Field::set_height()` has been removed - use `set_rows()` instead.
 - `nav_menu` container has been renamed to `nav_menu_item` to better represent what it does.
@@ -18,6 +18,7 @@
 - `association` field now returns `array( array( 'value', 'type', 'subtype', 'id' ), ... )`.
 - `set_datepicker_options` method is now `set_picker_options`
 - `set_timepicker_options` method is now `set_picker_options`
+- Date/Time/DateTime fields now always save in `Y-m-d H:i:s` format regardless of the display format set with `set_picker_options`. This allows you to easily compare dates in MySQL while keeping the ability for admins to interact with a user-friendly format such as `m/d/Y`.
 
 ##### Renamed/Updated Actions
 
