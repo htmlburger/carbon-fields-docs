@@ -1,6 +1,5 @@
 # 2.0 Upgrade Guide
 
-- __Carbon Fields is no longer distributed as a WordPress plugin. To install Carbon Fields use `composer install htmlburger/carbon-fields` in your theme directory and make sure you are including the generated composer autoloader.__
 - __All extending fields must be reworked. Refer to the Extending documentation page.__
 - Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example.
 - __WARNING:__ `theme_options` containers are limited to users who have the `manage_options` capability. In order to turn off this behavior to allow custom capability conditions use the `carbon_fields_theme_options_container_admin_only_access` filter.

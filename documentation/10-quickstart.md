@@ -1,7 +1,7 @@
 # Quickstart
 
 1. Browse to your theme directory
-1. Execute the following in your terminal of choice:
+1. Install the Carbon Fields WordPress plugin OR execute the following in your terminal of choice:
     ```cli
     composer require htmlburger/carbon-fields
     ```
