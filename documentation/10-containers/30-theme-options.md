@@ -57,6 +57,30 @@ Container::make( 'theme_options', 'Customize Background' )
 
 For detailed information on managing admin pages, see [Administration_Menus](http://codex.wordpress.org/Administration_Menus).
 
+### Localizing the page title
+
+By default, the URL of the option page is generated from the title passed to the `Container::make` method. In the example above, the URL will be `admin.php?page=theme-options`. If you use a `gettext` function to localize the title, for example:
+
+```php
+Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
+```
+
+then the URL of your page will be different for different languages. This will cause issues with multilingual plugins, such as WPGlobus or WPML, that allow for admin language switching.
+
+To resolve this, you need to call the `set_page_file` method, like this:
+
+```php
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
+    ->set_page_file( 'theme-options' )
+    ->add_fields(array(
+        Field::make('text', 'crb_facebook_url'),
+        Field::make('textarea', 'crb_footer_text')
+    ));
+```
+
 ### Menu icon
 
 To change the icon of your Theme Options page, you use `set_icon( $icon )`, where `$icon` can be one of the values, supported in the `$icon_url` parameter of the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
