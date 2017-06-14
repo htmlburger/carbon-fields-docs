@@ -19,6 +19,7 @@
 - `set_datepicker_options` method is now `set_picker_options`
 - `set_timepicker_options` method is now `set_picker_options`
 - Date/Time/DateTime fields now always save in `Y-m-d H:i:s` format regardless of the display format set with `set_picker_options`. This allows you to easily compare dates in MySQL while keeping the ability for admins to interact with a user-friendly format such as `m/d/Y`.
+- `set_header_template` now uses a [Lodash template](https://lodash.com/docs/4.17.4#template) instead of Underscore.
 
 ##### Renamed/Updated Actions
 
