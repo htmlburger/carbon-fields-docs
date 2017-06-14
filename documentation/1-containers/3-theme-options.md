@@ -15,6 +15,30 @@ Container::make('theme_options', 'Theme Options')
 	));
 ```
 
+### Localizing the page title
+
+By default, the URL of the option page is generated from the title passed to the `Container::make` method. In the example above, the URL will be `admin.php?page=theme-options`. If you use a `gettext` function to localize the title, for example:
+
+```php
+Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
+```
+
+then the URL of your page will be different for different languages. This will cause some nasty errors with multilingual plugins, such as WPGlobus or WPML, that allow for admin language switching.
+
+To resolve this, you need to call the `set_page_file` method, like this:
+
+```php
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
+	->set_page_file( 'theme-options' )
+	->add_fields(array(
+		Field::make('text', 'crb_facebook_url'),
+		Field::make('textarea', 'crb_footer_text')
+	));
+```
+
 ### Multiple option pages
 
 It is sometimes needed to create more than one option page. At other times you need to place different pages in different sections in the admin menu. For example, you might have extensive list of settings for the background that you would want to place on a separate Theme options page under Appearance.
