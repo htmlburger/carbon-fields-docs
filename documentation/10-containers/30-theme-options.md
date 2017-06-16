@@ -22,8 +22,9 @@ It is sometimes needed to create more than one option page. At other times you n
 
 To change the location of your Theme Options page, you use `set_page_parent( $parent )`, where `$parent` is either:
 
-* Title of a top level Theme Options page.
-* Indentificator of a top level menu section in the admin menu sidebar. This corresponds to the `$parent_slug` parameter of [add_submenu_page()](http://codex.wordpress.org/Function_Reference/add_submenu_page). You can see all predefined page parents [here](http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters).
+* A reference to a top level Theme Options container.
+* The menu slug of a top level Theme Options container.
+* The menu slug of any top level adminsitration page. This corresponds to the `$parent_slug` parameter of [add_submenu_page()](http://codex.wordpress.org/Function_Reference/add_submenu_page). You can see all predefined page parents [here](http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters).
 
 Below you see sample code for creating three theme option containers:
 
@@ -32,7 +33,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 // Default options page
-Container::make( 'theme_options', 'Basic Options' )
+$basic_options_container = Container::make( 'theme_options', 'Basic Options' )
     ->add_fields( array(
         Field::make( 'header_scripts', 'crb_header_script' ),
         Field::make( 'footer_scripts', 'crb_footer_script' ),
@@ -40,7 +41,7 @@ Container::make( 'theme_options', 'Basic Options' )
 
 // Add second options page under 'Basic Options'
 Container::make( 'theme_options', 'Social Links' )
-    ->set_page_parent( 'Basic Options' ) // title of a top level Theme Options page
+    ->set_page_parent( $basic_options_container ) // reference to a top level container
     ->add_fields( array(
         Field::make( 'text', 'crb_facebook_link' ),
         Field::make( 'text', 'crb_twitter_link' ),
