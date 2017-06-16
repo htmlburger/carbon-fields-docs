@@ -18,9 +18,18 @@ In this context:
 
 Defaults to `array( array( 'type' => 'post', 'post_type' => 'post' ) )`
 
+`set_min( $min )`
+
+Allows you to set the minimum number of selected items in an association field. By default, there is no requirement.
+
+```php
+Field::make( 'association', 'crb_association' )
+    ->set_min( 5 )
+```
+
 `set_max( $max )`
 
-Allows you to limit the maximum number of selected items in a association field. By default, there is no limit.
+Allows you to limit the maximum number of selected items in an association field. By default, there is no limit.
 
 ```php
 Field::make( 'association', 'crb_association' )
