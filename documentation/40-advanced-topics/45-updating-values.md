@@ -63,11 +63,11 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 // updating
 carbon_set_post_meta( 10, 'crb_complex', array(
     array(
-        // _type: 'your_group_name_here', // optional: use only if you've specified group names on field definition
+        // _type => 'your_group_name_here', // optional: use only if you've specified group names on field definition
         'text' => 'Foo',
     ),
     array(
-        // _type: 'your_group_name_here',
+        // _type => 'your_group_name_here',
         'text' => 'Bar',
     ),
 ) );
