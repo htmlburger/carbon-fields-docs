@@ -68,6 +68,8 @@ Allows for a [Lodash template](https://lodash.com/docs/4.17.4#template) to be us
 
 The passed `$template` can also be a [callback](http://php.net/manual/en/language.types.callable.php).
 
+___Note:___ Dashes in field names must be replaced with underscores. For example `field-name-with-dashes` must be referred to as `<%- field_name_with_dashes %>` in `set_header_template()`.
+
 Example usage:
 
 ```php
