@@ -13,7 +13,7 @@
 - `nav_menu` container has been renamed to `nav_menu_item` to better represent what it does.
 - `carbon_get_nav_menu_item_meta()` must be used for nav_menu_item fields.
 - Complex groups' `_type` key no longer adds an underscore for the type value e.g. `'_type' => '_text_group'` is now `'_type' => 'text_group'`.
-- `checkbox` field not returns a real boolean value.
+- `checkbox` field now returns a real boolean value.
 - `carbon_get_*()` methods now always use the appropriate field format (i.e. the `$type` parameter has been removed).
 - `relationship` field removed - use `association` instead.
 - `association` field now returns `array( array( 'value', 'type', 'subtype', 'id' ), ... )`.
