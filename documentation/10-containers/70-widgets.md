@@ -4,12 +4,13 @@ Widget containers are used to create custom widgets for your theme. Each widget 
 
 The constructor must be named after the class and it must call the method `setup( $name, $description, $fields, $classname )`, where:
 
-| Parameter                 | Description                                                   |
-| ------------------------- | ------------------------------------------------------------- |
-| `$name`                   | Name of the widget, used in the back-end                      |
-| `$description`            | Description of the widget, used in the back-end               |
-| `$fields`                 | Array of fields                                               |
-| `$classname` *(optional)* | Provide a custom class attribute for the widget.              |
+| Parameter                 | Description                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------- |
+| `$widget_id`              | ID of the widget. Note that it will automatically be prepended with `'carbon_fields_'` |
+| `$title`                  | Title of the widget, used in the back-end                                       |
+| `$description`            | Description of the widget, used in the back-end                                 |
+| `$fields`                 | Array of fields                                                                 |
+| `$classname` *(optional)* | Provide a custom class attribute for the widget.                                |
 
 The `front_end( $args, $instance )` method is responsible for rendering your widget in the front-end. Here you have access to all values saved for the fields you defined in the constructor via the `$instance` parameter.
 
