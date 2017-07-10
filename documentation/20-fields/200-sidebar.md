@@ -43,7 +43,7 @@ Field::make( 'sidebar', 'crb_custom_sidebar', 'Select a Sidebar' )
 
 `crb_dynamic_sidebar( $id, $sidebar_options )`
 
-This function is not included in the plugin core, but feel free to use it in your theme/plugin. 
+This function is not included in Carbon Fields core, but feel free to use it in your theme/plugin.
 
 It overwrites the sidebar options and prints the widgets of the sidebar with the specified ID.
 

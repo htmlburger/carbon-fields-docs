@@ -1,7 +1,7 @@
 # 2.0 Upgrade Guide
 
 - __All extending fields must be reworked. Refer to the Extending documentation page.__
-- Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example. __This does not apply if you are using Carbon Fields as a plugin.__
+- Carbon Fields now require you to call `\Carbon_Fields\Carbon_Fields::boot();` in order to load (instead of always loading). The best place to call this is in the `after_setup_theme` hook - see the Quickstart page for an example.
 - __WARNING:__ `theme_options` containers are limited to users who have the `manage_options` capability. In order to turn off this behavior to allow custom capability conditions use the `carbon_fields_theme_options_container_admin_only_access` filter.
 - The above applies to user meta containers as well with the filter being `carbon_fields_user_meta_container_admin_only_access`.
 - `post_meta` containers are now visible on all post types unless you specify one with `where( 'post_type', '=', 'YOURPOSTTYPEHERE')`. Previously they defaulted to the `post` post type only.

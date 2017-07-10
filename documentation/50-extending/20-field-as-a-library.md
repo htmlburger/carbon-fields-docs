@@ -5,7 +5,7 @@ Carbon Fields allows you to create custom field libraries that you can distribut
 1. Create your own git repo based on https://github.com/htmlburger/carbon-field-template
 1. Setup a blank WordPress installation
 1. Browse to the default theme directory (e.g. twentyseventeen)
-1. Install the Carbon Fields WordPress plugin OR Call `composer require htmlburger/carbon-fields`
+1. Call `composer require htmlburger/carbon-fields`
 1. Edit the `functions.php` file
 1. Add this code to the top of functions.php:
     ```php
@@ -19,8 +19,7 @@ Carbon Fields allows you to create custom field libraries that you can distribut
                 Field::make( 'yourfieldtype', 'crb_your_custom_field', 'Your Custom Field' ),
             ) );
     }
-    
-    /* SKIP the following if you are using Carbon Fields as a WordPress plugin: */
+
     add_action( 'after_setup_theme', 'crb_load' );
     function crb_load() {
         require_once( 'vendor/autoload.php' );
