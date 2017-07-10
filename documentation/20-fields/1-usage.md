@@ -70,6 +70,17 @@ Custom field classes can be added using the `set_classes()` method, for example:
 
 `Field::make(...)->set_classes( 'my-custom-class' )`
 
+### Attributes
+
+You can override certain field attributes using the `set_attribute()` method of fields based on &lt;input&gt; and &lt;textarea&gt;:
+
+```php
+Field::make( 'text', 'crb_phone', 'Phone' )
+    ->set_attribute( 'placeholder', '(***) ***-****' );
+```
+
+For a full list of what attributes are allowed visit the Text or Textarea field documentation pages.
+
 ### REST API
 
 Fields can be exposed in WordPress' REST API by using their `set_visible_in_rest_api()` method:
