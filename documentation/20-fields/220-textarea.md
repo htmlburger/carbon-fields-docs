@@ -17,7 +17,7 @@ Field::make( 'textarea', 'crb_services', 'Services' )
 
 `set_attribute( $name, $value = '' )`
 
-Sets a direct attribute of the resulting `<textarea>` field. Can only be one of the following: `'maxLength'`, `'minLength'`, `'placeholder'`, `'readOnly'`.
+Sets a direct attribute of the resulting `<textarea>` field. Can only be one of the following: `'maxLength'`, `'minLength'`, `'placeholder'`, `'readOnly'` and `'data-*'`.
 
 ```php
 Field::make( 'textarea', 'crb_phones', 'Phone Numbers' )
