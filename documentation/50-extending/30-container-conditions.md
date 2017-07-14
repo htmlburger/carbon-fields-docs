@@ -5,19 +5,10 @@ Carbon Fields allows you to define your own container conditions as well. Here's
 ##### `Foobar_Condition.php`
 ```php
 class Foobar_Condition extends Condition {
-    
-    /**
-     * Constructor
-     *
-     * @param  array<Carbon_Fields\Container\Condition\Comparer\Comparer> $comparers
-     */
-    public function __construct() {
-        $this->set_comparers( \Carbon_Fields\Carbon_Fields::resolve( 'generic', 'container_condition_comparer_collections' ) );
-    }
 
     /**
      * Check if the condition is fulfilled
-     * 
+     *
      * @param  array $environment
      * @return bool
      */
@@ -34,8 +25,10 @@ class Foobar_Condition extends Condition {
 ##### `functions.php` or another suitable place
 ```php
 \Carbon_Fields\Carbon_Fields::extend( Foobar_Condition::class, function( $container ) {
-    // register our new class
-    return new Foobar_Condition();
+    // create an instance of our new class
+    $condition = new Foobar_Condition();
+    $condition->set_comparers( \Carbon_Fields\Carbon_Fields::resolve( 'generic', 'container_condition_comparer_collections' ) );
+    return $condition;
 } );
 
 add_filter( 'carbon_fields_theme_options_container_static_condition_types', function( $condition_types, $container_type, $container ) {
