@@ -13,6 +13,7 @@ Carbon Fields - Docs
 * [Predefined Complex Groups](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/20-predefined-complex-groups.md)
 * [Sidebar Options](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/1-guides/30-sidebar-options.md)
 * [Serialized Datastore](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/50-serialized-datastore.md)
+* [Serialized Datastore](https://github.com/htmlburger/carbon-fields-docs/tree/master/documentation/60-bedrock-support.md)
 
 ---
 

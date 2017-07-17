@@ -84,7 +84,7 @@ Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
 
 ### Menu icon
 
-To change the icon of your Theme Options page, you use `set_icon( $icon )`, where `$icon` can be one of the values, supported in the `$icon_url` parameter of the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+To change the icon of your Theme Options page, you can use `set_icon( $icon )`, where `$icon` can be one of the values, supported in the `$icon_url` parameter of the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
 
 Below you see an example for setting up the icon of the theme options page:
 
@@ -99,13 +99,25 @@ Container::make( 'theme_options', 'Basic Options' )
     ) );
 ```
 
-### Menu position
+### Menu title
 
-To change the position priority of the page's menu button, you use `set_page_position( $position )`, where `$position` is a number. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+To change the menu button title of the container, you can use `set_page_menu_title( $title )`, where `$title` is your desired title. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
 
 ```php
 Container::make( 'theme_options', 'Basic Options' )
-    ->set_page_position( 80 )
+    ->set_page_menu_position( 80 )
+    ->add_fields( array(
+        // ...
+    ) );
+```
+
+### Menu position
+
+To change the position priority of the page's menu button, you use `set_page_menu_position( $position )`, where `$position` is a number. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+
+```php
+Container::make( 'theme_options', 'Basic Options' )
+    ->set_page_menu_position( 80 )
     ->add_fields( array(
         // ...
     ) );

@@ -8,6 +8,7 @@ Carbon Fields - Docs
 * [Carbon Fields](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/)
     * [Overview](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/1-overview.md)
     * [Quickstart](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/10-quickstart.md)
+    * [Plugin Quickstart](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/15-plugin-quickstart.md)
     * [New Features](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/20-new-features.md)
     * [Upgrade Guide](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/30-upgrade-guide.md)
     * [Getting Started](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/40-getting-started.md)
