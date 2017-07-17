@@ -109,3 +109,29 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
     });
 });
 ```
+
+##### Custom validation
+
+```js
+$(document).on('carbonFields.apiLoaded', function(e, api) {
+    $(document).on('carbonFields.validateField', function(e, fieldName, error) {
+        console.log('Field being validated: ' + fieldName);
+        console.log('Current error, if any: ' + error);
+
+        // Add your own validation logic here
+        // To raise an error return any string which will serve as the user-friendly error message
+        // To not raise an error return `null`
+        // To not interfere with the built-in validation return the `error` variable argument
+
+        // This example will raise an error if the field's value is not an even number
+        // If the value is even, it will proceed with validation as usual
+        if (fieldName === 'some_field_name_here') {
+            var value = api.getFieldValue(fieldName);
+            if ( parseInt( value ) % 2 !== 0 ) {
+                return 'The entered value is not an even number';
+            }
+        }
+        return error;
+    });
+});
+```
