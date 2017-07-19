@@ -112,6 +112,8 @@ $(document).on('carbonFields.apiLoaded', function(e, api) {
 
 ##### Custom validation
 
+###### NB! `set_required()` must be called for fields you wish to add custom validation to.
+
 ```js
 $(document).on('carbonFields.apiLoaded', function(e, api) {
     $(document).on('carbonFields.validateField', function(e, fieldName, error) {
