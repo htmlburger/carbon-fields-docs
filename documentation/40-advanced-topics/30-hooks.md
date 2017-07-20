@@ -64,7 +64,7 @@ Allows you to modify the button label of the theme options container. The filter
 
 * *string* `$label` The unfiltered button label.
 
-*(filter)* `carbon_fields_theme_options_container_admin_only_access` `( $enable, $container_title )`
+*(filter)* `carbon_fields_theme_options_container_admin_only_access` `( $enable, $container_title, $container )`
 
 Allows you to override the default requirement for the `manage_options` capability in order to interact with this container.
 
@@ -75,10 +75,11 @@ add_filter( 'carbon_fields_theme_options_container_admin_only_access', '__return
 
 * *boolean* `$enable` Whether to enable to disable this behavior.
 * *string* `$container_title` The container title.
+* *string* `$container` The container object.
 
 ### User Meta Container
 
-*(filter)* `carbon_fields_user_meta_container_admin_only_access` `( $enable, $container_title )`
+*(filter)* `carbon_fields_user_meta_container_admin_only_access` `( $enable, $container_title, $container )`
 
 Allows you to override the default requirement for the `manage_options` capability in order to interact with this container.
 
@@ -89,6 +90,7 @@ add_filter( 'carbon_fields_user_meta_container_admin_only_access', '__return_fal
 
 * *boolean* `$enable` Whether to enable to disable this behavior.
 * *string* `$container_title` The container title.
+* *string* `$container` The container object.
 
 ### Field
 
