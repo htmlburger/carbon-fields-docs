@@ -1,5 +1,7 @@
 # Quickstart
 
+This guide will show you how to install the Carbon Fields library using composer. To install Carbon Fields as a WordPress plugin, please follow the `Plugin Quickstart` guide instead.
+
 1. Browse to your theme directory
 1. Execute the following in your terminal of choice:
     ```cli
