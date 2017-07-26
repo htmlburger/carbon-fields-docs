@@ -59,7 +59,7 @@ In case you want to disable the default widget wrappers that come from your side
 
 ```php
 function __construct() {
-    $this->setup( 'Widget Title', __('Widget Description'), array(
+    $this->setup( 'widget_id', 'Widget Title', __('Widget Description'), array(
         Field::make( 'text', 'title', 'Title' )->set_default_value( 'Hello World!' ),
     ) );
 
