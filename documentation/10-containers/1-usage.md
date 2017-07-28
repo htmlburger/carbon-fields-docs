@@ -21,7 +21,15 @@ Container::make( 'post_meta', 'Custom Data' )
 
 To create a new Container, you just use the `Container::make( $type, $title )` method, where:
 
-| Parameter | Description                                                                                                                                   |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$type`   | Identifier of the container type (accepted values are `post_meta`, `term_meta`, `user_meta`, `comment_meta`, `nav_menu` and `theme_options`). |
-| `$title`  | Unique title of the container.                                                                                                                |
+| Parameter | Description                                                                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$type`   | Identifier of the container type (accepted values are `post_meta`, `term_meta`, `user_meta`, `comment_meta`, `nav_menu_item` and `theme_options`). |
+| `$title`  | Title of the container.                                                                                                                                  |
+
+Alternatively, you can pass an id for the container using `Container::make( $type, $id, $title )`, where:
+
+| Parameter | Description                                                                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$type`   | Identifier of the container type (accepted values are `post_meta`, `term_meta`, `user_meta`, `comment_meta`, `nav_menu_item` and `theme_options`). |
+| `$id`     | Unique id of the container. Automatically prefixed with `carbon_fields_container_`                                                     |
+| `$title`  | Title of the container.                                                                                                                                  |
