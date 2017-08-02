@@ -67,9 +67,6 @@ class Serialized_Theme_Options_Datastore extends Datastore {
     public function load( Field $field ) {
         $key = $this->get_key_for_field( $field );
         $value = get_option( $key, null );
-        if ( $value === null ) {
-            return array();
-        }
         return $value;
     }
 
