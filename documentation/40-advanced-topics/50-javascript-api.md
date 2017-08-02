@@ -24,6 +24,37 @@ Add a group to a complex field. `groupName` is optional when the field does not 
 
 Remove a group from a complex field by it's index.
 
+### API jQuery Events
+
+`'carbonFields.apiLoaded'`
+
+Triggered when the Carbon Fields' JS API is loaded.
+
+| Parameter | Description                                                |
+| --------- | ---------------------------------------------------------- |
+| `event`   | Event Object                                               |
+| `api`     | API object which is used to communicate with Carbon Fields |
+
+`'carbonFields.fieldUpdated'`
+
+Triggered when a field's value changes.
+
+| Parameter       | Description                        |
+| --------------- | ---------------------------------- |
+| `event`         | Event Object                       |
+| `fieldName`     | Name of the field that was updated |
+
+`'carbonFields.validateField'`
+
+Triggered when a field is being validated.
+This event actually behaves like a WordPress filter - you have to return a value. This enables you to define your own custom validation and error messages (an example can be found below).
+
+| Parameter       | Description                                       |
+| --------------- | ------------------------------------------------- |
+| `event`         | Event Object                                      |
+| `fieldName`     | Name of the field that is being validated         |
+| `error`         | The current error message for the field or `null` |
+
 ### Examples
 
 ##### Getting the API object instance
