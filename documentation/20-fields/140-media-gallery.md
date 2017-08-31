@@ -1,6 +1,9 @@
 # Media Gallery
 
-Behaves exactly like a Radio field, but the passed option values should be fully qualified urls to image thumbnails which will be displayed instead of traditional labels.
+This field allows adding multiple attachments from the Media. The returned data contains an array of the Attachment IDs.
+
+The Media Gallery supports sorting via _drag and drop_ and the selected attachments' metadata can be edited inline.
+
 
 ### Config methods
 
