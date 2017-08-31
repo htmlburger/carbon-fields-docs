@@ -11,7 +11,7 @@ Any mime in the list of acceptable file extensions for upload to the WordPress M
 
 ```php
 Field::make( 'media_gallery', 'crb_media_gallery' )
-    ->set_type( [ 'image', 'video' ] )
+    ->set_type( array( 'image', 'video' ) )
 ```
 
 `set_duplicates_allowed( $allow )`
