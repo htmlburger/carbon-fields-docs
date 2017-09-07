@@ -104,8 +104,8 @@ Container::make( 'theme_options', 'Basic Options' )
 To change the menu button title of the container, you can use `set_page_menu_title( $title )`, where `$title` is your desired title. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
 
 ```php
-Container::make( 'theme_options', 'Basic Options' )
-    ->set_page_menu_position( 80 )
+Container::make( 'theme_options', 'A very long option page title' )
+    ->set_page_menu_title( 'Custom Options' )
     ->add_fields( array(
         // ...
     ) );
