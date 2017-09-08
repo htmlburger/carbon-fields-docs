@@ -9,11 +9,14 @@
 | `'post_id'`                 | `'post_meta'`     | Check against the post id.                                                                                                            |
 | `'post_level'`              | `'post_meta'`     | Check against the post level in the hierarchy. Levels start from 1.                                                                   |
 | `'post_parent_id'`          | `'post_meta'`     | Check against the post's parent id.                                                                                                   |
+| `'post_ancestor_id'`        | `'post_meta'`     | Check against the post's ancestors.                                                                                                   |
 | `'post_template'`           | `'post_meta'`     | Check against the post's template filename. Pass `default` as the value to test against the default page template.                    |
 | `'post_term'`               | `'post_meta'`     | Check against the post's terms. The expected value must be a term descriptor (see below).  `CUSTOM` callable is passed the post's id. |
 | `'post_type'`               | `'post_meta'`     | Check against the post's type.                                                                                                        |
 | `'term'`                    | `'term_meta'`     | Check against the term according to the supplied term descriptor.  `CUSTOM` callable is passed the term's id.                         |
 | `'term_level'`              | `'term_meta'`     | Check against the term's level in the hierarchy.                                                                                      |
+| `'term_parent'`             | `'term_meta'`     | Check against the term's parent.                                                                                                      |
+| `'term_ancestor'`           | `'term_meta'`     | Check against the term's ancestors.                                                                                                   |
 | `'term_taxonomy'`           | `'term_meta'`     | Check against the term's taxonomy.                                                                                                    |
 | `'user_capability'`         | `'user_meta'`     | Check against the user's capabilities.  `CUSTOM` callable is passed the user's id.                                                    |
 | `'user_id'`                 | `'user_meta'`     | Check against the user's id.                                                                                                          |
