@@ -145,7 +145,7 @@ Allows you to modify the available options of the association field with name `{
 
 - if you want to filter the page post type options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_post_page`
 
-- if you want to filter the category taxonomy options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_taxonomy_category`
+- if you want to filter the category term options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_term_category`
 
 - if you want to filter the users options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_user`
 
