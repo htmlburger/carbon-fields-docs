@@ -14,3 +14,16 @@ Set the value that will be saved when the option is ticked.
 Field::make( 'checkbox', 'crb_show_content', 'Show content' )
     ->set_option_value( 'yes' )
 ```
+
+##### NB! Use a boolean value when referencing a checkbox field in `set_conditional_logic()`
+
+```php
+Field::make( 'checkbox', 'crb_show_content', 'Show content' ),
+Field::make( 'rich_text', 'crb_content', 'Content' )
+     ->set_conditional_logic( array(
+        array(
+            'field' => 'crb_show_content',
+            'value' => true,
+        )
+    ) ),
+```
