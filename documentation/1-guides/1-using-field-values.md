@@ -2,6 +2,11 @@
 
 This guide will show how to get and output field values in your theme. The use-case we will be discussing is for a copyright rich text field that we'll display in the theme's footer.
 
+##### NB: Field values can only be retrieved after the `carbon_fields_fields_registered` action has fired.
+The `carbon_fields_fields_registered` action is called in the `init` action with a priority of 0.
+
+---
+
 First, we'll need to define our theme options container and the rich text field in it by adding the following snippet at the top of your `functions.php` file:
 
 ```php
