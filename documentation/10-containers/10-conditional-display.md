@@ -41,6 +41,14 @@ Container::make( 'post_meta', 'Custom Data' )
     ->add_fields( array( ... ) );
 ```
 
+##### Showing a Post Meta Container on static home page
+
+```php
+Container::make( 'post_meta', 'Custom Data' )
+    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->add_fields( array( ... ) );
+```
+
 ##### Showing a User Meta Container only if the current user is an administrator or editor
 
 ```php
