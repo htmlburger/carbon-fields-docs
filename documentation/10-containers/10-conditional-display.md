@@ -11,7 +11,7 @@ _Note: chaining conditions behaves exactly like a normal php `if` statement with
 
 | Parameter              | Description                                                                                                   |
 |------------------------|---------------------------------------------------------------------------------------------------------------|
-| `$condition`           | A condition type name as a string (refer to the `Container Types` page)                                       |
+| `$condition`           | A condition type name as a string (refer to the `Condition Types` page)                                       |
 | `$comparison_operator` | Can be one of the following: `'='`, `'!='`, `'>'`, `'>='`, `'<'`, `'<='`, `'IN'`, `'NOT IN'`, `'CUSTOM'`      |
 | `$value`               | The value to check against. `IN` and `NOT IN` operators expect an array; `CUSTOM` operator expects a callable |
 
@@ -59,7 +59,7 @@ Container::make( 'post_meta', 'Custom Data' )
 
 ##### Nested logic
 
-In order to achieve nested display logic the `when()` and `or_when()` methods also support being invoked with a `callable`:
+In order to achieve nested display logic the `where()` and `or_where()` methods also support being invoked with a `callable`:
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
