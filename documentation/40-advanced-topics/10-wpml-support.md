@@ -1,6 +1,28 @@
 # WPML Support
 
-Carbon Fields provide out-of-the-box support for WPML with the small exception of the Theme Options container.
+Carbon Fields provide out-of-the-box support for WPML with the small exception of the Theme Options container (explained further below).
+
+## Flatpickr
+
+Carbon Fields use Flatpickr for the Date, Time and Datetime fields. In order to translate these fields you must enqueue the relevant translation script for [Flatpickr](https://chmln.github.io/flatpickr/localization/).
+
+Here's an example on how to include Russian translations:
+```php
+add_action( 'admin_enqueue_scripts', function() {
+    wp_enqueue_script( 'flatpickr-locale-ru', 'https://npmcdn.com/flatpickr/dist/l10n/ru.js', array('carbon-fields-boot') );
+} );
+```
+
+Carbon Fields will automatically detect your current administration language and pass it on to Flatpickr. If you want to override this behavior you can explicitly pass a locale for the relevant fields:
+```php
+Field::make( 'date', ... )
+    ->set_picker_options( array(
+        'locale' => 'es', // example with Spanish
+    ) ),
+```
+
+## Theme Options
+
 You can use this helpful snippet to achieve WPML-supporting theme options:
 
 ##### functions.php
