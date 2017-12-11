@@ -10,6 +10,8 @@ Renders a time and date picker field.
 
 Set the format which should be used to save date values in the database with. Defaults to `Y-m-d H:i:s`.
 
+Important note: Even though the database default format is `Y-m-d H:i:s`, the default input format is `Y-m-d H:i`. So in cases where the date_time field contains a date_time in `Y-m-d H:i:s` format, the field should be set `->set_input_format( 'Y-m-d H:i:s', 'Y-m-d H:i:S' )` to avoid the seconds being reset to :00 when the fields are updated.
+
 `set_input_format( $php_format, $js_format )`
 
 Set the format which should be used to enter values in the administration. Note that you should specify the format in both PHP and JS variants (i.e. they should be translations of each other). The JS format used is [Flatpickr's](https://chmln.github.io/flatpickr/formatting/).
