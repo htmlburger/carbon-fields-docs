@@ -57,6 +57,8 @@ Container::make( 'post_meta', 'Custom Data' )
     ->add_fields( array( ... ) );
 ```
 
+**Important note:** With [Theme options containers](/docs/containers-theme-options/) only users which have  ``manage_options`` capability have access to the container by default. Therefore ``current_user_role`` / ``current_user_capability`` conditions would not work unless [``carbon_fields_theme_options_container_admin_only_access`` filter](/docs/advanced-topics-hooks)is overridden.  
+ 
 ##### Nested logic
 
 In order to achieve nested display logic the `where()` and `or_where()` methods also support being invoked with a `callable`:
