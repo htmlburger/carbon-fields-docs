@@ -35,7 +35,7 @@ print_r( $rgba );
 ```
 
 Output:
-```
+```php
 array(4) {
   ["red"] => int(255), // integer in the 0-255 range
   ["green"] => int(0), // integer in the 0-255 range
