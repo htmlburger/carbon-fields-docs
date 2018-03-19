@@ -6,6 +6,15 @@ Renders a date picker.
 
 ### Config methods
 
+`set_attribute( $name, $value = '' )`
+
+Sets a direct attribute of the resulting `<input>` field. Can only be one of the following: `'placeholder'` and `'data-*'`.
+
+```php
+Field::make( 'date', 'crb_event_start', 'Event Start' )
+    ->set_attribute( 'placeholder', 'Date of event start' );
+```
+
 `set_storage_format( $storage_format )`
 
 Set the format which should be used to save date values in the database with. Defaults to `Y-m-d`.

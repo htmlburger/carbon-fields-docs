@@ -6,6 +6,15 @@ Renders a time picker field.
 
 ### Config methods
 
+`set_attribute( $name, $value = '' )`
+
+Sets a direct attribute of the resulting `<input>` field. Can only be one of the following: `'placeholder'` and `'data-*'`.
+
+```php
+Field::make( 'time', 'crb_event_start', 'Event Start' )
+    ->set_attribute( 'placeholder', 'Time of event start' );
+```
+
 `set_storage_format( $storage_format )`
 
 Set the format which should be used to save date values in the database with. Defaults to `H:i:s`.
