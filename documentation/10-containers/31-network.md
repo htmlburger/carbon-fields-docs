@@ -20,7 +20,7 @@ Container::make( 'network', 'crb_network_container', 'Network Settings' )
 
 ### Accessing field values
 
-To retrieve field values from a theme options container, you need to use the function `carbon_get_network_option( $site_id, $name, $container_id )`, where:
+To retrieve field values from a network options container, you need to use the function `carbon_get_network_option( $site_id, $name, $container_id )`, where:
 
 
 | Parameter            | Description                                                                         |
@@ -30,7 +30,7 @@ To retrieve field values from a theme options container, you need to use the fun
 | `$container_id`      | The container ID that contains the field. In the example above, `crb_network_container`. |
 
 ```php
-<h1>This is my title: <?php echo carbon_get_network_option( SITE_ID_CURRENT_SITE, 'crb_title', 'crb_network_container' ); ?></p>
+<h1>This is my title: <?php echo carbon_get_network_option( SITE_ID_CURRENT_SITE, 'crb_title', 'carbon_fields_container_crb_network_container' ); ?></p>
 ```
 
 After saving, the `carbon_fields_network_container_saved` hook is called, which allows you to hook additional functionality after saving.
