@@ -143,6 +143,8 @@ Allows you to change the number of characters, visible from the comment text in 
 
 Allows you to modify the available options of the association field with name `{name}` from the `{type}` type and of the `{subtype}` subtype where applicable.
 
+* *array* `$options` An options array that will be passed to the underlying query instance.
+
 - if you want to filter the page post type options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_post_page`
 
 - if you want to filter the category term options of the `crb_association` field, you would use the following filter: `carbon_fields_association_field_options_crb_association_term_category`
