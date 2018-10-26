@@ -1,6 +1,8 @@
-# Section-based page layout
+# Section-based page layout / Flexible Content
 
 In this guide, we'll create a section-based template which provides the end user with multiple section types that they can mix and match to their desire to build a unique page layout.
+
+For people coming from the ACF world: this guide shows the alternative of [Flexible Content](https://www.advancedcustomfields.com/resources/flexible-content/) field. 
 
 ##### Add the following to your theme's `functions.php`
 
