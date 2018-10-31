@@ -1,21 +1,15 @@
-# Serialized Datastore
+# Custom Datastore
 
-The following class allows you to store theme options fields as a serialized array instead of multiple database rows.
+The following example allows you to store theme options fields as a serialized array instead of multiple database rows.
 
-
-##### Container definitions
-
-```php
-Field::make( 'complex', 'crb_custom_datastore_complex' )
-    ->set_datastore( new Serialized_Theme_Options_Datastore() )
-    ->add_fields( array(
-        Field::make( 'text', 'text' ),
-    ) ),
-Field::make( 'map', 'crb_custom_datastore_map' )
-    ->set_datastore( new Serialized_Theme_Options_Datastore() ),
-```
+It serves as a starting point if you need to switch the underlying data
 
 ##### `Serialized_Theme_Options_Datastore.php`
+You first need to define a class that extends `Carbon_Fields\Datastore\Datastore`. You're required to define the following methods:
+
+ * `load( Field $field )` - load field value
+ * `save( Field $field )` - create or update field value
+ * `delete( Field $field )` - delete the field from the datastore
 
 ```php
 <?php
@@ -101,3 +95,18 @@ class Serialized_Theme_Options_Datastore extends Datastore {
     }
 }
 ```
+
+##### Container definitions
+Every `Field` keeps an instance to an object implementing the `Carbon_fields\Datastore\Datatore` interface. When you define a field, you can setup that object via `set_datastore` method call like this:
+
+```php
+Field::make( 'complex', 'crb_custom_datastore_complex' )
+    ->set_datastore( new Serialized_Theme_Options_Datastore() )
+    ->add_fields( array(
+        Field::make( 'text', 'text' ),
+    ) ),
+    
+Field::make( 'map', 'crb_custom_datastore_map' )
+    ->set_datastore( new Serialized_Theme_Options_Datastore() ),
+```
+
