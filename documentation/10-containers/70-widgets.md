@@ -1,8 +1,11 @@
 # Widgets
 
-Widget containers are used to create custom widgets for your theme. Each widget is defined as a PHP class. Widget classes must extend the `Widget` class and must have at least two methods – constructor `__construct()` and `front_end()`.
+The `widget` container is used to create custom widgets for your theme. Each widget is defined as a PHP class which:
 
-The constructor must be named after the class and it must call the method `setup( $name, $description, $fields, $classname )`, where:
+ 1. extends the `\Carbon_Fields\Widget` class ([reference](https://github.com/htmlburger/carbon-fields/blob/master/core/Widget/Widget.php))
+ 2. defines the constructor `__construct()` and `front_end()` methods
+
+The constructor must call the method `setup( $widget_id, $title, $description, $fields, $classname = '' )`, where:
 
 | Parameter                 | Description                                                                     |
 | ------------------------- | ------------------------------------------------------------------------------- |
