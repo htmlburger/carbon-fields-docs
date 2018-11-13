@@ -1,6 +1,6 @@
 # Widgets
 
-The `widget` container is used to create custom widgets for your theme. Each widget is defined as a PHP class which:
+The `Widget` container is used to create custom widgets for your theme. Each widget is defined as a PHP class which:
 
  1. extends the `\Carbon_Fields\Widget` class ([reference](https://github.com/htmlburger/carbon-fields/blob/master/core/Widget/Widget.php))
  2. defines the constructor `__construct()` and `front_end()` methods
