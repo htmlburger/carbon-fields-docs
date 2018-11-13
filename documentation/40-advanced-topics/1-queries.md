@@ -1,4 +1,4 @@
-# Queries
+# Integrating with `WP_Query`
 
 Carbon Fields allow you to make Post, Term and User queries based on fields even inside complex fields.
 
