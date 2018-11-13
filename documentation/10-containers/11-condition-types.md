@@ -1,27 +1,51 @@
 # Condition Types
 
-| Name                        | Container     | Description                                                                                                                           |
-|---------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| `'current_user_capability'` | Any               | Check against the current user's capabilities.  `CUSTOM` callable is passed the current user's id.                                    |
-| `'current_user_id'`         | Any               | Check against the current user's id.                                                                                                  |
-| `'current_user_role'`       | Any               | Check against the current user's role.  `CUSTOM` callable is passed an array of all current user's roles.                             |
-| `'post_format'`             | `'post_meta'`     | Check against the post format. Use a blank string as the value to test if the post has no format assigned.                            |
-| `'post_id'`                 | `'post_meta'`     | Check against the post id.                                                                                                            |
-| `'post_level'`              | `'post_meta'`     | Check against the post level in the hierarchy. Levels start from 1.                                                                   |
-| `'post_parent_id'`          | `'post_meta'`     | Check against the post's parent id.                                                                                                   |
-| `'post_ancestor_id'`        | `'post_meta'`     | Check against the post's ancestors.                                                                                                   |
-| `'post_template'`           | `'post_meta'`     | Check against the post's template filename. Pass `default` as the value to test against the default page template.                    |
-| `'post_term'`               | `'post_meta'`     | Check against the post's terms. The expected value must be a term descriptor (see below).  `CUSTOM` callable is passed the post's id. |
-| `'post_type'`               | `'post_meta'`     | Check against the post's type.                                                                                                        |
-| `'term'`                    | `'term_meta'`     | Check against the term according to the supplied term descriptor.  `CUSTOM` callable is passed the term's id.                         |
-| `'term_level'`              | `'term_meta'`     | Check against the term's level in the hierarchy.                                                                                      |
-| `'term_parent'`             | `'term_meta'`     | Check against the term's parent.                                                                                                      |
-| `'term_ancestor'`           | `'term_meta'`     | Check against the term's ancestors.                                                                                                   |
-| `'term_taxonomy'`           | `'term_meta'`     | Check against the term's taxonomy.                                                                                                    |
-| `'user_capability'`         | `'user_meta'`     | Check against the user's capabilities.  `CUSTOM` callable is passed the user's id.                                                    |
-| `'user_id'`                 | `'user_meta'`     | Check against the user's id.                                                                                                          |
-| `'user_role'`               | `'user_meta'`     | Check against the user's role.  `CUSTOM` callable is passed an array of the user's roles.                                             |
-| `'blog_id'`                 | `'theme_options'` | Check against the current blog's id                                                                        |
+### `post_meta` conditions
+
+| Name                 | Description                                                                                                                           |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| `'post_format'`      | Check against the post format. Use a blank string as the value to test if the post has no format assigned.                            |
+| `'post_id'`          | Check against the post id.                                                                                                            |
+| `'post_level'`       | Check against the post level in the hierarchy. Levels start from 1.                                                                   |
+| `'post_parent_id'`   | Check against the post's parent id.                                                                                                   |
+| `'post_ancestor_id'` | Check against the post's ancestors.                                                                                                   |
+| `'post_template'`    | Check against the post's template filename. Pass `default` as the value to test against the default page template.                    |
+| `'post_term'`        | Check against the post's terms. The expected value must be a term descriptor (see below).  `CUSTOM` callable is passed the post's id. |
+| `'post_type'`        | Check against the post's type.                                                                                                        |
+
+### `term_meta` conditions
+
+| Name              | Description                                                                                                                           |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| `'term'`          | Check against the term according to the supplied term descriptor.  `CUSTOM` callable is passed the term's id.                         |
+| `'term_level'`    | Check against the term's level in the hierarchy.                                                                                      |
+| `'term_parent'`   | Check against the term's parent.                                                                                                      |
+| `'term_ancestor'` | Check against the term's ancestors.                                                                                                   |
+| `'term_taxonomy'` | Check against the term's taxonomy.                                                                                                    |
+
+### `user_meta` conditions
+
+| Name                | Description                                                                                                                           |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| `'user_capability'` | Check against the user's capabilities. `CUSTOM` callable is passed the user's id.                                                     |
+| `'user_id'`         | Check against the user's id.                                                                                                          |
+| `'user_role'`       | Check against the user's role. `CUSTOM` callable is passed an array of the user's roles.                                              |
+
+### `theme_options` conditions
+
+| Name         | Description                                                                                                                           |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| `'blog_id'`  | Check against the current blog's id                                                                                                   |
+
+### Generally available conditions
+
+The below conditions are applicable to any container and depend on the current user 
+
+| Name                        | Description                                                                                                                           |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| `'current_user_capability'` | Check against the current user's capabilities.  `CUSTOM` callable is passed the current user's id.                                    |
+| `'current_user_id'`         | Check against the current user's id.                                                                                                  |
+| `'current_user_role'`       | Check against the current user's role.  `CUSTOM` callable is passed an array of all current user's roles.                             |
 
 ## Term Descriptors
 
