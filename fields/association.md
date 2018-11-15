@@ -2,9 +2,19 @@
 
 This field allows to select and reorder multiple post type **posts**, **taxonomy terms**, **users** or **comments**. Useful for creating links between any of these items.
 
-### Config methods
+```php
+Field::make( 'association', 'crb_association', __( 'Association' ) )
+    ->set_types( array(
+        array(
+            'type'      => 'post',
+            'post_type' => 'product',
+        )
+    ) )
+```
 
-`set_types( $types )`
+## Config methods
+
+?> `set_types( $types )`
 
 It allows you to specify the types of data that you want to have available in this association field.
 
@@ -16,9 +26,19 @@ In this context:
     * For the `taxonomy` `type`, you can use `category`, `post_tag` or any other registered custom taxonomy. 
     * The `subtype` is not used for the `user` and `comment` types.
 
-Defaults to `array( array( 'type' => 'post', 'post_type' => 'post' ) )`
+Defaults to:
 
-`set_min( $min )`
+```php
+Field::make( 'association', 'crb_association', __( 'Association' ) )
+    ->set_types( array(
+        array(
+            'type'      => 'post',
+            'post_type' => 'post',
+        )
+    ) )
+```
+
+?> `set_min( $min )`
 
 Allows you to set the minimum number of selected items in an association field. By default, there is no requirement.
 
@@ -27,7 +47,7 @@ Field::make( 'association', 'crb_association' )
     ->set_min( 5 )
 ```
 
-`set_max( $max )`
+?> `set_max( $max )`
 
 Allows you to limit the maximum number of selected items in an association field. By default, there is no limit.
 
@@ -36,7 +56,7 @@ Field::make( 'association', 'crb_association' )
     ->set_max( 5 )
 ```
 
-`set_duplicates_allowed( $allow )`
+?> `set_duplicates_allowed( $allow )`
 
 If enabled will allow the same item to be selected more than once. By default, duplicates are not allowed.
 
@@ -45,11 +65,12 @@ Field::make( 'association', 'crb_association' )
     ->set_duplicates_allowed( true )
 ```
 
-##### Getting stored values
+## Getting stored values
 
 ```php
 /* Get the association data as an array */
 carbon_get_post_meta( $id, $name );
+
 /*
 The above example returns: 
 array( 
@@ -63,13 +84,13 @@ array(
         'id' => 16,
         'type' => 'term',
         'subtype' => 'category',
-        'value' => 'term:category:16',
+        'value' => 'term:category:16',a
     )
 )
 */
 ```
 
-### Example
+## Example
 
 The example below registers the following options for the association field:
 
@@ -108,7 +129,7 @@ Field::make( 'association', 'crb_association' )
     ) )
 ```
 
-### Value Format
+## Value Format
 
 ```php
 array(
