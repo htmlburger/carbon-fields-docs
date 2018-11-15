@@ -1,8 +1,8 @@
-# Integrating with `WP_Query`
+# Integrating with WP_Query
 
 Carbon Fields allow you to make Post, Term and User queries based on fields even inside complex fields.
 
-##### Example 1
+## Example 1
 
 Getting all posts which have a `crb_text` field with a value of `'hello world'`:
 
@@ -16,8 +16,8 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
-    'meta_query'=>array(
+    'post_type' => 'post',
+    'meta_query' => array(
         array(
             'key' => 'crb_text',
             'value' => 'hello_world',
@@ -26,9 +26,9 @@ $query = new WP_Query( array(
 ) );
 ```
 
-##### Example 2
+## Example 2
 
-Getting all posts which have a `crb_map` field with a longitude property larger than -2 (rather than combined `lat,lng` value):
+Getting all posts which have a `crb_map` field with a longitude property larger than -2 (rather than combined `lat, lng` value):
 
 ```php
 // field definition
@@ -40,8 +40,8 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
-    'meta_query'=>array(
+    'post_type' => 'post',
+    'meta_query' => array(
         array(
             'key' => 'crb_map',
             'carbon_field_property' => 'lng',
@@ -52,7 +52,7 @@ $query = new WP_Query( array(
 ) );
 ```
 
-##### Example 3
+## Example 3
 
 Getting all posts which have `'red'` selected in the `crb_colors` Set field:
 
@@ -67,8 +67,8 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
-    'meta_query'=>array(
+    'post_type' => 'post',
+    'meta_query' => array(
         array(
             'key' => 'crb_colors',
             'value' => 'red',
@@ -77,7 +77,7 @@ $query = new WP_Query( array(
 ) );
 ```
 
-##### Example 4
+## Example 4
 
 Getting all posts which have `'New York'` entered in the `city` Text_Field inside a `crb_cities` complex field:
 
@@ -94,8 +94,8 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
-    'meta_query'=>array(
+    'post_type' => 'post',
+    'meta_query' => array(
         array(
             'key' => 'crb_cities/city',
             'value' => 'New York',
@@ -104,7 +104,7 @@ $query = new WP_Query( array(
 ) );
 ```
 
-##### Example 5
+## Example 5
 
 Getting all posts which have `'New York'` entered in the `city` Text_Field inside a `crb_cities` complex field when the complex has multiple groups:
 
@@ -127,8 +127,8 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
-    'meta_query'=>array(
+    'post_type' => 'post',
+    'meta_query' => array(
         array(
             'key' => 'crb_cities:group1/city',
             'value' => 'New York',
@@ -137,7 +137,7 @@ $query = new WP_Query( array(
 ) );
 ```
 
-##### Example 6
+## Example 6
 
 Ordering posts based on a Carbon Field value:
 
@@ -151,10 +151,10 @@ Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
 
 // query
 $query = new WP_Query( array(
-    'post_type'=>'post',
+    'post_type' => 'post',
     'orderby' => 'text_field',
     'order' => 'asc',
-    'meta_query'=>array(
+    'meta_query' => array(
         'text_field' => array(
             'key' => 'crb_text',
             'compare' => 'EXISTS',
