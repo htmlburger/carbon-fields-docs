@@ -15,6 +15,7 @@
 * Containers
 
  * [Usage](containers/usage.md)
+ * [Gutenberg Blocks](containers/gutenberg-blocks.md)
  * [Post Meta](containers/post-meta.md)
  * [Term Meta](containers/term-meta.md)
  * [User Meta](containers/user-meta.md)
