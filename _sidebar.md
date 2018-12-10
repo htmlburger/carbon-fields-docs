@@ -1,16 +1,8 @@
-* Carbon Fields
+* Getting Started
 
   * [Overview](overview.md)
   * [Quickstart](quickstart.md)
   * [Plugin Quickstart](plugin-quickstart.md)
-
-* Guides
-
-  * [Using Field Values](guides/using-field-values.md)
-  * [Term Meta](guides/term-meta.md)
-  * [Repeating Groups](guides/repeating-groups.md)
-  * [Predefined Complex Groups](guides/predefined-complex-groups.md)
-  * [Sidebar Options](guides/sidebar-options.md)
 
 * Containers
 
@@ -45,12 +37,12 @@
  * [Image](fields/image.md)
  * [Map](fields/map.md)
  * [Media Gallery](fields/media-gallery.md)
+ * [Multiselect](fields/multiselect.md)
  * [Oembed](fields/oembed.md)
  * [Radio](fields/radio.md)
  * [Radio Image](fields/radio-image.md)
  * [Rich Text](fields/rich-text.md)
  * [Select](fields/select.md)
- * [Multiselect](fields/multiselect.md)
  * [Separator](fields/separator.md)
  * [Set](fields/set.md)
  * [Sidebar](fields/sidebar.md)
