@@ -23,32 +23,48 @@
 * Fields
 
  * [Usage](fields/usage.md)
- * [Association](fields/association.md)
- * [Checkbox](fields/checkbox.md)
- * [Color](fields/color.md)
- * [Date](fields/date.md)
- * [Date Time](fields/date-time.md)
- * [File](fields/file.md)
- * [Footer Scripts](fields/footer-scripts.md)
- * [Gravity Form](fields/gravity-form.md)
- * [Header Scripts](fields/header-scripts.md)
- * [Hidden](fields/hidden.md)
- * [Html](fields/html.md)
- * [Image](fields/image.md)
- * [Map](fields/map.md)
- * [Media Gallery](fields/media-gallery.md)
- * [Multiselect](fields/multiselect.md)
- * [Oembed](fields/oembed.md)
- * [Radio](fields/radio.md)
- * [Radio Image](fields/radio-image.md)
- * [Rich Text](fields/rich-text.md)
- * [Select](fields/select.md)
- * [Separator](fields/separator.md)
- * [Set](fields/set.md)
- * [Sidebar](fields/sidebar.md)
- * [Text](fields/text.md)
- * [Textarea](fields/textarea.md)
- * [Time](fields/time.md)
+
+ * Basic
+  - [Checkbox](fields/checkbox.md)
+  - [Color](fields/color.md)
+  - [Hidden](fields/hidden.md)
+  - [Multiselect](fields/multiselect.md)
+  - [Radio](fields/radio.md)
+  - [Radio Image](fields/radio-image.md)
+  - [Rich Text](fields/rich-text.md)
+  - [Select](fields/select.md)
+  - [Set](fields/set.md)
+  - [Text](fields/text.md)
+  - [Textarea](fields/textarea.md)
+
+ * Date and Time
+  - [Date](fields/date.md)
+  - [Date Time](fields/date-time.md)
+  - [Time](fields/time.md)
+
+ * Relational
+  - [Association](fields/association.md)
+
+ * Media
+  - [File](fields/file.md)
+  - [Image](fields/image.md)
+  - [Media Gallery](fields/media-gallery.md)
+
+ * Misc
+  - [Footer Scripts](fields/footer-scripts.md)
+  - [Header Scripts](fields/header-scripts.md)
+
+ * Structure
+  - [Html](fields/html.md)
+  - [Separator](fields/separator.md)
+
+ * 3rd Party Plugins
+  - [Gravity Form](fields/gravity-form.md)
+
+ * Other
+  - [Map](fields/map.md)
+  - [Oembed](fields/oembed.md)
+  - [Sidebar](fields/sidebar.md)
 
 * Complex Field
 
