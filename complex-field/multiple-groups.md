@@ -11,15 +11,18 @@ Unique name of the group.
 Numeric array of fields.
 
 ```php
-Field::make( 'complex', 'crb_job' )
-    ->add_fields( 'driver', array(
-        Field::make( 'text', 'name' ),
-        Field::make( 'text', 'drivers_license_id' ),
-    ))
-    ->add_fields( 'teacher', array(
-        Field::make( 'image', 'name' ),
-        Field::make( 'image', 'years_of_experience' ),
-    ))
+Field::make( 'complex', 'crb_media' )
+    ->add_fields( 'photograph', array(
+        Field::make( 'text', 'caption', __( 'Caption' ) ),
+        Field::make( 'image', 'image', __( 'Image' ) )
+            ->set_value_type( 'url' ),
+    ) )
+    ->add_fields( 'movie', array(
+        Field::make( 'text', 'length', __( 'Length' ) ),
+        Field::make( 'text', 'title', __( 'Title' ) ),
+        Field::make( 'file', 'video', __( 'Video' ) )
+            ->set_value_type( 'url' ),
+    ) )
 ```
 
 Each call to `add_fields( $name, $fields )` creates a new group and adds it to the complex field.
@@ -53,3 +56,26 @@ Each item represents the values stored by a single group. The name of the group 
 
 Complex field values are retrieved using either `carbon_get_post_meta()` or `carbon_get_theme_option()` (or a different retrieval function, depending on the container it is added to) and passing the string `"complex"` as `$type` argument.
 
+## Config Methods
+
+?> `set_duplicate_groups_allowed( $allowed = true )`
+
+Set whether duplicate groups are allowed.
+
+!> This method is only applicable to multiple groups complex field definition. Using it with a single group won't have any effect.
+
+```php
+Field::make( 'complex', 'crb_media' )
+    ->set_duplicate_groups_allowed( false )
+    ->add_fields( 'photograph', array(
+        Field::make( 'text', 'caption', __( 'Caption' ) ),
+        Field::make( 'image', 'image', __( 'Image' ) )
+            ->set_value_type( 'url' ),
+    ) )
+    ->add_fields( 'movie', array(
+        Field::make( 'text', 'length', __( 'Length' ) ),
+        Field::make( 'text', 'title', __( 'Title' ) ),
+        Field::make( 'file', 'video', __( 'Video' ) )
+            ->set_value_type( 'url' ),
+    ) )
+```

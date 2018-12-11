@@ -3,14 +3,14 @@
 Complex fields act as containers to which you can add multiple groups of fields. It is represented as a table, where each row is a field group. The user is able to add infinite rows of each group. This allows to repeat a set of fields multiple times creating customizable and sortable lists. This is useful when creating image galleries, lists of data or advanced content and layout elements.
 
 ```php
-Field::make( 'complex', 'crb_slide' )
+Field::make( 'complex', 'crb_slider', __( 'Slider' ) )
     ->add_fields( array(
-        Field::make( 'text', 'title' ),
-        Field::make( 'image', 'photo' ),
+        Field::make( 'text', 'title', __( 'Slide Title' ) ),
+        Field::make( 'image', 'photo', __( 'Slide Photo' ) ),
     ) )
 ```
 
-The example above shows how to make a slide show. We created a single complex field named `slide`, to which we attached one group of fields that represents a single slide – `title` and `photo`. The user will be able to add multiple rows of title and photo, thus creating a list of slides for the slide show.
+The example above shows how to make a slider. We've created a single complex field named `slide`, to which we attached one group of fields that represents a single slide – `title` and `photo`. The user will be able to add multiple rows of title and photo, thus creating a list of slides for the slide show.
 
 A more advanced usage of the complex field is shown below:
 

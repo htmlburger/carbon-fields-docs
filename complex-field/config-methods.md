@@ -2,11 +2,11 @@
 
 You can use the following methods to setup and customize the complex field.
 
-`add_fields( $fields )`
+?> `add_fields( $fields )`
 
 This method is identical to Container add_fields method, where `$fields` is an array of fields.
 
-`set_layout( $layout )`
+?> `set_layout( $layout )`
 
 There are 3 layouts available for displaying a complex field:
 
@@ -18,23 +18,23 @@ For tabbed layouts the group label will be displayed in the tabs navigation.
 
 Tabbed layouts are intended to clean up the user interface of field-heavy pages.
 
-`set_collapsed( $collapsed )`
+?> `set_collapsed( $collapsed )`
 
 Change the groups' initial visual collapse state. Must be `boolean`. Defaults to `false`.
 
-`set_min( $min )`
+?> `set_min( $min )`
 
 Minimum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
 
-`set_max( $max )`
+?> `set_max( $max )`
 
 Maximum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
 
-`set_duplicate_groups_allowed( $allowed )`
+?> `set_duplicate_groups_allowed( $allowed )`
 
 Set whether the user should be allowed to create duplicate groups. Defaults to `true`.
 
-`setup_labels( $labels )`
+?> `setup_labels( $labels )`
 
 Allows client code to change labels for this complex field. The following items are accepted:
 
@@ -62,11 +62,9 @@ Field::make( 'complex', 'crb_employee_data' )
     ) )
 ```
 
-`set_header_template( $template )`
+?> `set_header_template( $template )`
 
 Allows for a [Lodash template](https://lodash.com/docs/4.17.4#template) to be used in the fields group header.
-
-The passed `$template` can also be a [callback](http://php.net/manual/en/language.types.callable.php).
 
 ___Note:___ Dashes in field names must be replaced with underscores.
 Example: `field-name-with-dashes` must be referred to as `<%- field_name_with_dashes %>` in `set_header_template()`
@@ -96,4 +94,26 @@ Example usage:
         Driver: <%- name %>, <%- drivers_license_id %>
     <% } %>
 ' )
+```
+
+The passed `$template` can also be a [callback](http://php.net/manual/en/language.types.callable.php).
+
+```php
+function crb_complex_field_header_template() {
+    ob_start();
+    ?>
+
+    <% if (name) { %>
+        Passenger: <%- name %> <%- years ? "(" + years + ")" : "" %>
+    <% } %>
+
+    <?php
+    return ob_get_clean();
+}
+
+->add_fields( 'passenger', array(
+    Field::make( 'text', 'name' ),
+    Field::make( 'text', 'years' ),
+) )
+->set_header_template( 'crb_complex_field_header_template' )
 ```

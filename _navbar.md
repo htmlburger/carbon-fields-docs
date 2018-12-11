@@ -1,4 +1,4 @@
-* [Switch Version](guides/using-field-values.md)
+* [Switch Version](/)
  * [3.0](/)
  * [2.2](https://github.com/htmlburger/carbon-fields-docs/tree/2.2.0/documentation)
  * [2.1](https://github.com/htmlburger/carbon-fields-docs/tree/2.1.0/documentation)
