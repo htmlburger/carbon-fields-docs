@@ -10,7 +10,7 @@ use Carbon_Fields\Container;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 function crb_attach_post_meta() {
-    Container::make( 'post_meta', __( 'Page Options', 'crb' ) )
+    Container::make( 'post_meta', __( 'Page Options' ) )
         ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
         ->add_fields( array(
             Field::make( 'complex', 'crb_slides', 'Slides' )

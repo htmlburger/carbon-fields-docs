@@ -10,7 +10,7 @@ Setting the value for the `crb_text` post_meta field for the post with id of 10:
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'text', 'crb_text', 'Text' ),
@@ -26,7 +26,7 @@ Setting the value for the `text` post_meta field for the post with id of 10 when
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'complex', 'crb_complex', 'Complex' )
@@ -51,7 +51,7 @@ Setting the value for the `crb_complex` post_meta field for the post with id of 
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'complex', 'crb_complex', 'Complex' )

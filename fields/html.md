@@ -2,9 +2,14 @@
 
 Render custom HTML markup.
 
-### Config methods
+```php
+Field::make( 'html', 'crb_html', __( 'Section Description' ) )
+	->set_html( sprintf( '<p>$1</p>', __( 'Here, you can add some useful description for the fields below / above this text.' ) ) )
+```
 
-`set_html( $html )`
+## Config methods
+
+?> `set_html( $html )`
 
 Set the HTML markup you would like to show to `$html`.
 

@@ -3,7 +3,7 @@
 ### Field Definition
 
 ```php
-Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+Container::make( 'theme_options', __( 'Theme Options' ) )
     ->add_fields( array(
         Field::make( 'complex', 'crb_complex', 'My Complex Field' )
             ->add_fields( array(

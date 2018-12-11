@@ -8,7 +8,7 @@ Getting all posts which have a `crb_text` field with a value of `'hello world'`:
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'text', 'crb_text', 'Text' ),
@@ -32,7 +32,7 @@ Getting all posts which have a `crb_map` field with a longitude property larger 
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'map', 'crb_map', 'Map' ),
@@ -58,7 +58,7 @@ Getting all posts which have `'red'` selected in the `crb_colors` Set field:
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'set', 'crb_colors', 'Colors' )
@@ -83,7 +83,7 @@ Getting all posts which have `'New York'` entered in the `city` Text_Field insid
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'complex', 'crb_cities', 'Cities' )
@@ -110,7 +110,7 @@ Getting all posts which have `'New York'` entered in the `city` Text_Field insid
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( 'group1', array(
         Field::make( 'complex', 'crb_cities', 'Cities' )
@@ -143,7 +143,7 @@ Ordering posts based on a Carbon Field value:
 
 ```php
 // field definition
-Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+Container::make( 'post_meta', __( 'Post Options' ) )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
         Field::make( 'text', 'crb_text', 'Text' ),

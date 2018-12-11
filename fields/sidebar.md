@@ -4,7 +4,9 @@ Adds a drop-down field that lists existing sidebars and provides the ability to 
 
 To change the options of sidebars created through this field or through the "Add New" sidebar button on the Widgets page, use this filter:
 
-`Field::make( 'sidebar', 'crb_custom_sidebar', 'Select a Sidebar' )`
+```phpq
+Field::make( 'sidebar', 'crb_custom_sidebar', __( 'Select a Sidebar' ) )
+```
 
 ```php
 add_filter( 'carbon_fields_sidebar_options', 'crb_my_custom_sidebar_options' );
@@ -24,13 +26,13 @@ function crb_my_custom_sidebar_field_options( $sidebars, $field_name ) {
 }
 ```
 
-### Config methods
+## Config methods
 
-`disable_add_new()`
+?> `disable_add_new()`
 
 Remove the ability to add new sidebars to the site.
 
-`set_excluded_sidebars( $sidebars )`
+?> `set_excluded_sidebars( $sidebars )`
 
 Exclude one or more sidebars from the select menu. `$sidebars` parameter can be an array (of sidebar IDs or sidebar names) or a single sidebar (ID or name).
 
@@ -41,7 +43,7 @@ Field::make( 'sidebar', 'crb_custom_sidebar', 'Select a Sidebar' )
 
 ### Helper functions
 
-`crb_dynamic_sidebar( $id, $sidebar_options )`
+?> `crb_dynamic_sidebar( $id, $sidebar_options )`
 
 This function is not included in Carbon Fields core, but feel free to use it in your theme/plugin.
 

@@ -14,7 +14,7 @@ Carbon Fields allows you to create custom field libraries that you can distribut
 
     add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
     function crb_attach_theme_options() {
-        Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+        Container::make( 'theme_options', __( 'Theme Options' ) )
             ->add_fields( array(
                 Field::make( 'yourfieldtype', 'crb_your_custom_field', 'Your Custom Field' ),
             ) );

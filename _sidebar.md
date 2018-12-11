@@ -14,33 +14,37 @@
   ---
 </details>
 
-
 * Getting Started
 
   * [Overview](overview.md)
   * [Quickstart](quickstart.md)
   * [Plugin Quickstart](plugin-quickstart.md)
 
-* Containers
+* Containers Usage
 
  * [Usage](containers/usage.md)
  * [Conditional Display](containers/conditional-display.md)
  * [Condition Types](containers/condition-types.md)
+ * [Tabs](containers/tabs.md)
+
+* Container Types
 
  * [Comment Meta](containers/comment-meta.md)
  * [Gutenberg Blocks :new:](containers/gutenberg-blocks.md)
  * [Nav Menu Item](containers/nav-menu-item.md)
  * [Network](containers/network.md)
  * [Post Meta](containers/post-meta.md)
- * [Tabs](containers/tabs.md)
  * [Term Meta](containers/term-meta.md)
  * [Theme Options](containers/theme-options.md)
  * [User Meta](containers/user-meta.md)
  * [Widgets](containers/widgets.md)
 
-* Fields
+* Fields Usage
 
  * [Usage](fields/usage.md)
+ * [Conditional Logic](fields/conditional-logic.md)
+
+* Field Types
 
  * Basic
   - [Checkbox](fields/checkbox.md)
@@ -90,6 +94,7 @@
  * [Single Group](complex-field/single-group.md)
  * [Multiple Groups](complex-field/multiple-groups.md)
  * [Nested Complex Fields](complex-field/nested-complex-fields.md)
+ * [Predefined Complex Groups](complex-field/predefined-complex-groups.md)
  * [Config Methods](complex-field/config-methods.md)
 
 * Advanced Topics

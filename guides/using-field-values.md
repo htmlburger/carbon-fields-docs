@@ -15,7 +15,7 @@ use Carbon_Fields\Container;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
-    Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+    Container::make( 'theme_options', __( 'Theme Options' ) )
         ->add_fields( array(
             Field::make( 'rich_text', 'crb_footer_copyright', 'Copyright' ),
         ) );
@@ -48,7 +48,7 @@ use Carbon_Fields\Container;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 function crb_attach_post_meta() {
-    Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+    Container::make( 'post_meta', __( 'Post Options' ) )
         ->where( 'post_type', '=', 'post' )
         ->add_fields( array(
             Field::make( 'text', 'crb_venue', 'Venue' ),

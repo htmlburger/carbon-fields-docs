@@ -42,7 +42,7 @@ add_filter( 'carbon_fields_theme_options_container_static_condition_types', func
 
 ##### Container definitions
 ```php
-Container::make( 'theme_options', __( 'Foobar Container', 'crb' ) )
+Container::make( 'theme_options', __( 'Foobar Container' ) )
     ->where( 'foobar', '=', 'foobar' ); // this will always return true
     // ->where( 'foobar', '=', 'lorem' ); // this will always return false
 ```

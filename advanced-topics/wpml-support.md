@@ -46,7 +46,7 @@ function crb_get_i18n_theme_option( $option_name ) {
 ##### Field Definition
 
 ```php
-Container::make( 'theme_options', __( 'WPML Theme Options', 'crb' ) )
+Container::make( 'theme_options', __( 'WPML Theme Options' ) )
     ->add_fields( array(
         Field::make( 'text', 'crb_wpml_text_field' . crb_get_i18n_suffix(), 'Text Field' )
     ) );

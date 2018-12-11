@@ -9,7 +9,7 @@ For people coming from the ACF world: this guide shows the alternative of [Flexi
 ```php
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_options' );
 function crb_attach_post_options() {
-    Container::make( 'post_meta', __( 'Section Options', 'crb' ) )
+    Container::make( 'post_meta', __( 'Section Options' ) )
         ->where( 'post_type', '=', 'page' )
         ->where( 'post_template', '=', 'template-section-based.php' )
         ->add_fields( array(

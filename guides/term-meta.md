@@ -10,7 +10,7 @@ use Carbon_Fields\Container;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_term_meta' );
 function crb_attach_term_meta() {
-    Container::make( 'term_meta', __( 'Term Options', 'crb' ) )
+    Container::make( 'term_meta', __( 'Term Options' ) )
         ->where( 'term_taxonomy', '=', 'category' ) // only show our new field for categories
         ->add_fields( array(
             Field::make( 'color', 'crb_color', 'Color' )
