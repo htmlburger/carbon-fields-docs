@@ -24,18 +24,19 @@
 * Containers
 
  * [Usage](containers/usage.md)
- * [Gutenberg Blocks :new:](containers/gutenberg-blocks.md)
- * [Post Meta](containers/post-meta.md)
- * [Term Meta](containers/term-meta.md)
- * [User Meta](containers/user-meta.md)
- * [Comment Meta](containers/comment-meta.md)
- * [Theme Options](containers/theme-options.md)
- * [Widgets](containers/widgets.md)
- * [Nav Menu Item](containers/nav-menu-item.md)
- * [Network](containers/network.md)
- * [Tabs](containers/tabs.md)
  * [Conditional Display](containers/conditional-display.md)
  * [Condition Types](containers/condition-types.md)
+
+ * [Comment Meta](containers/comment-meta.md)
+ * [Gutenberg Blocks :new:](containers/gutenberg-blocks.md)
+ * [Nav Menu Item](containers/nav-menu-item.md)
+ * [Network](containers/network.md)
+ * [Post Meta](containers/post-meta.md)
+ * [Tabs](containers/tabs.md)
+ * [Term Meta](containers/term-meta.md)
+ * [Theme Options](containers/theme-options.md)
+ * [User Meta](containers/user-meta.md)
+ * [Widgets](containers/widgets.md)
 
 * Fields
 
