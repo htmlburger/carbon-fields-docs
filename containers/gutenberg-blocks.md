@@ -14,7 +14,6 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
 	->set_render_callback( function ( $block ) {
-		ob_start();
 		?>
 
 		<div class="block">
@@ -32,7 +31,6 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 		</div><!-- /.block -->
 
 		<?php
-		return ob_get_clean();
 	} );
 ```
 
