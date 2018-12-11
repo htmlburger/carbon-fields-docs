@@ -6,9 +6,9 @@ Nav Menu Item containers are used to extend the Nav Menu edit screens with addit
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make( 'nav_menu_item', 'Menu Settings' )
+Container::make( 'nav_menu_item', __( 'Menu Settings' ) )
     ->add_fields( array(
-        Field::make( 'color', 'crb_color' ),
+        Field::make( 'color', 'crb_color', __( 'Color' ) ),
     ));
 ```
 
@@ -20,10 +20,10 @@ Containers are rendered in the order they are initialized.
 
 Since each menu entry is a post from post type `"nav_menu_item"` with status `"publish"`, the values can be accessed with the function `carbon_get_nav_menu_item_meta( $nav_menu_item_ID, $name )`, where:
 
-| Parameter            | Description                                                   |
-| -------------------- | ------------------------------------------------------------- |
-| `$nav_menu_item_ID`  | Nav Menu Item Post ID where your value was entered.           |
-| `$name`              | The field name pattern of the field to be retrieved.                        |
+| Parameter           | Description                                          |
+| --------------------| -----------------------------------------------------|
+| `$nav_menu_item_ID` | Nav Menu Item Post ID where your value was entered.  |
+| `$name`             | The field name pattern of the field to be retrieved. |
 
 ### Custom Walkers or Walker Filters
 
@@ -102,17 +102,17 @@ function crb_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
 
 Both of the above examples will result in:
 
-```php
+```html
 <div class="menu-main-menu-container">
     <ul id="menu-main-menu" class="menu">
         <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23">
-            <a href="#" style="color: #2020f3; ">Sample Page</a>
+            <a href="#" style="color: #2020f3;">Sample Page</a>
         </li>
         <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-            <a href="#" style="color: #f94c4c; ">Sample Page</a>
+            <a href="#" style="color: #f94c4c;">Sample Page</a>
         </li>
         <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-            <a href="#" style="color: #81d742; ">Sample Page</a>
+            <a href="#" style="color: #81d742;">Sample Page</a>
         </li>
     </ul>
 </div>

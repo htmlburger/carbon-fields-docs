@@ -84,10 +84,10 @@
 * Advanced Topics
 
  * [Queries](advanced-topics/queries.md)
- * [Wpml Support](advanced-topics/wpml-support.md)
+ * [WPML Support](advanced-topics/wpml-support.md)
  * [Hooks](advanced-topics/hooks.md)
  * [Updating Values](advanced-topics/updating-values.md)
- * [Javascript Api](advanced-topics/javascript-api.md)
+ * [Javascript API](advanced-topics/javascript-api.md)
  * [Field Name Patterns](advanced-topics/field-name-patterns.md)
 
 * Extending

@@ -6,11 +6,11 @@ Term meta containers are used to extend the term edit screens with additional fi
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-Container::make( 'term_meta', 'Category Properties' )
+Container::make( 'term_meta', __( 'Category Properties' ) )
     ->where( 'term_taxonomy', '=', 'category' )
     ->add_fields( array(
-        Field::make( 'color', 'crb_title_color' ),
-        Field::make( 'image', 'crb_thumb' ),
+        Field::make( 'color', 'crb_title_color', __( 'Title Color' ) ),
+        Field::make( 'image', 'crb_thumb', __( 'Thumbnail' ) ),
     ) );
 ```
 
@@ -18,10 +18,10 @@ Container::make( 'term_meta', 'Category Properties' )
 
 To access field values you need to use the function `carbon_get_term_meta( $term_id, $name )`, where:
 
-| Parameter            | Description                                                                         |
-| -------------------- | ----------------------------------------------------------------------------------- |
-| `$term_id`           | Term ID where your value was entered.                                               |
-| `$name`              | The field name pattern of the field to be retrieved.                                              |
+| Parameter  | Description                                          |
+| ---------- | ---------------------------------------------------- |
+| `$term_id` | Term ID where your value was entered.                |
+| `$name`    | The field name pattern of the field to be retrieved. |
 
 ```php
 <!-- Simple field -->

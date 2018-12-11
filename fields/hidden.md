@@ -1,7 +1,11 @@
 # Hidden
 
-Add a hidden field
+Adds a hidden field.
 
-### Config methods
+```php
+Field::make( 'hidden', 'crb_hidden_data', __( 'Hidden Data' ) )
+```
 
-Refer to Text Field.
+## Config methods
+
+Refer to [Text Field](/fields/text).

@@ -4,7 +4,7 @@ Adds a drop-down field that lists existing sidebars and provides the ability to 
 
 To change the options of sidebars created through this field or through the "Add New" sidebar button on the Widgets page, use this filter:
 
-```phpq
+```php
 Field::make( 'sidebar', 'crb_custom_sidebar', __( 'Select a Sidebar' ) )
 ```
 
@@ -75,7 +75,7 @@ function crb_dynamic_sidebar( $index = 1, $options = array() ) {
     $sidebar = $wp_registered_sidebars[$index];
 
     // Update the sidebar options
-    $wp_registered_sidebars[$index]    = wp_parse_args( $options, $sidebar );
+    $wp_registered_sidebars[ $index ] = wp_parse_args( $options, $sidebar );
 
     // Display the sidebar
     $status = dynamic_sidebar( $index );
