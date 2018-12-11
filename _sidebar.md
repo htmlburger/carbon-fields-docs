@@ -1,19 +1,3 @@
-<details style="display: none;">
-  <summary><strong>Switch Version (Click to expand)</strong></summary>
-
-  <ul style="margin-left: 30px;">
-    <li><a href="#">master</a></li>
-    <li><a href="#">v3.0</a></li>
-    <li><a href="#">v2.2</a></li>
-    <li><a href="#">v2.1</a></li>
-    <li><a href="#">v2.0</a></li>
-    <li><a href="#">v1.6</a></li>
-    <li><a href="#">v1.4</a></li>
-  </ul>
-
-  ---
-</details>
-
 * Getting Started
 
   * [Overview](overview.md)
