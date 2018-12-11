@@ -1,6 +1,6 @@
 # Condition Types
 
-### `post_meta` conditions
+## `post_meta` conditions
 
 | Name                 | Description                                                                                                                           |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -13,7 +13,20 @@
 | `'post_term'`        | Check against the post's terms. The expected value must be a term descriptor (see below).  `CUSTOM` callable is passed the post's id. |
 | `'post_type'`        | Check against the post's type.                                                                                                        |
 
-### `term_meta` conditions
+```php
+// Display container on Books CPT
+Container::make( 'post_meta', __( 'Book Data' ) )
+	->where( 'post_type', '=', 'crb_book' )
+	->add_fields( array( .. ) );
+
+// Display container on page that uses the template `templates/homepage.php`
+Container::make( 'post_meta', __( 'Homepage Settings' ) )
+	->where( 'post_type', '=', 'page' )
+	->where( 'post_template', '=', 'templates/homepage.php' )
+	->add_fields( array( .. ) );
+```
+
+## `term_meta` conditions
 
 | Name              | Description                                                                                                                           |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,7 +36,14 @@
 | `'term_ancestor'` | Check against the term's ancestors.                                                                                                   |
 | `'term_taxonomy'` | Check against the term's taxonomy.                                                                                                    |
 
-### `user_meta` conditions
+```php
+// Display container on Book Category taxonomy
+Container::make( 'post_meta', __( 'Book Category Data' ) )
+	->where( 'term_taxonomy', '=', 'crb_book_category' )
+	->add_fields( array( .. ) );
+```
+
+## `user_meta` conditions
 
 | Name                | Description                                                                                                                           |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -31,13 +51,20 @@
 | `'user_id'`         | Check against the user's id.                                                                                                          |
 | `'user_role'`       | Check against the user's role. `CUSTOM` callable is passed an array of the user's roles.                                              |
 
-### `theme_options` conditions
+```php
+// Display container on for Administrators only
+Container::make( 'post_meta', __( 'Administrator' ) )
+	->where( 'user_role', '=', 'administrator' )
+	->add_fields( array( .. ) );
+```
+
+## `theme_options` conditions
 
 | Name         | Description                                                                                                                           |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | `'blog_id'`  | Check against the current blog's id                                                                                                   |
 
-### Generally available conditions
+## Generally available conditions
 
 The below conditions are applicable to any container and depend on the current user 
 
@@ -46,6 +73,13 @@ The below conditions are applicable to any container and depend on the current u
 | `'current_user_capability'` | Check against the current user's capabilities.  `CUSTOM` callable is passed the current user's id.                                    |
 | `'current_user_id'`         | Check against the current user's id.                                                                                                  |
 | `'current_user_role'`       | Check against the current user's role.  `CUSTOM` callable is passed an array of all current user's roles.                             |
+
+```php
+// Display theme options page to users who have the 'manage_options' capability
+Container::make( 'theme_options', __( 'Theme Options' ) )
+	->where( 'current_user_capability', '=', 'manage_options' )
+	->add_fields( array( .. ) )
+```
 
 ## Term Descriptors
 
@@ -58,7 +92,7 @@ A term descriptor is an array which has the following keys:
 | `value`    | The value for the term field.   |
 | `taxonomy` | The taxonomy of the term.       |
 
-##### Example usage
+## Example usage
 
 ```php
 Container::make( 'post_meta', 'Custom Data' )
