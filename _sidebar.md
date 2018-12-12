@@ -1,3 +1,9 @@
+<div style="display: flex; justify-content: center; margin: 30px 0;">
+  <a href="https://htmlburger.com/" target="_blank">
+    <img src="https://carbonfields.net/wp-content/uploads/2017/10/htmlburger-made-with-love.png" title="Made by htmlBurger with love!" alt="Made by htmlBurger with love!" />
+  </a>
+</div>
+
 * Getting Started
 
   * [Overview](overview.md)
