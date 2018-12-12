@@ -3,7 +3,7 @@
 Renders a date picker.
 
 ```php
-Field::make( 'date', 'crb_event_start_date', __( 'Event Start Date' ) )`
+Field::make( 'date', 'crb_event_start_date', __( 'Event Start Date' ) )
 ```
 
 ## Config methods
