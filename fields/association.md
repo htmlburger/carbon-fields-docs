@@ -4,12 +4,6 @@ This field allows to select and reorder multiple post type **posts**, **taxonomy
 
 ```php
 Field::make( 'association', 'crb_association', __( 'Association' ) )
-    ->set_types( array(
-        array(
-            'type'      => 'post',
-            'post_type' => 'product',
-        )
-    ) )
 ```
 
 ## Config methods
