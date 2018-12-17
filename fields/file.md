@@ -5,7 +5,7 @@ Renders a file upload field with a preview thumbnail of the uploaded file. The b
 This field type stores the **ID** of the selected file.
 
 ```php
-Field::make( 'file', 'crb_file', __( 'File' ) ),
+Field::make( 'file', 'crb_file', __( 'File' ) )
 ```
 
 ## Config methods
