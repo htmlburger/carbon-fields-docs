@@ -81,7 +81,7 @@
 
  * Other
   - [Map](fields/map.md)
-  - [Oembed](fields/oembed.md)
+  - [oEmbed](fields/oembed.md)
   - [Sidebar](fields/sidebar.md)
 
 * Complex Field
