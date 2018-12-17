@@ -121,6 +121,8 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 
 This method allows you to set the aliases that help users discover it while searching.
 
+!> You are only allowed to add as much as 3 keywords per block.
+
 ```php
 Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
@@ -128,7 +130,7 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
-	->set_keywords( [ __( 'block' ), __( 'image' ), __( 'content' ), __( 'layout' ) ] )
+	->set_keywords( [ __( 'block' ), __( 'image' ), __( 'content' ) ] )
 	->set_render_callback( function () {
 		// ..
 	} );
