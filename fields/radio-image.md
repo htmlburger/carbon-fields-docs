@@ -3,10 +3,11 @@
 Behaves exactly like a Radio field, but the passed option values should be fully qualified urls to image thumbnails which will be displayed instead of traditional labels.
 
 ```php
-Field::make( 'radio_image', 'crb_layout', __( 'Choose Layout' ) )
+Field::make( 'radio_image', 'crb_background_image', __( 'Choose Background Image' ) )
 	->set_options( array(
-		'fullwidth' => 'https://example.com/images/fullwidth-layout.png',
-		'boxed' => 'https://example.com/images/boxed-layout.png',
+		'mountain' => 'https://source.unsplash.com/X1UTzW8e7Q4/800x600',
+		'temple' => 'https://source.unsplash.com/ioJVccFmWxE/800x600',
+		'road' => 'https://source.unsplash.com/5c8fczgvar0/800x600',
 	) )
 ```
 
