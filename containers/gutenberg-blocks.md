@@ -7,7 +7,9 @@ __Gutenberg__ is a block-based editor that provides a better and more natural wa
 In order to create a new Gutenberg Block you can still use the already familiar developer-friendly way just like you'd register any other container.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+use Carbon_Fields\Block;
+
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -46,7 +48,7 @@ Notice the `->set_render_callback()` method. This allows you to set the output t
 This method allows you to set a short text that describes the block. The description is shown in the Block inspector sidebar once you focus on the Block.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -71,7 +73,7 @@ Gutenberg blocks can be grouped in different categories. By default, the followi
 If you don't specify a category, the block will be assigned to __common__.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -86,7 +88,7 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 However, if you need to, you can register a new category for your blocks.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -105,7 +107,7 @@ The `$icon` argument accepts the slug of a [WordPress Dashicon](https://develope
 In addition to setting an icon to block categories, you can set an icon to the block itself.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -124,7 +126,7 @@ This method allows you to set the aliases that help users discover it while sear
 !> You are only allowed to add as much as 3 keywords per block.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -141,7 +143,7 @@ Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
 This methods sets whether the preview mode is available for the block type.
 
 ```php
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -163,7 +165,7 @@ wp_register_style(
 	get_stylesheet_directory_uri() . '/css/gutenberg/my-shiny-gutenberg-block.css'
 );
 
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -185,7 +187,7 @@ wp_register_style(
 	get_stylesheet_directory_uri() . '/css/gutenberg/my-shiny-gutenberg-block.css'
 );
 
-Container::make( 'block', __( 'My Shiny Gutenberg Block' ) )
+Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
 		Field::make( 'text', 'heading', __( 'Block Heading' ) ),
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
