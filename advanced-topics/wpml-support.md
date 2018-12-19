@@ -17,7 +17,7 @@ Carbon Fields will automatically detect your current administration language and
 ```php
 Field::make( 'date', ... )
     ->set_picker_options( array(
-        'locale' => 'es', // example with Spanish
+        'locale' => 'ru', // example with Russian
     ) ),
 ```
 
