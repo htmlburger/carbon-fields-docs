@@ -1,8 +1,6 @@
 Carbon Fields - Docs
 ====================
 
----
-
 ### Table of Contents
 
 * [Carbon Fields](https://github.com/htmlburger/carbon-fields-docs/blob/master/documentation/)
