@@ -80,17 +80,10 @@
   - [Gravity Form](fields/gravity-form.md)
 
  * Other
+  - [Complex](fields/complex.md)
   - [Map](fields/map.md)
   - [oEmbed](fields/oembed.md)
   - [Sidebar](fields/sidebar.md)
-
-* Complex Field
-
- * [Usage](complex-field/usage.md)
- * [Multiple Groups](complex-field/multiple-groups.md)
- * [Nested Complex Fields](complex-field/nested-complex-fields.md)
- * [Predefined Complex Groups](complex-field/predefined-complex-groups.md)
- * [Config Methods](complex-field/config-methods.md)
 
 * Advanced Topics
 
