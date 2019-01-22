@@ -1,4 +1,4 @@
-# Hooks
+# PHP Hooks
 
 There are several hooks that allow you to include your custom classes and functionality at the right time, in the right place:
 

@@ -89,7 +89,8 @@
 
  * [Queries](advanced-topics/queries.md)
  * [WPML Support](advanced-topics/wpml-support.md)
- * [Hooks](advanced-topics/hooks.md)
+ * [PHP Hooks](advanced-topics/php-hooks.md)
+ * [JavaScript Hooks](advanced-topics/javascript-hooks.md)
  * [Updating Values](advanced-topics/updating-values.md)
  <!-- * [Javascript API](advanced-topics/javascript-api.md) -->
  * [Field Name Patterns](advanced-topics/field-name-patterns.md)
