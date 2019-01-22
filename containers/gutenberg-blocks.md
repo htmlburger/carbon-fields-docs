@@ -38,7 +38,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 
 Notice the `->set_render_callback()` method. This allows you to set the output that will be generated from this block both in _Preview_ mode and on the frontend.
 
-`->set_render_callback()` accepts a callback, which should __return__ an HTML string. The callback functions accepts `$block` as the first argument, which contains an array with the entered data in the block.
+`->set_render_callback()` accepts a callback, which should output the HTML markup for the block. The callback function accepts `$block` as the first argument, which contains an array with the entered data in the block.
 
 
 ## Config Methods
