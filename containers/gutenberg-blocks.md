@@ -15,20 +15,20 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
-	->set_render_callback( function ( $block ) {
+	->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 		?>
 
 		<div class="block">
 			<div class="block__heading">
-				<h1><?php echo esc_html( $block['heading'] ); ?></h1>
+				<h1><?php echo esc_html( $fields['heading'] ); ?></h1>
 			</div><!-- /.block__heading -->
 
 			<div class="block__image">
-				<?php echo wp_get_attachment_image( $block['image'], 'full' ); ?>
+				<?php echo wp_get_attachment_image( $fields['image'], 'full' ); ?>
 			</div><!-- /.block__image -->
 
 			<div class="block__content">
-				<?php echo apply_filters( 'the_content', $block['content'] ); ?>
+				<?php echo apply_filters( 'the_content', $fields['content'] ); ?>
 			</div><!-- /.block__content -->
 		</div><!-- /.block -->
 
@@ -38,7 +38,11 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 
 Notice the `->set_render_callback()` method. This allows you to set the output that will be generated from this block both in _Preview_ mode and on the frontend.
 
-`->set_render_callback()` accepts a callback, which should output the HTML markup for the block. The callback function accepts `$block` as the first argument, which contains an array with the entered data in the block.
+`->set_render_callback()` accepts a callback, which should output the HTML markup for the block. The callback function will be called with the following arguments:
+
+- `$fields`, an array with the entered data in the block.
+- `$attributes`, an array with the attributes of the block like custom CSS class, alignment, etc.
+- `$inner_blocks`, a string with the content of all nested blocks.
 
 
 ## Config Methods
@@ -201,7 +205,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
-?> `set_inner_blocks( $nested_blocks = true )`
+?> `set_inner_blocks( $inner_blocks = true )`
 
 This method controls the ability of the block to contain nested blocks.
 
