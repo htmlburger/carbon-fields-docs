@@ -15,20 +15,20 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
-	->set_render_callback( function ( $block ) {
+	->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 		?>
 
 		<div class="block">
 			<div class="block__heading">
-				<h1><?php echo esc_html( $block['heading'] ); ?></h1>
+				<h1><?php echo esc_html( $fields['heading'] ); ?></h1>
 			</div><!-- /.block__heading -->
 
 			<div class="block__image">
-				<?php echo wp_get_attachment_image( $block['image'], 'full' ); ?>
+				<?php echo wp_get_attachment_image( $fields['image'], 'full' ); ?>
 			</div><!-- /.block__image -->
 
 			<div class="block__content">
-				<?php echo apply_filters( 'the_content', $block['content'] ); ?>
+				<?php echo apply_filters( 'the_content', $fields['content'] ); ?>
 			</div><!-- /.block__content -->
 		</div><!-- /.block -->
 
@@ -38,7 +38,11 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 
 Notice the `->set_render_callback()` method. This allows you to set the output that will be generated from this block both in _Preview_ mode and on the frontend.
 
-`->set_render_callback()` accepts a callback, which should output the HTML markup for the block. The callback function accepts `$block` as the first argument, which contains an array with the entered data in the block.
+`->set_render_callback()` accepts a callback, which should output the HTML markup for the block. The callback function will be called with the following arguments:
+
+- `$fields`, an array with the entered data in the block.
+- `$attributes`, an array with the attributes of the block like custom CSS class, alignment, etc.
+- `$inner_blocks`, a string with the content of all nested blocks.
 
 
 ## Config Methods
@@ -155,6 +159,8 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
+!> The nested blocks aren't affected by this method. Only their parent can enter in a preview mode.
+
 ?> `set_editor_style( $handle )`
 
 You can set a custom stylesheet specific for your block, which will be loaded in the editor in the administration panel.
@@ -194,6 +200,138 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
 	->set_style( 'crb-my-shiny-gutenberg-block-stylesheet' )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_inner_blocks( $inner_blocks = true )`
+
+This method controls the ability of the block to contain nested blocks.
+
+```php
+Block::make( __( 'My Shiny Gutenberg Block' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_inner_blocks_position( $position = 'above' )`
+
+This method sets the position at which the inner blocks will render. The possible values are: `above` and `below`.
+
+```php
+Block::make( __( 'My Shiny Gutenberg Block' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_inner_blocks_position( 'below' )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_inner_blocks_template( $template = null )`
+
+This method allows you to set a template of blocks which every new instance of your block will contain.
+The possible values are: `array` and `null`.
+
+See [Gutenberg > Templates](https://wordpress.org/gutenberg/handbook/designers-developers/developers/block-api/block-templates/#nested-templates) for more details.
+
+```php
+Block::make( __( 'My Shiny Gutenberg Block' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_inner_blocks_template( array(
+		array( 'core/heading' ),
+		array( 'core/paragraph' )
+	) )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_inner_blocks_template_lock( $lock = null )`
+
+This method allows you to lock the area that contains the nested blocks.
+The possible values are:
+
+- `all` - prevents all operations. It is not possible to insert new blocks. Move existing blocks or delete them.
+- `insert` - prevents inserting or removing blocks, but allows moving existing ones.
+- `false` - prevents locking from being applied to the nested blocks area even if a parent block contains locking.
+- `null` - disables any locks applied to the area.
+
+See [Gutenberg > Templates](https://wordpress.org/gutenberg/handbook/designers-developers/developers/block-api/block-templates/#locking) and [Gutenberg > Inner Blocks](https://github.com/WordPress/gutenberg/tree/master/packages/editor/src/components/inner-blocks#templatelock) for more details.
+
+```php
+Block::make( __( 'My Shiny Gutenberg Block' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_inner_blocks_template( array(
+		array( 'core/heading' ),
+		array( 'core/paragraph' )
+	) )
+	->set_inner_blocks_template_lock( 'insert' )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_parent( $parent = null )`
+
+This method allows you to restrict the block to be inserted to specific block types.
+The possible values are - `string`, `array` or `null`.
+
+See [Gutenberg > Block Registration](https://wordpress.org/gutenberg/handbook/designers-developers/developers/block-api/block-registration/#parent-optional) for more details.
+
+```php
+Block::make( __( 'Product' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_render_callback( function () {
+		// ..
+	} );
+
+Block::make( __( 'Product Description' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_parent( 'carbon-fields/product' )
+	->set_render_callback( function () {
+		// ..
+	} );
+```
+
+?> `set_allowed_inner_blocks( $blocks = null )`
+
+This method allows you to restrict the type of blocks that can be inserted in the nested blocks area.
+The possible values are - `array` or `null`.
+
+See [Gutenberg > Inner Blocks](https://github.com/WordPress/gutenberg/tree/master/packages/editor/src/components/inner-blocks#allowedblocks) for more details.
+
+!> If an empty array is passed then only the blocks that have your block as parent can be inserted. See the `set_parent` method.
+
+```php
+Block::make( __( 'My Shiny Gutenberg Block' ) )
+	->add_fields( array(
+		// ...
+	) )
+	->set_inner_blocks( true )
+	->set_allowed_inner_blocks( array(
+		'core/paragraph',
+		'core/list'
+	) )
 	->set_render_callback( function () {
 		// ..
 	} );
