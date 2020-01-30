@@ -27,3 +27,5 @@ This guide will show you how to install the Carbon Fields library using composer
     }
     ```
 1. Open up `/wp-admin/` - you now have a brand new "Theme Options" admin section with a text field
+
+**IMPORTANT: Any further guide in this documentation is written with the awareness that you are following this Quickstart guide and any `Container` or `Block` definitions are registered in the `carbon_fields_register_fields` hook.**
