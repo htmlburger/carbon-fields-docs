@@ -9,7 +9,7 @@ Carbon Fields use Flatpickr for the Date, Time and Datetime fields. In order to 
 Here's an example on how to include Russian translations:
 ```php
 add_action( 'admin_enqueue_scripts', function() {
-    wp_enqueue_script( 'flatpickr-locale-ru', 'https://npmcdn.com/flatpickr/dist/l10n/ru.js', array('carbon-fields-boot') );
+    wp_enqueue_script( 'flatpickr-locale-ru', 'https://npmcdn.com/flatpickr/dist/l10n/ru.js', array('carbon-fields-core') );
 } );
 ```
 
