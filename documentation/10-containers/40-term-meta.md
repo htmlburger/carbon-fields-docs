@@ -16,19 +16,20 @@ Container::make( 'term_meta', 'Category Properties' )
 
 ### Accessing field values
 
-To access field values you need to use the function `carbon_get_term_meta( $term_id, $name )`, where:
+To access field values you need to use the function `carbon_get_term_meta( $term_id, $name, $container_id = '' )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
-| `$term_id`           | Term ID where your value was entered.                                               |
-| `$name`              | The field name pattern of the field to be retrieved.                                              |
+| `$term_id`           | Term ID where your value was entered. (required)                                    |
+| `$name`              | The field name pattern of the field to be retrieved. (required)                     |
+| `$container_id`      | The container id for which to retrieve the field value. (optional) See [Post Meta Container](/containers/post-meta?id=accessing-field-values) for more info. |
 
 ```php
 <!-- Simple field -->
 <p>Editor of this category: <?php echo carbon_get_term_meta( $category->term_id, 'crb_editor' ); ?></p>
 
 <!-- Complex field -->
-<?php 
+<?php
 $authors = carbon_get_term_meta( $category->term_id, 'crb_authors' );
 foreach ( $authors as $author ) {
     echo $author['name'];

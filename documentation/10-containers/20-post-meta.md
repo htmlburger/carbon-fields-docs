@@ -20,19 +20,22 @@ The priority within the context where the container should show (`'high'` (defau
 
 ### Accessing field values
 
-To access field values you need to use the function `carbon_get_post_meta( $id, $name )`, where:
+To access field values you need to use the function `carbon_get_post_meta( $id, $name, $container_id = '' )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
-| `$id`                | Post ID where your value was entered.                                               |
-| `$name`              | The field name pattern of the field to be retrieved.                                              |
+| `$id`                | Post ID where your value was entered. (required)                                    |
+| `$name`              | The field name pattern of the field to be retrieved. (required)                     |
+| `$container_id`      | The container id for which to retrieve the field value. (optional)                  |
+
+*Container ID is generated from the `carbon_fields_container_` prefix and sanitized version of the Container Name. For example if you define `post_meta` Container named `Post Settings` its id will be - `carbon_fields_container_post_settings`. Passing the container id is recommended if you have defined fields with same names and in different containers.*
 
 ```php
 <!-- Simple field -->
 <p>Article was published in: <?php echo carbon_get_post_meta( get_the_ID(), 'crb_location' ); ?></p>
 
 <!-- Complex field -->
-<?php 
+<?php
 $slides = carbon_get_post_meta( get_the_ID(), 'crb_slides' );
 if ( $slides ) {
     foreach ( $slides as $slide ) {
