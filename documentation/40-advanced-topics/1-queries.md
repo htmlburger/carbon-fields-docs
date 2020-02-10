@@ -112,18 +112,15 @@ Getting all posts which have `'New York'` entered in the `city` Text_Field insid
 // field definition
 Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
     ->where( 'post_type', '=', 'post' )
-    ->add_fields( 'group1', array(
+    ->add_fields( array(
         Field::make( 'complex', 'crb_cities', 'Cities' )
-            ->add_fields( array(
+            ->add_fields( 'group1', array(
                 Field::make( 'text', 'city', 'City' ),
             ) )
-    ) )
-    ->add_fields( 'group2', array(
-        Field::make( 'complex', 'crb_cities', 'Cities' )
-            ->add_fields( array(
+            ->add_fields( 'group2', array(
                 // ...
-            ) )
-    ) );
+            ) );
+    ) )
 
 // query
 $query = new WP_Query( array(
