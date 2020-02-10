@@ -10,6 +10,8 @@ More information about the position options can be found in the [add_meta_box()]
 
 The part of the page where the container should be shown (`'normal'` (default), `'advanced'`, `'side'` or `'carbon_fields_after_title'`)
 
+*`carbon_fields_after_title` position is not supported in the Gutenberg Editor.*
+
 `->set_context( 'normal' )`
 
 #### Priority
@@ -32,7 +34,7 @@ To access field values you need to use the function `carbon_get_post_meta( $id, 
 <p>Article was published in: <?php echo carbon_get_post_meta( get_the_ID(), 'crb_location' ); ?></p>
 
 <!-- Complex field -->
-<?php 
+<?php
 $slides = carbon_get_post_meta( get_the_ID(), 'crb_slides' );
 if ( $slides ) {
     foreach ( $slides as $slide ) {
