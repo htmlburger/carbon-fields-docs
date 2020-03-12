@@ -4,6 +4,12 @@ This field renders the built-in WordPress tinyMCE WYSIWYG editor.
 
 `Field::make( 'rich_text', 'crb_sidenote', 'Sidenote Content' )`
 
+## Config methods
+
+`set_settings( $settings_array )`
+
+For more information check the **wp_editor** settings -- https://developer.wordpress.org/reference/classes/_wp_editors/parse_settings/
+
 ## Usage
 
 The data retrieved from a Rich Text field will generally need to be manually filtered in order to display properly. Simply echoing the field will lead to improperly formatted paragraphs.
