@@ -6,7 +6,7 @@ New field are created using the `make` method `Field::make( $type, $name, $label
 
 `$type`
 
-The type of the field. This parameter should be valid class name of a field. For example `text` will create field of class `Field_Text`. 
+The type of the field. This parameter should be valid class name of a field. For example `text` will create field of class `Field_Text`.
 
 `$name`
 
@@ -97,7 +97,7 @@ The conditional rules are passed in a two-dimensional array and each rule can ha
 | --------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------| -------- |
 | `field`     | The field name to which the rule is applied. The name should be the same as defined in the container.    | `string`                         | Yes      |
 | `value`     | The value of the field. It can be an array only when `compare` is `IN`, `NOT IN`, `INCLUDES` or `EXCLUDES`.                            | `string|array`, default: `""`    | No       |
-| `compare` | Operator to test. Possible values are: `=`, `<`, `>`, `<=`, `>=`, `IN`, `NOT IN`, `INCLUDES`, `EXCLUDES`.                                    | `string`, default: `=`           | No       |
+| `compare` | Operator to test. Possible values are: `=`, `!=`, `<`, `>`, `<=`, `>=`, `IN`, `NOT IN`, `INCLUDES`, `EXCLUDES`.                                    | `string`, default: `=`           | No       |
 
 You can optionally pass the `relation` key and set it to either `AND` (default) or `OR`. It defines the relation, when there is more than one rule.
 
@@ -116,7 +116,7 @@ Field::make( 'text', 'crb_facebook', 'Facebook URL' )
         array(
             'field' => 'crb_show_socials',
             'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
-            'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+            'compare' => '=', // Optional, defaults to "=". Available operators: =, !=, <, >, <=, >=, IN, NOT IN, INCLUDES, EXCLUDES
         )
     ) ),
 ```
