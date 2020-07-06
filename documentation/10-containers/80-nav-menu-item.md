@@ -18,12 +18,13 @@ Containers are rendered in the order they are initialized.
 
 ### Accessing field values
 
-Since each menu entry is a post from post type `"nav_menu_item"` with status `"publish"`, the values can be accessed with the function `carbon_get_nav_menu_item_meta( $nav_menu_item_ID, $name )`, where:
+Since each menu entry is a post from post type `"nav_menu_item"` with status `"publish"`, the values can be accessed with the function `carbon_get_nav_menu_item_meta( $nav_menu_item_ID, $name, $container_id = '' )`, where:
 
-| Parameter            | Description                                                   |
-| -------------------- | ------------------------------------------------------------- |
-| `$nav_menu_item_ID`  | Nav Menu Item Post ID where your value was entered.           |
-| `$name`              | The field name pattern of the field to be retrieved.                        |
+| Parameter            | Description                                                    |
+| -------------------- | -------------------------------------------------------------- |
+| `$nav_menu_item_ID`  | Nav Menu Item Post ID where your value was entered. (required) |
+| `$name`              | The field name pattern of the field to be retrieved. (required) |
+| `$container_id`      | The container id for which to retrieve the field value. (optional) See [Post Meta Container](/containers/post-meta?id=accessing-field-values) for more info. |
 
 ### Custom Walkers or Walker Filters
 

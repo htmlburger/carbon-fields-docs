@@ -15,12 +15,13 @@ Container::make( 'comment_meta', 'Comment Information' )
 
 ### Accessing field values
 
-To access field values you need to use the function `carbon_get_comment_meta( $comment_id, $name )`, where:
+To access field values you need to use the function `carbon_get_comment_meta( $comment_id, $name, $container_id = '' )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
-| `$comment_id`        | Comment ID where your value was entered.                                            |
-| `$name`              | The field name pattern of the field to be retrieved.                                              |
+| `$comment_id`        | Comment ID where your value was entered. (required)                                 |
+| `$name`              | The field name pattern of the field to be retrieved. (required)                     |
+| `$container_id`      | The container id for which to retrieve the field value. (optional) See [Post Meta Container](/containers/post-meta?id=accessing-field-values) for more info. |
 
 ```php
 <?php $comments = get_comments( array(

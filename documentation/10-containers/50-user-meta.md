@@ -16,19 +16,20 @@ Container::make( 'user_meta', 'Address' )
 
 ### Accessing field values
 
-To access field values you need to use the function `carbon_get_user_meta( $user_d, $name )`, where:
+To access field values you need to use the function `carbon_get_user_meta( $user_id, $name, $container_id = '' )`, where:
 
 | Parameter            | Description                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------- |
-| `$user_id`           | User ID where your value was entered.                                               |
-| `$name`              | The field name pattern of the field to be retrieved.                                              |
+| `$user_id`           | User ID where your value was entered. (required)                                    |
+| `$name`              | The field name pattern of the field to be retrieved. (required)                     |
+| `$container_id`      | The container id for which to retrieve the field value. (optional) See [Post Meta Container](/containers/post-meta?id=accessing-field-values) for more info. |
 
 ```php
 <!-- Simple field -->
 <p>Author address: <?php echo carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_street' ); ?></p>
 
 <!-- Complex field -->
-<?php 
+<?php
 $phone_numbers = carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_phone_numbers' );
 foreach ( $phone_numbers as $phone ) {
     echo $phone['country_code'] . '-' . $phone['number'];
