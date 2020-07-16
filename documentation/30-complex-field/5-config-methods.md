@@ -24,7 +24,7 @@ Change the groups' initial visual collapse state. Must be `boolean`. Defaults to
 
 `set_min( $min )`
 
-Minimum number of rows. Must be greater than `0`. Defaults to `-1` (no limit).
+Minimum number of rows. Must be greater than `0`. Defaults to `-1` (no limit). Fields must be required, otherwise set_min will be ignored.
 
 `set_max( $max )`
 
