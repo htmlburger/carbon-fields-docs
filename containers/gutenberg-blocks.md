@@ -8,6 +8,7 @@ In order to create a new Gutenberg Block you can still use the already familiar 
 
 ```php
 use Carbon_Fields\Block;
+use Carbon_Fields\Field;
 
 Block::make( __( 'My Shiny Gutenberg Block' ) )
 	->add_fields( array(
