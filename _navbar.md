@@ -1,5 +1,5 @@
 * Switch Version
- * [3.0](/)
+ * [3.x](/)
  * [2.2](https://carbonfields.net/docs/?crb_version=2-2-0)
  * [2.1](https://carbonfields.net/docs/?crb_version=2-1-0)
  * [2.0](https://carbonfields.net/docs/?crb_version=2-0-0)
