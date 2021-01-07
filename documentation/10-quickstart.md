@@ -14,7 +14,7 @@ This guide will show you how to install the Carbon Fields library using composer
 
     add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
     function crb_attach_theme_options() {
-        Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+        Container::make( 'theme_options', 'sample_theme_options',  __( 'Theme Options', 'crb' ) )
             ->add_fields( array(
                 Field::make( 'text', 'crb_text', 'Text Field' ),
             ) );
