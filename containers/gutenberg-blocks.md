@@ -143,9 +143,10 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
-?> `set_preview_mode( $preview = true )`
+?> `set_mode( 'both' )`
 
-This methods sets whether the preview mode is available for the block type.
+This methods sets which modes are available for the block.
+The possible values are - `both` (default), `edit` or `preview`.
 
 ```php
 Block::make( __( 'My Shiny Gutenberg Block' ) )
@@ -154,7 +155,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
-	->set_preview_mode( false )
+	->set_mode( 'edit' )
 	->set_render_callback( function () {
 		// ..
 	} );
