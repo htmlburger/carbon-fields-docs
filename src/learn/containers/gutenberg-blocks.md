@@ -7,6 +7,8 @@ __Gutenberg__ is a block-based editor that provides a better and more natural wa
 In order to create a new Gutenberg Block you can still use the already familiar developer-friendly way just like you'd register any other container.
 
 ```php
+<?php
+
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
@@ -143,9 +145,9 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
-### `set_preview_mode( $preview = true )`
+### `set_mode( $mode = 'edit' )`
 
-This methods sets whether the preview mode is available for the block type.
+This method sets the block mode to 'edit' or 'both'.
 
 ```php
 Block::make( __( 'My Shiny Gutenberg Block' ) )
@@ -154,7 +156,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 		Field::make( 'image', 'image', __( 'Block Image' ) ),
 		Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
 	) )
-	->set_preview_mode( false )
+	->set_mode( 'edit' )
 	->set_render_callback( function () {
 		// ..
 	} );
