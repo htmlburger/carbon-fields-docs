@@ -1,0 +1,33 @@
+# Image
+
+Renders an image upload button with a preview thumbnail of the uploaded image. The built-in WordPress file handling interface is used.
+
+Supported image formats are: `jpg`, `jpeg`, `gif`, `png` and `bmp`.
+
+This field type stores the **ID** of the selected image.
+
+```php
+Field::make( 'image', 'crb_image', __( 'Image' ) )
+```
+
+## Config methods
+
+### `set_type( $mime_type )` *(defaults to `image`)*
+
+Set the allowed files type. Short mime types are also supported (`audio`, `video`, `image`).
+
+```php
+Field::make( 'image', 'crb_image', __( 'Image' ) )
+	->set_type( array( 'video' ) )
+```
+
+### `set_value_type( $value_type )`
+
+Set the type of the stored value. *(defaults to `id`)*
+
+You can also set the type to `url` to store the URL of the image instead of its ID.
+
+```php
+Field::make( 'image', 'crb_image', __( 'Image' ) )
+    ->set_value_type( 'url' )
+```
