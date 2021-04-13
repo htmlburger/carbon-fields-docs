@@ -67,7 +67,7 @@ Template Name: Section-based
             case 'file_list':
                 ?>
                 <div class="section-file-list">
-                    <h2>Resorces:</h2>
+                    <h2>Resources:</h2>
                     <ul>
                         <?php foreach ( $section['files'] as $file_item ) : ?>
                             <li>
