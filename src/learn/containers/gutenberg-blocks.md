@@ -7,8 +7,6 @@ __Gutenberg__ is a block-based editor that provides a better and more natural wa
 In order to create a new Gutenberg Block you can still use the already familiar developer-friendly way just like you'd register any other container.
 
 ```php
-<?php
-
 use Carbon_Fields\Block;
 use Carbon_Fields\Field;
 
