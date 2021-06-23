@@ -38,7 +38,7 @@ Container::make( 'post_meta', __( 'Homepage Settings' ) )
 
 ```php
 // Display container on Book Category taxonomy
-Container::make( 'post_meta', __( 'Book Category Data' ) )
+Container::make( 'term_meta', __( 'Book Category Data' ) )
 	->where( 'term_taxonomy', '=', 'crb_book_category' )
 	->add_fields( array( .. ) );
 ```
@@ -53,7 +53,7 @@ Container::make( 'post_meta', __( 'Book Category Data' ) )
 
 ```php
 // Display container on for Administrators only
-Container::make( 'post_meta', __( 'Administrator' ) )
+Container::make( 'user_meta', __( 'Administrator' ) )
 	->where( 'user_role', '=', 'administrator' )
 	->add_fields( array( .. ) );
 ```
