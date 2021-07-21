@@ -1,4 +1,4 @@
-# Conditional display
+# Conditional Display
 
 Containers are very flexible in terms of display options. By default, containers show on all related entities (all post types for post meta container, all terms for term meta container etc.), however, you can limit container visibility to specific post types, taxonomy terms, hierarchy levels and more with unlimited complexity.
 
