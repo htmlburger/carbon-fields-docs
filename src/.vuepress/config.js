@@ -32,8 +32,7 @@ module.exports = {
    */
   themeConfig: {
     repo: 'htmlburger/carbon-fields',
-    editLinks: false,
-    docsDir: '',
+    docsDir: 'src',
     docsRepo: 'htmlburger/carbon-fields-docs',
     docsBranch: '3.x',
     editLinks: true,
@@ -41,7 +40,7 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'Learn',
+        text: 'v3.x',
         items: [
             { text: 'Versions', items: [
                 { text: 'v3.x', link: '/' },
