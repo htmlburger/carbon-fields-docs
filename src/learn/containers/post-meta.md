@@ -1,10 +1,10 @@
 # Post Meta
 
-Custom Field containers are used to extend the post edit screens with additional fields. Field data is stored separately for each post as post meta (see [add_post_meta](http://codex.wordpress.org/Function_Reference/add_post_meta)).
+Custom Field containers are used to extend the post edit screens with additional fields. Field data is stored separately for each post as post meta (see [add_post_meta](https://developer.wordpress.org/reference/functions/add_post_meta/)).
 
 ### Container position
 
-More information about the position options can be found in the [add_meta_box()](https://codex.wordpress.org/Function_Reference/add_meta_box) function.
+More information about the position options can be found in the [add_meta_box()](https://developer.wordpress.org/reference/functions/add_meta_box/) function.
 
 #### Context
 
@@ -42,7 +42,7 @@ if ( $slides ) {
 ?>
 ```
 
-You can also use `carbon_get_the_post_meta( $name )` to access the values for the current post in [The Loop](http://codex.wordpress.org/The_Loop).
+You can also use `carbon_get_the_post_meta( $name )` to access the values for the current post in [The Loop](https://developer.wordpress.org/themes/basics/the-loop/).
 
 ```php
 <p>Article was published in: <?php echo carbon_get_the_post_meta( 'crb_location' ); ?></p>

@@ -13,7 +13,7 @@ Field::make( 'file', 'crb_file', __( 'File' ) )
 ### `set_type( $mime_type )`
 
 Set the allowed file type as a `string` or an `array` of types. Short mime types are also supported (`audio`, `video`, `image`).  
-Any mime in the list of acceptable file extensions for upload to the WordPress Media can be used. You can read more [here](https://codex.wordpress.org/Plugin_API/Filter_Reference/upload_mimes).
+Any mime in the list of acceptable file extensions for upload to the WordPress Media can be used. You can read more [here](https://developer.wordpress.org/reference/hooks/upload_mimes/).
 
 ```php
 Field::make( 'file', 'crb_file', __( 'File' ) )

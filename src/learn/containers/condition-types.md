@@ -103,4 +103,4 @@ Container::make( 'post_meta', 'Custom Data' )
     ) )
 ```
 
-More information on these values can be found in the documentation of the [`get_term_by()`](https://codex.wordpress.org/Function_Reference/get_term_by) function in the WordPress Codex (the three keys here are identical to the first three arguments of this function).
+More information on these values can be found in the documentation of the [`get_term_by()`](https://developer.wordpress.org/reference/functions/get_term_by/) function in the WordPress Code Reference (the three keys here are identical to the first three arguments of this function).

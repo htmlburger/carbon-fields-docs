@@ -1,6 +1,6 @@
 # Theme Options
 
-Theme option containers are used to add pages with options in the back-end. Field data is stored as [options](http://codex.wordpress.org/Option_Reference).
+Theme option containers are used to add pages with options in the back-end. Field data is stored as [options](https://developer.wordpress.org/plugins/settings/options-api/).
 Note that by default only users with the `manage_options` capability have access to this container. In order to override this behavior please refer to the `carbon_fields_theme_options_container_admin_only_access` filter in the Hooks section.
 
 By default, theme options containers automatically create main page in the admin area menu named **“Theme Options”**. In most cases these default settings are sufficient, but if you need to change the title or the location of a page in the menu, read the **“Multiple option pages”** section below.
@@ -24,7 +24,7 @@ To change the location of your Theme Options page, you use `set_page_parent( $pa
 
 * A reference to a top level Theme Options container.
 * The menu slug of a top level Theme Options container.
-* The menu slug of any top level adminsitration page. This corresponds to the `$parent_slug` parameter of [add_submenu_page()](http://codex.wordpress.org/Function_Reference/add_submenu_page). You can see all predefined page parents [here](http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters).
+* The menu slug of any top level adminsitration page. This corresponds to the `$parent_slug` parameter of [add_submenu_page()](https://developer.wordpress.org/reference/functions/add_submenu_page/). You can see all predefined page parents [here](https://developer.wordpress.org/reference/functions/add_submenu_page#Parameters).
 
 Below you see sample code for creating three theme option containers:
 
@@ -56,7 +56,7 @@ Container::make( 'theme_options', __( 'Customize Background' ) )
     ) );
 ```
 
-For detailed information on managing admin pages, see [Administration_Menus](http://codex.wordpress.org/Administration_Menus).
+For detailed information on managing admin pages, see [Administration_Menus](https://developer.wordpress.org/plugins/administration-menus/).
 
 ### Localizing the page title
 
@@ -84,7 +84,7 @@ Container::make( 'theme_options', __( 'Theme Options', 'my-textdomain' ) )
 
 ### Menu icon
 
-To change the icon of your Theme Options page, you can use `set_icon( $icon )`, where `$icon` can be one of the values, supported in the `$icon_url` parameter of the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+To change the icon of your Theme Options page, you can use `set_icon( $icon )`, where `$icon` can be one of the values, supported in the `$icon_url` parameter of the [add_menu_page()](https://developer.wordpress.org/reference/functions/add_menu_page/) function.
 
 Below you see an example for setting up the icon of the theme options page:
 
@@ -101,7 +101,7 @@ Container::make( 'theme_options', 'Basic Options' )
 
 ### Menu title
 
-To change the menu button title of the container, you can use `set_page_menu_title( $title )`, where `$title` is your desired title. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+To change the menu button title of the container, you can use `set_page_menu_title( $title )`, where `$title` is your desired title. For more information see the [add_menu_page()](https://developer.wordpress.org/reference/functions/add_menu_page/) function.
 
 ```php
 Container::make( 'theme_options', 'A very long option page title' )
@@ -113,7 +113,7 @@ Container::make( 'theme_options', 'A very long option page title' )
 
 ### Menu position
 
-To change the position priority of the page's menu button, you use `set_page_menu_position( $position )`, where `$position` is a number. For more information see the [add_menu_page()](http://codex.wordpress.org/Function_Reference/add_menu_page) function.
+To change the position priority of the page's menu button, you use `set_page_menu_position( $position )`, where `$position` is a number. For more information see the [add_menu_page()](https://developer.wordpress.org/reference/functions/add_menu_page/) function.
 
 ```php
 Container::make( 'theme_options', 'Basic Options' )
