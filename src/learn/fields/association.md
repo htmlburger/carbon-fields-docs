@@ -78,7 +78,7 @@ array(
         'id' => 16,
         'type' => 'term',
         'subtype' => 'category',
-        'value' => 'term:category:16',a
+        'value' => 'term:category:16',
     )
 )
 */
