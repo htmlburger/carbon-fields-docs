@@ -8,4 +8,4 @@ Field::make( 'hidden', 'crb_hidden_data', __( 'Hidden Data' ) )
 
 ## Config methods
 
-Refer to [Text Field](/fields/text).
+Refer to [Text Field](/learn/fields/text.html).
