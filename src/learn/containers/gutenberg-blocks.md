@@ -162,7 +162,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
-!> The nested blocks aren't affected by this method. Only their parent can enter in a preview mode.
+The nested blocks aren't affected by this method. Only their parent can enter in a preview mode.
 
 ### `set_editor_style( $handle )`
 
@@ -323,7 +323,7 @@ The possible values are - `array` or `null`.
 
 See [Gutenberg > Inner Blocks](https://github.com/WordPress/gutenberg/tree/master/packages/editor/src/components/inner-blocks#allowedblocks) for more details.
 
-!> If an empty array is passed then only the blocks that have your block as parent can be inserted. See the `set_parent` method.
+If an empty array is passed then only the blocks that have your block as parent can be inserted. See the `set_parent` method.
 
 ```php
 Block::make( __( 'My Shiny Gutenberg Block' ) )
