@@ -6,4 +6,7 @@ On the JavaScript side, the library is designed to be powerful and flexible and 
 
 To get a better understanding of how the library works, checkout our step-by-step guide of how to create a new Carbon Field type, which can be found at [https://github.com/htmlburger/carbon-field-template](https://github.com/htmlburger/carbon-field-template). The guide itself also acts as a template that you can start from.
 
-In addition, you can also review the [Number Field](https://github.com/htmlburger/carbon-field-number) which is a simplistic extension field.
+In addition, you can also review the:
+- [Number Field](https://github.com/htmlburger/carbon-field-number) simplistic extension field
+- [Map Yandex Field](https://github.com/yunusga/carbon-field-map-yandex) alternative to Google maps
+- [Url Picker Field](https://github.com/iamntz/carbon-fields-urlpicker) simple url picker
