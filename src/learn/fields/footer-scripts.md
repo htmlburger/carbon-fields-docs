@@ -12,4 +12,4 @@ Field::make( 'footer_scripts', 'crb_footer_scripts', __( 'Footer Scripts' ) )
 
 ## Config methods
 
-Please refer to the [Header Scripts](/fields/header-scripts) field docs.
+Please refer to the [Header Scripts](/learn/fields/header-scripts.html) field docs.
