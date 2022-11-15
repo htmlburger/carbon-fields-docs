@@ -130,7 +130,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 
 This method allows you to set the aliases that help users discover it while searching.
 
-!> You are only allowed to add as much as 3 keywords per block.
+You are only allowed to add as much as 3 keywords per block.
 
 ```php
 Block::make( __( 'My Shiny Gutenberg Block' ) )
@@ -162,7 +162,7 @@ Block::make( __( 'My Shiny Gutenberg Block' ) )
 	} );
 ```
 
-!> The nested blocks aren't affected by this method. Only their parent can enter in a preview mode.
+The nested blocks aren't affected by this method. Only their parent can enter in a preview mode.
 
 ### `set_editor_style( $handle )`
 
