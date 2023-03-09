@@ -181,9 +181,11 @@ Container::make( 'theme_options', __( 'Theme Options' ) )
             ) )
             ->set_default_value( array(
                 array(
+                    //'_type' => 'your_group_name_here', // optional: use only if you've specified group names on field definition
                     'my_text_field' => 'Hello',
                 ),
                 array(
+                    //'_type' => 'your_group_name_here',
                     'my_text_field' => 'World!',
                 ),
             ) ),
